@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
+  // Menu items for navigation
   const MenuItems = [
     { title: "Home", id: "home" },
     { title: "About", id: "about" },
@@ -14,13 +15,14 @@ export default function Navbar() {
     { title: "Contact", id: "contact" },
   ];
 
+  // State to toggle mobile menu visibility
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const pathname = usePathname();
   const router = useRouter();
 
-  //state control navbar
+  // State control for navbar visibility on scroll
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -29,10 +31,10 @@ export default function Navbar() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        //scroll down -> hide navbar
+        // If scrolling down -> hide navbar
         setShowNavbar(false);
       } else {
-        //scroll up -> show navbar
+        // If scrolling up -> show navbar
         setShowNavbar(true);
       }
 
@@ -44,11 +46,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Function to handle navigation inside the page or redirect
   const handleNavigation = (id) => {
     if (pathname === "/rikt") {
       router.push(`/?scrollTo=${id}`);
     }
-    setIsOpen(false);
+    setIsOpen(false); // Close menu after selection
   };
 
   return (
@@ -57,55 +60,62 @@ export default function Navbar() {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
+      {/* Logo that scrolls to the top when clicked */}
       <ScrollLink 
         to="home"
         smooth={true}
         duration={500}
-       className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
+        className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer"
+      >
         <img src="/logo.png" width="120px" alt="RMIT SGS Shinsei Kendo Club"/>
       </ScrollLink>
 
+      {/* Mobile menu toggle button */}
       <div className="block lg:hidden">
         <button onClick={toggleMenu} className="flex items-center px-3 py-2 text-white">
           {isOpen ? <FontAwesomeIcon icon={faTimes} size="xl" /> : <FontAwesomeIcon icon={faBars} size="xl" />}
         </button>
       </div>
     
+      {/* Navigation menu */}
       <div className={`w-full lg:flex lg:flex-row lg:items-center lg:w-auto ${isOpen ? "flex flex-col items-center space-y-4" : "hidden"}`}>
-          {MenuItems.map((item, index) =>
-            item.url ? (
-              <Link
+        {MenuItems.map((item, index) =>
+          item.url ? (
+            // External navigation link
+            <Link
+              key={index}
+              href={item.url}
+              className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
+              onClick={() => setIsOpen(false)} // Close menu after selection
+            >
+              {item.title}
+            </Link>
+          ) : (
+            pathname === "/rikt" ? (
+              // Handle navigation if on /rikt page
+              <button
                 key={index}
-                href={item.url}
+                onClick={() => handleNavigation(item.id)}
                 className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
-                onClick={() => setIsOpen(false)}
               >
                 {item.title}
-              </Link>
+              </button>
             ) : (
-              pathname === "/rikt" ? (
-                <button
-                  key={index}
-                  onClick={() => handleNavigation(item.id)}
-                  className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
-                >
-                  {item.title}
-                </button>
-              ) : (
-                <ScrollLink
-                  key={index}
-                  to={item.id}
-                  smooth={true}
-                  duration={500}
-                  className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.title}
-                </ScrollLink>
-              )
+              // Smooth scroll to section within the same page
+              <ScrollLink
+                key={index}
+                to={item.id}
+                smooth={true}
+                duration={500}
+                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
+                onClick={() => setIsOpen(false)} // Close menu after selection
+              >
+                {item.title}
+              </ScrollLink>
             )
-          )}
-        </div>
+          )
+        )}
+      </div>
     </nav>
   );
 }
