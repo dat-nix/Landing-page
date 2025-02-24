@@ -20,7 +20,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // 🟢 State kiểm soát navbar
+  //state control navbar
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -29,10 +29,10 @@ export default function Navbar() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        // Nếu cuộn xuống -> Ẩn navbar
+        //scroll down -> hide navbar
         setShowNavbar(false);
       } else {
-        // Nếu cuộn lên -> Hiện navbar
+        //scroll up -> show navbar
         setShowNavbar(true);
       }
 
@@ -57,9 +57,13 @@ export default function Navbar() {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img src="/logo.png" width="120px" />
-      </Link>
+      <ScrollLink 
+        to="home"
+        smooth={true}
+        duration={500}
+       className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
+        <img src="/logo.png" width="120px" alt="RMIT SGS Shinsei Kendo Club"/>
+      </ScrollLink>
 
       <div className="block lg:hidden">
         <button onClick={toggleMenu} className="flex items-center px-3 py-2 text-white">
