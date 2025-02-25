@@ -1,0 +1,9 @@
+{
+  "app": {
+    "[project]/src/app/page": [],
+    "[project]/src/app/rikt/page": []
+  },
+  "appUsingSizeAdjust": false,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
