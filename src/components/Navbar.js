@@ -56,7 +56,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-neutral-800 fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-6 z-50 transition-transform duration-300 ${
+      className={`bg-neutral-800 fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -67,7 +67,7 @@ export default function Navbar() {
         duration={500}
         className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer"
       >
-        <img src="/logo.png" width="120px" alt="RMIT SGS Shinsei Kendo Club"/>
+        <img src="/logo.png" width="110px" alt="RMIT SGS Shinsei Kendo Club"/>
       </ScrollLink>
 
       {/* Mobile menu toggle button */}
@@ -85,7 +85,7 @@ export default function Navbar() {
             <Link
               key={index}
               href={item.url}
-              className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
+              className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-4 px-4 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-black transition font-extrabold"
               onClick={() => setIsOpen(false)} // Close menu after selection
             >
               {item.title}
@@ -107,7 +107,7 @@ export default function Navbar() {
                 to={item.id}
                 smooth={true}
                 duration={500}
-                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
+                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-6"
                 onClick={() => setIsOpen(false)} // Close menu after selection
               >
                 {item.title}
