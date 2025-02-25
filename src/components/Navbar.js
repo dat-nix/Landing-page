@@ -61,6 +61,11 @@ export default function Navbar() {
       }`}
     >
       {/* Logo that scrolls to the top when clicked */}
+      {pathname === "/rikt" ? (
+      <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
+    <img src="/logo.png" width="110px" alt="RMIT SGS Shinsei Kendo Club"/>
+      </Link>
+        ) : (
       <ScrollLink 
         to="home"
         smooth={true}
@@ -69,6 +74,7 @@ export default function Navbar() {
       >
         <img src="/logo.png" width="110px" alt="RMIT SGS Shinsei Kendo Club"/>
       </ScrollLink>
+)}
 
       {/* Mobile menu toggle button */}
       <div className="block lg:hidden">
