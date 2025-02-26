@@ -5,7 +5,8 @@ import Link from "next/link";
 export default function Scoreboard() {
   // Fake data state 
   const [scoreData, setScoreData] = useState({
-    matchType: "MALE INDIVIDUAL",
+    Sex: "MALE",
+    matchType: "INDIVIDUAL",
     player1: { hit: "M K", score: 2, color: "white" },
     player2: { hit: "D", score: 1, color: "red" },
     club1: "RMIT Shinsei Kendo Club",
@@ -22,6 +23,7 @@ export default function Scoreboard() {
     <div className="h-screen w-screen flex flex-col justify-center items-center text-white p-4 bg-black">
       {/* Match Type */}
       <p className="text-sm">Lastest update</p>
+      <h1 className="text-lg font-bold">{scoreData.Sex}</h1>
       <h2 className="text-lg font-bold">{scoreData.matchType}</h2>
 
       {/* Scoreboard */}
