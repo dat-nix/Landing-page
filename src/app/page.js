@@ -51,7 +51,7 @@ export default function Home() {
             to="about"
             smooth={true}
             duration={500}
-            className="px-6 py-3 bg-orange-500 text-white font-bold rounded-lg shadow-lg cursor-pointer"
+            className="px-6 py-3 bg-orange-500 text-white font-bold rounded-lg shadow-lg cursor-pointer transition-all duration-300 hover:bg-orange-600 hover:text-gray-200"
           >
           About Us
           </ScrollLink>
