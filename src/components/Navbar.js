@@ -15,37 +15,44 @@ export default function Navbar() {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const pathname = usePathname();
   const router = useRouter();
 
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setShowNavbar(currentScrollY < lastScrollY);
-      setLastScrollY(currentScrollY);
+      if (!isOpen) { // Only update visibility when menu is closed
+        const currentScrollY = window.scrollY;
+        setShowNavbar(currentScrollY < lastScrollY);
+        setLastScrollY(currentScrollY);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isOpen]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    setShowNavbar(true); // Ensure navbar stays visible
+  };
 
   const handleNavigation = (id) => {
+    setIsOpen(false);
     if (pathname === "/rikt") {
       router.push(`/?scrollTo=${id}`);
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
   };
 
   return (
     <nav
       className={`bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
-        } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
+      } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
       {/* Logo */}
       {pathname === "/rikt" ? (
@@ -71,7 +78,11 @@ export default function Navbar() {
       </div>
 
       {/* Navigation Menu */}
-      <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? "flex flex-col items-center space-y-4" : "hidden"}`}>
+      <div
+        className={`w-full lg:flex lg:items-center lg:w-auto ${
+          isOpen ? "flex flex-col items-center space-y-4" : "hidden"
+        }`}
+      >
         {MenuItems.map((item, index) =>
           item.url ? (
             <Link
@@ -91,16 +102,13 @@ export default function Navbar() {
               {item.title}
             </button>
           ) : (
-            <ScrollLink
+            <button
               key={index}
-              to={item.id}
-              smooth={true}
-              duration={500}
+              onClick={() => handleNavigation(item.id)}
               className="relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-6 px-2 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-orange-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
-              onClick={() => setIsOpen(false)}
             >
               {item.title}
-            </ScrollLink>
+            </button>
           )
         )}
       </div>
