@@ -43,9 +43,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-black fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-3 z-50 transition-transform duration-300 ${
+      className={`bg-black w-full flex items-center justify-between flex-wrap p-3 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
+        } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
       {/* Logo */}
       {pathname === "/rikt" ? (
