@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
 import { useSearchParams } from "next/navigation";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
@@ -41,15 +42,21 @@ export default function Home() {
             Welcome to RMIT Shinsei Kendo Club
           </motion.h1> 
 
-          <motion.a 
-            href="#about"
+          <motion.div 
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ duration: 1, delay: 0.5 }}
-            className="px-6 py-3 bg-orange-500 text-white font-bold rounded-lg shadow-lg"
           >
-            About Us
-          </motion.a>
+          <ScrollLink
+            to="about"
+            smooth={true}
+            duration={500}
+            className="px-6 py-3 bg-orange-500 text-white font-bold rounded-lg shadow-lg cursor-pointer"
+          >
+          About Us
+          </ScrollLink>
+
+          </motion.div>
         </div>
       </section>
 
