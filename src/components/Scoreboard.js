@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 
 export default function Scoreboard() {
   // Fake data state 
@@ -51,13 +50,6 @@ export default function Scoreboard() {
         {scoreData.club1} <span className="mx-2">VS</span> {scoreData.club2}
       </p>
 
-      {/* Visit RIKT page */}
-      <Link
-        href="/rikt"
-          className="mt-6 px-6 py-3 text-lg font-semibold bg-gray-300 text-black rounded-lg hover:bg-gray-400 transition"
-      >
-        Visit RIKT
-      </Link>
     </div>
   );
 }
