@@ -1,7 +1,6 @@
 {
   "app": {
-    "[project]/src/app/page": [],
-    "[project]/src/app/rikt/page": []
+    "[project]/src/app/page": []
   },
   "appUsingSizeAdjust": false,
   "pages": {},

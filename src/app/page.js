@@ -31,13 +31,8 @@ export default function Home() {
           transition={{ duration: 1.2 }}
           className="absolute w-[90%] h-[85vh]"
         >
-          <Image 
-            src="/rmit.jpg" 
-            alt="Kendo Club"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-80 "
-          />
+          <Image src="/rmit.jpg" fill className="object-cover opacity-85" alt="RMIT" />
+
         </motion.div>
 
         {/* welcome text & about us button */}
@@ -49,7 +44,7 @@ export default function Home() {
             className="text-5xl font-thin mb-6"
           >
             Welcome to RMIT Shinsei Kendo Club
-          </motion.h1>
+          </motion.h1> sjsdjdjskfj
 
           <motion.a 
             href="#about"

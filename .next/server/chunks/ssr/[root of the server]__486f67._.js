@@ -56,7 +56,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesom
 ;
 ;
 function Navbar() {
-    // Menu items for navigation
     const MenuItems = [
         {
             title: "Home",
@@ -75,24 +74,16 @@ function Navbar() {
             id: "contact"
         }
     ];
-    // State to toggle mobile menu visibility
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const toggleMenu = ()=>setIsOpen(!isOpen);
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["usePathname"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
-    // State control for navbar visibility on scroll
     const [showNavbar, setShowNavbar] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     const [lastScrollY, setLastScrollY] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const handleScroll = ()=>{
             const currentScrollY = window.scrollY;
-            if (currentScrollY > lastScrollY) {
-                // If scrolling down -> hide navbar
-                setShowNavbar(false);
-            } else {
-                // If scrolling up -> show navbar
-                setShowNavbar(true);
-            }
+            setShowNavbar(currentScrollY < lastScrollY);
             setLastScrollY(currentScrollY);
         };
         window.addEventListener("scroll", handleScroll);
@@ -100,124 +91,120 @@ function Navbar() {
     }, [
         lastScrollY
     ]);
-    // Function to handle navigation inside the page or redirect
     const handleNavigation = (id)=>{
         if (pathname === "/rikt") {
             router.push(`/?scrollTo=${id}`);
         }
-        setIsOpen(false); // Close menu after selection
+        setIsOpen(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-        className: `bg-neutral-800 fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`,
+        className: `bg-black fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-3 z-50 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`,
         children: [
             pathname === "/rikt" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 href: "/",
-                className: "flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer",
+                className: "flex items-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                     src: "/logo.png",
-                    width: "110px",
+                    width: "115px",
                     alt: "RMIT SGS Shinsei Kendo Club"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.js",
-                    lineNumber: 66,
-                    columnNumber: 5
+                    lineNumber: 53,
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.js",
-                lineNumber: 65,
-                columnNumber: 7
+                lineNumber: 52,
+                columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$scroll$2f$modules$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Link"], {
                 to: "home",
                 smooth: true,
                 duration: 500,
-                className: "flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer",
+                className: "flex items-center cursor-pointer",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                     src: "/logo.png",
-                    width: "110px",
+                    width: "115px",
                     alt: "RMIT SGS Shinsei Kendo Club"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.js",
-                    lineNumber: 75,
-                    columnNumber: 9
+                    lineNumber: 62,
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.js",
-                lineNumber: 69,
-                columnNumber: 7
+                lineNumber: 56,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "block lg:hidden",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: toggleMenu,
-                    className: "flex items-center px-3 py-2 text-white",
+                    className: "px-3 py-2 text-white",
                     children: isOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$index$2e$es$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FontAwesomeIcon"], {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$solid$2d$svg$2d$icons$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["faTimes"],
                         size: "xl"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.js",
-                        lineNumber: 82,
+                        lineNumber: 69,
                         columnNumber: 21
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$index$2e$es$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FontAwesomeIcon"], {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$solid$2d$svg$2d$icons$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["faBars"],
                         size: "xl"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Navbar.js",
-                        lineNumber: 82,
+                        lineNumber: 69,
                         columnNumber: 68
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Navbar.js",
-                    lineNumber: 81,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.js",
-                lineNumber: 80,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `w-full lg:flex lg:flex-row lg:items-center lg:w-auto ${isOpen ? "flex flex-col items-center space-y-4" : "hidden"}`,
-                children: MenuItems.map((item, index)=>item.url ? // External navigation link
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                className: `w-full lg:flex lg:items-center lg:w-auto ${isOpen ? "flex flex-col items-center space-y-4" : "hidden"}`,
+                children: MenuItems.map((item, index)=>item.url ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: item.url,
-                        className: "block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-4 px-4 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-black transition font-extrabold",
+                        className: "relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-4 px-4 py-2 border-2 border-white rounded-lg hover:bg-white hover:text-black transition font-extrabold",
                         onClick: ()=>setIsOpen(false),
                         children: item.title
                     }, index, false, {
                         fileName: "[project]/src/components/Navbar.js",
-                        lineNumber: 91,
+                        lineNumber: 77,
                         columnNumber: 13
-                    }, this) : pathname === "/rikt" ? // Handle navigation if on /rikt page
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    }, this) : pathname === "/rikt" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>handleNavigation(item.id),
-                        className: "block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4",
+                        className: "relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-4 px-2 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-orange-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100",
                         children: item.title
                     }, index, false, {
                         fileName: "[project]/src/components/Navbar.js",
-                        lineNumber: 102,
-                        columnNumber: 15
-                    }, this) : // Smooth scroll to section within the same page
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$scroll$2f$modules$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Link"], {
+                        lineNumber: 86,
+                        columnNumber: 13
+                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$scroll$2f$modules$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Link"], {
                         to: item.id,
                         smooth: true,
                         duration: 500,
-                        className: "block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-6",
+                        className: "relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-6 px-2 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-orange-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100",
                         onClick: ()=>setIsOpen(false),
                         children: item.title
                     }, index, false, {
                         fileName: "[project]/src/components/Navbar.js",
-                        lineNumber: 111,
-                        columnNumber: 15
+                        lineNumber: 94,
+                        columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/Navbar.js",
-                lineNumber: 87,
+                lineNumber: 74,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Navbar.js",
-        lineNumber: 58,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 }

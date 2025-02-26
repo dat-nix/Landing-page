@@ -54,7 +54,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Navbar$
 ;
 ;
 const metadata = {
-    title: "Kendo tracking",
+    title: "Join RMIT Shinsei Kendo Club",
     description: "RMIT stuff"
 };
 function RootLayout({ children }) {
