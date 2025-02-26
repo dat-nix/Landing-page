@@ -63,7 +63,7 @@ export default function Navbar() {
       {/* Logo that scrolls to the top when clicked */}
       {pathname === "/rikt" ? (
       <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer">
-    <img src="/logo.png" width="110px" alt="RMIT SGS Shinsei Kendo Club"/>
+    <img src="/logo.png" width="115px" alt="RMIT SGS Shinsei Kendo Club"/>
       </Link>
         ) : (
       <ScrollLink 
@@ -72,7 +72,7 @@ export default function Navbar() {
         duration={500}
         className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 cursor-pointer"
       >
-        <img src="/logo.png" width="110px" alt="RMIT SGS Shinsei Kendo Club"/>
+        <img src="/logo.png" width="115px" alt="RMIT SGS Shinsei Kendo Club"/>
       </ScrollLink>
 )}
 
@@ -102,7 +102,7 @@ export default function Navbar() {
               <button
                 key={index}
                 onClick={() => handleNavigation(item.id)}
-                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4"
+                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-4"
               >
                 {item.title}
               </button>
@@ -113,7 +113,7 @@ export default function Navbar() {
                 to={item.id}
                 smooth={true}
                 duration={500}
-                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-6"
+                className="block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-xl cursor-pointer mx-6"
                 onClick={() => setIsOpen(false)} // Close menu after selection
               >
                 {item.title}

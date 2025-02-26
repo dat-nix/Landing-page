@@ -3,7 +3,7 @@ import "@/stylesheets/index.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Kendo tracking",
+  title: "Join RMIT Shinsei Kendo Club",
   description: "RMIT stuff",
 };
 
