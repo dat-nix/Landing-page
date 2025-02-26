@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { scroller } from "react-scroll";
-import Scoreboard from "@/components/Scoreboard";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -18,10 +17,6 @@ export default function Home() {
 
   return (
     <div>
-      <section>
-        <Scoreboard />
-      </section>
-
       {/* home section */}
       <section id="home" className="relative h-screen flex justify-center items-center bg-white">
         {/* enlarged background image */}
@@ -44,7 +39,7 @@ export default function Home() {
             className="text-5xl font-thin mb-6"
           >
             Welcome to RMIT Shinsei Kendo Club
-          </motion.h1> sjsdjdjskfj
+          </motion.h1> 
 
           <motion.a 
             href="#about"
