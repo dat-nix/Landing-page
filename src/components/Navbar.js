@@ -56,7 +56,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-neutral-800 fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
+      className={`bg-black fixed top-0 left-0 w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
