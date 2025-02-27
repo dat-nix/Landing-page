@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
+  // Define menu items
   const MenuItems = [
     { title: "Home", id: "home" },
     { title: "About", id: "about" },
@@ -23,7 +24,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isOpen) {
+      if (!isOpen) { // Only update visibility when menu is closed
         const currentScrollY = window.scrollY;
         setShowNavbar(currentScrollY < lastScrollY);
         setLastScrollY(currentScrollY);
@@ -34,21 +35,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, isOpen]);
 
+  // Toggle menu open/close state
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
-    setShowNavbar(true);
+    setShowNavbar(true); // Ensure navbar stays visible
   };
 
+  // Handle navigation logic
   const handleNavigation = (id) => {
     setIsOpen(false);
     if (pathname === "/rikt") {
-      router.push(`/?scrollTo=${id}`);
+      router.push(`/?scrollTo=${id}`); // Navigate to home with scroll parameter
     } else {
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      }, 300); // Delay scrolling for smoother transition
     }
-  }; 
+  };
 
   return (
     <nav
@@ -56,6 +59,7 @@ export default function Navbar() {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
+      {/* Logo Navigation */}
       {pathname === "/rikt" ? (
         <Link href="/" className="flex items-center">
           <img src="/logo.png" width="115px" alt="RMIT SGS Shinsei Kendo Club" />
@@ -71,12 +75,14 @@ export default function Navbar() {
         </ScrollLink>
       )}
 
+      {/* Mobile Menu Toggle */}
       <div className="block lg:hidden">
         <button onClick={toggleMenu} className="px-3 py-2 text-white">
           {isOpen ? <FontAwesomeIcon icon={faTimes} size="xl" /> : <FontAwesomeIcon icon={faBars} size="xl" />}
         </button>
       </div>
 
+      {/* Navigation Menu */}
       <div
         className={`w-full lg:flex lg:items-center lg:w-auto ${
           isOpen ? "flex flex-col items-center space-y-4" : "hidden"
@@ -84,6 +90,7 @@ export default function Navbar() {
       >
         {MenuItems.map((item, index) =>
           item.url ? (
+            // External navigation link
             <Link
               key={index}
               href={item.url}
@@ -93,6 +100,7 @@ export default function Navbar() {
               {item.title}
             </Link>
           ) : (
+            // Internal navigation with smooth scrolling
             <button
               key={index}
               onClick={() => handleNavigation(item.id)}
