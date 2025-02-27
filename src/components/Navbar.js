@@ -49,7 +49,7 @@ export default function Navbar() {
     } else {
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 300); // Delay scrolling for smoother transition
+      }, 200); // Delay scrolling for smoother transition
     }
   };
 
@@ -62,7 +62,7 @@ export default function Navbar() {
       {/* Logo Navigation */}
       {pathname === "/rikt" ? (
         <Link href="/" className="flex items-center">
-          <img src="/logo.png" width="115px" alt="RMIT SGS Shinsei Kendo Club" />
+          <img src="/logo.png" width="100px" alt="RMIT SGS Shinsei Kendo Club" />
         </Link>
       ) : (
         <ScrollLink
@@ -71,7 +71,7 @@ export default function Navbar() {
           duration={500}
           className="flex items-center cursor-pointer"
         >
-          <img src="/logo.png" width="115px" alt="RMIT SGS Shinsei Kendo Club" />
+          <img src="/logo.png" width="100px" alt="RMIT SGS Shinsei Kendo Club" />
         </ScrollLink>
       )}
 
