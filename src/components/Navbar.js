@@ -23,7 +23,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isOpen) { // Only update visibility when menu is closed
+      if (!isOpen) {
         const currentScrollY = window.scrollY;
         setShowNavbar(currentScrollY < lastScrollY);
         setLastScrollY(currentScrollY);
@@ -35,8 +35,8 @@ export default function Navbar() {
   }, [lastScrollY, isOpen]);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    setShowNavbar(true); // Ensure navbar stays visible
+    setIsOpen((prev) => !prev);
+    setShowNavbar(true);
   };
 
   const handleNavigation = (id) => {
@@ -44,9 +44,11 @@ export default function Navbar() {
     if (pathname === "/rikt") {
       router.push(`/?scrollTo=${id}`);
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }
-  };
+  }; 
 
   return (
     <nav
@@ -54,7 +56,6 @@ export default function Navbar() {
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
-      {/* Logo */}
       {pathname === "/rikt" ? (
         <Link href="/" className="flex items-center">
           <img src="/logo.png" width="115px" alt="RMIT SGS Shinsei Kendo Club" />
@@ -70,14 +71,12 @@ export default function Navbar() {
         </ScrollLink>
       )}
 
-      {/* Mobile Menu Toggle */}
       <div className="block lg:hidden">
         <button onClick={toggleMenu} className="px-3 py-2 text-white">
           {isOpen ? <FontAwesomeIcon icon={faTimes} size="xl" /> : <FontAwesomeIcon icon={faBars} size="xl" />}
         </button>
       </div>
 
-      {/* Navigation Menu */}
       <div
         className={`w-full lg:flex lg:items-center lg:w-auto ${
           isOpen ? "flex flex-col items-center space-y-4" : "hidden"
@@ -93,14 +92,6 @@ export default function Navbar() {
             >
               {item.title}
             </Link>
-          ) : pathname === "/rikt" ? (
-            <button
-              key={index}
-              onClick={() => handleNavigation(item.id)}
-              className="relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-4 px-2 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-orange-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
-            >
-              {item.title}
-            </button>
           ) : (
             <button
               key={index}
