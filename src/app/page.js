@@ -30,8 +30,8 @@ export default function Home() {
           className="absolute w-[90%] h-[85vh] overflow-hidden"
         >
           <Image src="/rmit.jpg" fill className="object-cover opacity-85 rounded-2xl" alt="RMIT"/>
-          {/* Black Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            {/* Black Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 
         </motion.div>
 
