@@ -29,7 +29,7 @@ export default function Home() {
           transition={{ duration: 1.2 }}
           className="absolute w-[90%] h-[85vh] overflow-hidden"
         >
-          <Image src="/rmit.jpg" fill className="object-cover opacity-85" alt="RMIT" />
+          <Image src="/rmit.jpg" fill className="object-cover opacity-85 rounded-2xl" alt="RMIT"/>
 
         </motion.div>
 
