@@ -15,7 +15,7 @@ const Card = ({ image, title, description }) => {
         />
         
         {/* gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/20 to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/20 to-black/10"></div>
       </div>
 
       {/* Right Text Section */}
