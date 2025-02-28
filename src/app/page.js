@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SwiperSlider from "@/components/SwiperSlider";
 import FAQs from "@/components/FAQs"
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -74,6 +75,8 @@ export default function Home() {
       <section id="contact" className="h-screen flex justify-center items-center bg-white">
         <FAQs/>
       </section>
+
+      <section><Footer/></section>
     </div>
   );
 }
