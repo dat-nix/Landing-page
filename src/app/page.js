@@ -6,6 +6,7 @@ import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SwiperSlider from "@/components/SwiperSlider";
+import FAQs from "@/components/FAQs"
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -27,9 +28,9 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }} 
           whileHover={{ scale: 1.05, transition: { duration: 0.5 } }} // Hover effect
           transition={{ duration: 1.2 }}
-          className="absolute w-[90%] h-[85vh] overflow-hidden"
+          className="absolute w-[90%] h-[85vh] overflow-hidden rounded-xl"
         >
-          <Image src="/rmit.jpg" fill className="object-cover opacity-85 rounded-2xl" alt="RMIT"/>
+          <Image src="/rmit.jpg" fill className="object-cover opacity-85 rounded-xl" alt="RMIT"/>
             {/* Black Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 
@@ -59,8 +60,8 @@ export default function Home() {
           >
           About Us
           </ScrollLink>
-
           </motion.div>
+
         </div>
       </section>
 
@@ -70,8 +71,8 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="h-screen flex justify-center items-center bg-yellow-500 text-white text-5xl font-bold">
-        <h1>Contact Section</h1>
+      <section id="contact" className="h-screen flex justify-center items-center bg-white">
+        <FAQs/>
       </section>
     </div>
   );
