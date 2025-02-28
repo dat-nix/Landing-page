@@ -5,6 +5,8 @@ import { useSearchParams } from "next/navigation";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import Image from "next/image";
+//import SwiperSlider from "@/components/SwiperSlider";
+import Card from "@/components/Card";
 
 export default function Home() {
   const searchParams = useSearchParams();
@@ -12,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     if (scrollTo) {
-      scroller.scrollTo(scrollTo, { smooth: true, duration: 500 });
+      scroller.scrollTo(scrollTo, { smooth: true, duration: 300 });
     }
   }, [scrollTo]);
 
@@ -24,8 +26,9 @@ export default function Home() {
         <motion.div 
           initial={{ opacity: 0, scale: 1.1 }} 
           animate={{ opacity: 1, scale: 1 }} 
+          whileHover={{ scale: 1.05, transition: { duration: 0.5 } }} // Hover effect
           transition={{ duration: 1.2 }}
-          className="absolute w-[90%] h-[85vh]"
+          className="absolute w-[90%] h-[85vh] overflow-hidden rounded-xl"
         >
           <Image src="/rmit.jpg" fill className="object-cover opacity-85" alt="RMIT" />
 
@@ -61,8 +64,12 @@ export default function Home() {
       </section>
 
       {/* about section */}
-      <section id="about" className="h-screen flex justify-center items-center bg-green-500 text-white text-5xl font-bold">
-        <h1>About Section</h1>
+      <section id="about" className="flex items-center justify-center min-h-screen bg-white">
+        <Card
+          image="/rmit.jpg"
+          title="About RMIT Competition"
+        description="Join the most exciting event of the year! Compete, learn, and network with the best."
+      />
       </section>
 
       {/* Contact Section */}
