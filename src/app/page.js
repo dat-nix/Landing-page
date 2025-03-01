@@ -20,7 +20,7 @@ export default function Home() {
   }, [scrollTo]);
 
   return (
-    <div>
+    <div className="min-h-screen flex flex-col justify-between">
       {/* home section */}
       <section id="home" className="relative h-screen flex justify-center items-center bg-white">
         {/* enlarged background image */}
