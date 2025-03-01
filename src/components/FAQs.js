@@ -16,9 +16,9 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex w-full">
+    <div className="flex w-full flex-col">
       {/* FAQs Section*/}
-      <div className="w-[55%] pl-8">
+      <div className="md:w-[55%] pl-8 min-h-screen pb-30">
         <h2 className="text-2xl font-bold text-center mb-8">FAQs</h2>
         <div className="space-y-6">
           {faqs.map((faq, index) => (
@@ -36,7 +36,7 @@ const FAQ = () => {
 
               {/*answers*/}
               {openIndex === index && (
-                <div className="px-4 py-4 bg-white border-t text-lg text-gray-700">
+                <div className="px-4 py-4 bg-white border-t text-lg text-gray-700 overflow-hidden">
                   {faq.answer}
                 </div>
               )}
