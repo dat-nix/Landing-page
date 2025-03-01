@@ -4,11 +4,10 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
-    { question: "What is React?", answer: "React is a JavaScript library for building user interfaces." },
-    { question: "What is Tailwind CSS?", answer: "Tailwind CSS is a utility-first CSS framework for creating custom designs." },
-    { question: "How do you install Tailwind CSS?", answer: "You can install Tailwind CSS using npm and configure it in your project." },
-    { question: "How do you toggle content visibility?", answer: "You can use state management in React to toggle content visibility." },
-    { question: "What is a state in React?", answer: "State is an object that holds values that determine the behavior of a component." }
+    { question: "What is ?", answer: "jdfsfdsfsflkjsflkjs;lfljs" },
+    { question: "What is ?", answer: "dskkjdskjdskjfdskldslkskfklsl;sa" },
+    { question: "How do you...?", answer: "jsslklkjfkjsakl" },
+    { question: "Where do you...?", answer: "jkskfkskjfkjsflkjskfskjfkljsa" },
   ];
 
   const handleToggle = (index) => {
