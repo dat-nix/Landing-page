@@ -16,8 +16,14 @@ const Footer = () => {
 
         {/* Icons on the right */}
         <div className="flex gap-4">
-          <Image src="/assets/cir1.png" alt="Circle 1" width={40} height={40} className="rounded-full" />
-          <Image src="/assets/cir2.png" alt="Circle 2" width={40} height={40} className="rounded-full" />
+        <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
+          <Image src="/assets/facebook.png" alt="facebook" width={40} height={40} className="rounded-full" />
+        </a>
+
+        <a href="https://www.instagram.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
+          <Image src="/assets/instagram.png" alt="instagram" width={40} height={40} className="rounded-full" />
+        </a>
+
         </div>
       </div>
 
