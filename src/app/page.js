@@ -73,10 +73,9 @@ export default function Home() {
       </section>
 
       {/* Contact & FAQs Section */}
-      <section id="contact" className="min-h-screen flex flex-col md:flex-row justify-center items-start px-8 md:px-16 py-10 bg-white space-y-5 md:space-y-0 md:space-x-10">
+      <section id="contact" className="min-h-screen flex flex-col md:flex-row justify-center items-start px-8 md:px-16 py-10 bg-white space-y-1 md:space-y-0 md:space-x-10">
       {/* FAQs on mobile, on the left in desktop */}
           <FAQs/>
-
       {/* Contact Form under mobile, on the right in desktop */}
         <div className="w-full md:w-2/3">
           <ContactForm/>
