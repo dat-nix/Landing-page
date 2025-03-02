@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* about section */}
-      <section id="about" className="flex items-center justify-center min-h-screen bg-white">
+      <section id="about" className="flex items-center justify-center min-h-[75vh] bg-white">
         <SwiperSlider/>
       </section>
 
@@ -77,7 +77,7 @@ export default function Home() {
       {/* FAQs on mobile, on the left in desktop */}
           <FAQs/>
       {/* Contact Form under mobile, on the right in desktop */}
-        <div className="w-full md:w-2/3">
+        <div id="contact-form" className="w-full md:w-2/3">
           <ContactForm/>
         </div>
       </section>
