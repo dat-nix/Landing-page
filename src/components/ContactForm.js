@@ -26,7 +26,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
+    <div className="flex justify-center items-center min-h-[80vh] bg-black">
       <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-8 w-96 bg-neutral-900 text-white rounded-lg shadow-lg">
         <h2 className="text-center text-2xl font-bold text-gray-200">Contact Us</h2>
         <input 

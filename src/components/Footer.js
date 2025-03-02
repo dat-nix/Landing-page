@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 min-h-[400px]">
+    <footer className="bg-black text-white py-16 min-h-[300px]">
       {/* Top section */}
       <div className="flex flex-wrap justify-center md:justify-between items-center px-6 md:px-16 mb-6">
         {/* Logos */}

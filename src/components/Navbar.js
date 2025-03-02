@@ -24,7 +24,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isOpen) { // Only update visibility when menu is closed
+      if (!isOpen) {
         const currentScrollY = window.scrollY;
         setShowNavbar(currentScrollY < lastScrollY);
         setLastScrollY(currentScrollY);
@@ -38,19 +38,32 @@ export default function Navbar() {
   // Toggle menu open/close state
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
-    setShowNavbar(true); // Ensure navbar stays visible
+    setShowNavbar(true);
   };
 
   // Handle navigation logic
   const handleNavigation = (id) => {
     setIsOpen(false);
     if (pathname === "/rikt") {
-      router.push(`/?scrollTo=${id}`); // Navigate to home with scroll parameter
+      router.push(`/?scrollTo=${id}`);
     } else {
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 200); // Delay scrolling for smoother transition
+      }, 200);
     }
+  };
+
+  // Scroll to Contact Form (mobile: contact-form, desktop: contact)
+  const handleScrollToContact = () => {
+  const targetId = window.innerWidth < 768 ? "contact-form" : "contact";
+    setIsOpen(false); // Close menu on mobile
+  const element = document.getElementById(targetId);
+      if (element) {
+        const yOffset = -150; 
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+
   };
 
   return (
@@ -99,6 +112,15 @@ export default function Navbar() {
             >
               {item.title}
             </Link>
+          ) : item.id === "contact" ? (
+            // Special case for Contact button (handling mobile & desktop)
+            <button
+              key={index}
+              onClick={handleScrollToContact}
+              className="relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-6 px-2 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-orange-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
+              {item.title}
+            </button>
           ) : (
             // Internal navigation with smooth scrolling
             <button
