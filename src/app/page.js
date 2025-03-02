@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import SwiperSlider from "@/components/SwiperSlider";
 import FAQs from "@/components/FAQs"
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -71,11 +72,18 @@ export default function Home() {
         <SwiperSlider/>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="h-screen flex justify-center items-center bg-white">
-        <FAQs/>
-      </section>
+      {/* Contact & FAQs Section */}
+      <section id="contact" className="min-h-screen flex flex-col md:flex-row justify-center items-start px-8 md:px-16 py-10 bg-white space-y-5 md:space-y-0 md:space-x-10">
+      {/* FAQs on mobile, on the left in desktop */}
+          <FAQs/>
 
+      {/* Contact Form under mobile, on the right in desktop */}
+        <div className="w-full md:w-2/3">
+          <ContactForm/>
+        </div>
+      </section>
+ 
+      {/* Footer */}
       <section><Footer/></section>
     </div>
   );
