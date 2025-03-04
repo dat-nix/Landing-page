@@ -12,8 +12,6 @@ const cardData = [
   { image: "/assets/img1.jpg", title: "Event 1", description: "Description for event 1" },
   { image: "/assets/img2.jpg", title: "Event 2", description: "Description for event 2" },
   { image: "/assets/img3.jpg", title: "Event 3", description: "Description for event 3" },
-  { image: "/assets/img4.jpg", title: "Event 4", description: "Description for event 4" },
-  { image: "/assets/img5.jpg", title: "Event 5", description: "Description for event 5" },
 ];
 
 const SwiperSlider = () => {
