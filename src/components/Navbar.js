@@ -59,11 +59,12 @@ export default function Navbar() {
 
   return (
     <nav
-      className={` bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-500 ${
+      className={`lg:pl-24 lg:h-24 md:h-30 bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-700 ease-in-out lg:justify-center ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
       {/* Logo Navigation */}
+      <div className="lg:absolute left-4">
       {pathname === "/rikt" ? (
         <Link href="/" className="flex items-center">
           <img src="/logo.png" width="100px" alt="RMIT SGS Shinsei Kendo Club" />
@@ -78,6 +79,7 @@ export default function Navbar() {
           <img src="/logo.png" width="100px" alt="RMIT SGS Shinsei Kendo Club" />
         </ScrollLink>
       )}
+      </div>
 
       {/* Mobile Menu Toggle */}
       <div className="block lg:hidden">
@@ -88,7 +90,7 @@ export default function Navbar() {
 
       {/* Navigation Menu */}
       <div
-        className={`w-full lg:flex lg:items-center lg:w-auto ${
+        className={` bg-black w-full lg:flex lg:items-center lg:w-auto ${
           isOpen ? "flex flex-col items-center space-y-4" : "hidden"
         }`}
       >
