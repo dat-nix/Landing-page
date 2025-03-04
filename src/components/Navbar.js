@@ -23,7 +23,7 @@ export default function Navbar() {
   const router = useRouter();
 
   useEffect(() => {
-    const threshold = 40;
+    const threshold = 50;
     const handleScroll = () => {
       if (!isOpen) {
         const currentScrollY = window.scrollY;
@@ -59,7 +59,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`lg:pl-24 lg:h-24 md:h-30 bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-700 ease-in-out lg:justify-center ${
+      className={`lg:pl-24 lg:h-24 md:h-30 bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-700 lg:justify-center ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* Navigation Menu */}
       <div
-        className={` bg-black w-full lg:flex lg:items-center lg:w-auto ${
+        className={`bg-black w-full lg:flex lg:items-center lg:w-auto ${
           isOpen ? "flex flex-col items-center space-y-4" : "hidden"
         }`}
       >
