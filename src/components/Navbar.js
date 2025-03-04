@@ -23,12 +23,16 @@ export default function Navbar() {
   const router = useRouter();
 
   useEffect(() => {
+    const threshold = 40;
     const handleScroll = () => {
       if (!isOpen) {
         const currentScrollY = window.scrollY;
+
+      if (Math.abs(currentScrollY - lastScrollY) > threshold) {
         setShowNavbar(currentScrollY < lastScrollY);
         setLastScrollY(currentScrollY);
       }
+    }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -53,22 +57,9 @@ export default function Navbar() {
     }
   };
 
-  // Scroll to Contact Form (mobile: contact-form, desktop: contact)
-  const handleScrollToContact = () => {
-  const targetId = window.innerWidth < 768 ? "contact-form" : "contact";
-    setIsOpen(false); // Close menu on mobile
-  const element = document.getElementById(targetId);
-      if (element) {
-        const yOffset = -150; 
-        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-  window.scrollTo({ top: y, behavior: "smooth" });
-}
-
-  };
-
   return (
     <nav
-      className={`bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
+      className={`transition-transform duration-500 ease-in-out ${showNavbar ? "translate-y-0" : "-translate-y-full"} bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
@@ -101,7 +92,7 @@ export default function Navbar() {
           isOpen ? "flex flex-col items-center space-y-4" : "hidden"
         }`}
       >
-        {MenuItems.map((item, index) =>
+        {MenuItems.map((item, index) => (
           item.url ? (
             // External navigation link
             <Link
@@ -112,15 +103,6 @@ export default function Navbar() {
             >
               {item.title}
             </Link>
-          ) : item.id === "contact" ? (
-            // Special case for Contact button (handling mobile & desktop)
-            <button
-              key={index}
-              onClick={handleScrollToContact}
-              className="relative block mt-4 lg:inline-block lg:mt-0 text-stone-200 text-2xl cursor-pointer mx-6 px-2 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-orange-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
-            >
-              {item.title}
-            </button>
           ) : (
             // Internal navigation with smooth scrolling
             <button
@@ -131,7 +113,7 @@ export default function Navbar() {
               {item.title}
             </button>
           )
-        )}
+        ))}
       </div>
     </nav>
   );
