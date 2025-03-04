@@ -59,7 +59,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`transition-transform duration-500 ease-in-out ${showNavbar ? "translate-y-0" : "-translate-y-full"} bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-300 ${
+      className={` bg-black w-full flex items-center justify-between flex-wrap p-1 z-50 transition-transform duration-500 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       } ${pathname === "/rikt" ? "fixed top-0" : "sticky top-0"}`}
     >
