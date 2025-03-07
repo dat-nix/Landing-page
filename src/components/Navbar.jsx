@@ -26,9 +26,9 @@ export default function Navbar() {
     <nav className={`bg-black w-full fixed top-0 z-50 p-4 ${showNavbar ? "translate-y-0" : "-translate-y-full"} transition-transform duration-700`}>
       {/* Logo */}
       <div>
-        <Link to="/" className="flex items-center">
+        <ScrollLink to="home" smooth duration={500} className="flex items-center">
           <img src="/src/assets/logo.png" width="100px" alt="Logo" />
-        </Link>
+        </ScrollLink>
       </div>
 
       {/* Mobile Menu Toggle */}
