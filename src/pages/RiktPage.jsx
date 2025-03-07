@@ -69,39 +69,13 @@ const RiktPage = () => {
                     </h2>
                     <p className="mt-4 text-lg">
                         To participate, complete the registration form below and
-                        submit it before **October 6th, 2024, 11:59 PM**.
+                        submit it before{" "}
+                        <span className="text-white text-2xl font-extrabold">
+                            OCTOBER 6TH, 2024, 11:59 PM
+                        </span>
+                        ! ⚠️
                     </p>
-                    <form className="mt-6 bg-[#EA4607] p-6 rounded-lg shadow-md">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input
-                                type="text"
-                                placeholder="Full Name"
-                                className="p-3 rounded bg-white text-black w-full"
-                                required
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email Address"
-                                className="p-3 rounded bg-white text-black w-full"
-                                required
-                            />
-                            <input
-                                type="text"
-                                placeholder="Club Name"
-                                className="p-3 rounded bg-white text-black w-full"
-                                required
-                            />
-                            <input
-                                type="text"
-                                placeholder="Phone Number"
-                                className="p-3 rounded bg-white text-black w-full"
-                                required
-                            />
-                        </div>
-                        <button className="mt-4 bg-[#F2AF43] text-black px-6 py-2 rounded-lg font-semibold hover:bg-[#EA4607] transition">
-                            Submit Registration
-                        </button>
-                    </form>
+                    {/* TODO: Including the form download package here */}
                 </section>
 
                 {/* Contact Information */}
