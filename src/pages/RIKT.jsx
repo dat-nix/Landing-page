@@ -1,5 +1,5 @@
 import React from 'react';
-import Scoreboard from "@/components/Scoreboard";
+import Scoreboard from "../components/Scoreboard";
 
 function RIKT() {
   return (  

@@ -24,20 +24,20 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`bg-black w-full fixed top-0 z-50 p-4 px-8 flex items-center justify-between ${
+            className={`bg-black w-full fixed top-0 z-50 px-8 flex items-center justify-between ${
                 showNavbar ? "translate-y-0" : "-translate-y-full"
             } transition-transform duration-700`}
         >
             {/* Logo */}
             <div>
-                <ScrollLink
-                    to="home"
+                <Link
+                    to="/"
                     smooth
                     duration={500}
                     className="flex items-center cursor-pointer"
                 >
                     <img src="/src/assets/logo.png" width="100px" alt="Logo" />
-                </ScrollLink>
+                </Link>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -55,14 +55,16 @@ export default function Navbar() {
                 >
                     Home
                 </ScrollLink>
+
                 <ScrollLink
                     to="about"
                     smooth
                     duration={500}
-                    className="text-white mx-4"
+                    className="text-white mx-4 cursor-pointer"
                 >
                     About
                 </ScrollLink>
+
                 <Link
                     to="/rikt"
                     className="relative mx-4 cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
