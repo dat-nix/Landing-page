@@ -8,13 +8,13 @@ const Footer = () => {
                 {/* Left Logos */}
                 <div className="flex gap-3 ml-6">
                     <img
-                        src="src/assets/rec1.png"
+                        src="/rec1.png"
                         alt="Logo 1"
                         width={130}
                         height={210}
                     />
                     <img
-                        src="src/assets/rec2.png"
+                        src="/rec2.png"
                         alt="Logo 2"
                         width={150}
                         height={180}
@@ -29,7 +29,7 @@ const Footer = () => {
                         rel="noopener noreferrer"
                     >
                         <img
-                            src="src/assets/facebook.png"
+                            src="/facebook.png"
                             alt="facebook"
                             width={55}
                             height={55}
@@ -42,7 +42,7 @@ const Footer = () => {
                         rel="noopener noreferrer"
                     >
                         <img
-                            src="src/assets/instagram.png"
+                            src="/instagram.png"
                             alt="instagram"
                             width={55}
                             height={55}

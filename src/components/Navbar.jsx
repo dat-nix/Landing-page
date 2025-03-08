@@ -36,7 +36,7 @@ export default function Navbar() {
                     duration={500}
                     className="flex items-center cursor-pointer"
                 >
-                    <img src="/src/assets/logo.png" width="100px" alt="Logo" />
+                    <img src="/logo.png" width="100px" alt="Logo" />
                 </Link>
             </div>
 
