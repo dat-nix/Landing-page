@@ -8,19 +8,19 @@ import "../styles/SwiperSlider.css";
 
 const cardData = [
     {
-        image: "src/assets/img1.jpg",
+        image: "/img1.jpg",
         title: "Kendo Training",
         description:
             "Weekly practice sessions covering footwork, strikes, and sparring.",
     },
     {
-        image: "src/assets/img2.jpg",
+        image: "/img2.jpg",
         title: "Competitions & Gradings",
         description:
             "Opportunities to compete and advance through official Kendo ranks.",
     },
     {
-        image: "src/assets/img3.jpg",
+        image: "/img3.jpg",
         title: "Workshops & Events",
         description:
             "Special workshops on techniques, philosophy, and cultural experiences.",
