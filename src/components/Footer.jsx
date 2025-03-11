@@ -54,10 +54,10 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="src/assets/facebook.png"
+                                src="/facebook.png"
                                 alt="facebook"
-                                width={55}
-                                height={55}
+                                width={50}
+                                height={40}
                                 className="rounded-full"
                             />
                         </a>
@@ -67,11 +67,10 @@ const Footer = () => {
                             rel="noopener noreferrer"
                         >
                             <img
-                                src="src/assets/instagram.png"
+                                src="/instagram.png"
                                 alt="instagram"
-                                width={55}
-                                height={55}
-                                className="rounded-full"
+                                width={50}
+                                height={50}
                             />
                         </a>
                     </div>
