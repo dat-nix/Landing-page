@@ -68,7 +68,7 @@ export default function Home() {
                             to="about"
                             smooth={true}
                             duration={500}
-                            className="px-6 py-3 text-lg font-semibold bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+                            className="cursor-pointer px-6 py-3 text-lg font-semibold bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
                         >
                             Learn More
                         </ScrollLink>
