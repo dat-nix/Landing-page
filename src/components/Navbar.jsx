@@ -24,6 +24,7 @@ export default function Navbar() {
     }, [location.pathname]);
 
     const handleNavClick = (section) => {
+        setIsOpen(false); // Close menu on mobile when clicking a link
         if (location.pathname !== "/") {
             sessionStorage.setItem("scrollToSection", section);
             navigate("/", { replace: true });
@@ -32,10 +33,13 @@ export default function Navbar() {
         }
     };
 
-    const handleRiktClick = () => setRedirectToHome(true);
+    const handleRiktClick = () => {
+        setIsOpen(false); // Close menu on mobile
+        setRedirectToHome(true);
+    };
 
     return (
-        <nav className="bg-black w-full px-8 flex items-center justify-between shadow-md">
+        <nav className="bg-black w-full px-8 flex items-center justify-between shadow-md relative">
             {/* Logo */}
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
@@ -44,7 +48,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <button onClick={toggleMenu} className="text-white lg:hidden">
+            <button onClick={toggleMenu} className="text-white lg:hidden z-50">
                 <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="xl" />
             </button>
 
@@ -87,60 +91,38 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
-                <div className="absolute top-16 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
-                    <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
-                        <li>
-                            <button
-                                className="hover:text-yellow-400"
-                                onClick={() => {
-                                    toggleMenu();
-                                    handleNavClick("home");
-                                }}
-                            >
-                                Home
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                className="hover:text-yellow-400"
-                                onClick={() => {
-                                    toggleMenu();
-                                    handleNavClick("about");
-                                }}
-                            >
-                                About
-                            </button>
-                        </li>
-                        <li>
-                            <Link
-                                to="/rikt"
-                                className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
-                                before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
-                                before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
-                                hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
-                                onClick={() => {
-                                    toggleMenu();
-                                    handleRiktClick();
-                                }}
-                            >
-                                RIKT
-                            </Link>
-                        </li>
-                        <li>
-                            <button
-                                className="hover:text-yellow-400"
-                                onClick={() => {
-                                    toggleMenu();
-                                    handleNavClick("contact");
-                                }}
-                            >
-                                Contact
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            )}
+            <div
+                className={`absolute top-0 left-0 w-full h-screen bg-black text-white flex flex-col items-center space-y-6 pt-24 transform transition-transform duration-300 lg:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+            >
+                <button
+                    className="hover:text-yellow-400"
+                    onClick={() => handleNavClick("home")}
+                >
+                    Home
+                </button>
+                <button
+                    className="hover:text-yellow-400"
+                    onClick={() => handleNavClick("about")}
+                >
+                    About
+                </button>
+                <Link
+                    to="/rikt"
+                    className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
+                    before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
+                    before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
+                    hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
+                    onClick={handleRiktClick}
+                >
+                    RIKT
+                </Link>
+                <button
+                    className="hover:text-yellow-400"
+                    onClick={() => handleNavClick("contact")}
+                >
+                    Contact
+                </button>
+            </div>
         </nav>
     );
 }
