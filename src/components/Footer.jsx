@@ -56,8 +56,8 @@ const Footer = () => {
                             <img
                                 src="/facebook.png"
                                 alt="facebook"
-                                width={50}
-                                height={40}
+                                width={40}
+                                height={30}
                                 className="rounded-full"
                             />
                         </a>
@@ -69,8 +69,8 @@ const Footer = () => {
                             <img
                                 src="/instagram.png"
                                 alt="instagram"
-                                width={50}
-                                height={50}
+                                width={40}
+                                height={40}
                             />
                         </a>
                     </div>
