@@ -1,33 +1,41 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [showNavbar, setShowNavbar] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            setShowNavbar(currentScrollY < lastScrollY || currentScrollY < 10);
-            setLastScrollY(currentScrollY);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [redirectToHome, setRedirectToHome] = useState(false);
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
 
+    useEffect(() => {
+        const sectionToScroll = sessionStorage.getItem("scrollToSection");
+
+        if (sectionToScroll && location.pathname === "/") {
+            setTimeout(() => {
+                document.getElementById(sectionToScroll)?.scrollIntoView({ behavior: "smooth" });
+                sessionStorage.removeItem("scrollToSection");
+            }, 100); 
+        }
+    }, [location.pathname]);
+
+    const handleNavClick = (section) => {
+        if (location.pathname !== "/") {
+            sessionStorage.setItem("scrollToSection", section);
+            navigate("/", { replace: true });
+        } else {
+            document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const handleRiktClick = () => setRedirectToHome(true);
+
     return (
-        <nav
-            className={`bg-black w-full fixed top-0 z-50 px-8 flex items-center justify-between
-                ${showNavbar ? "translate-y-0" : "-translate-y-full"} 
-                transition-transform duration-700 shadow-md`}
-        >
+        <nav className="bg-black w-full px-8 flex items-center justify-between shadow-md">
             {/* Logo */}
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
@@ -42,27 +50,23 @@ export default function Navbar() {
 
             {/* Navigation Menu */}
             <div className="hidden lg:flex space-x-8 text-lg font-medium">
-                <ScrollLink
-                    to="home"
-                    smooth
-                    duration={500}
+                <button
                     className="text-white cursor-pointer hover:text-yellow-400"
+                    onClick={() => handleNavClick("home")}
                 >
                     Home
-                </ScrollLink>
+                </button>
 
-                <ScrollLink
-                    to="about"
-                    smooth
-                    duration={500}
+                <button
                     className="text-white cursor-pointer hover:text-yellow-400"
+                    onClick={() => handleNavClick("about")}
                 >
                     About
-                </ScrollLink>
+                </button>
 
-                {/* Responsive RIKT Link */}
                 <Link
                     to="/rikt"
+                    onClick={handleRiktClick}
                     className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
                     before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
                     before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
@@ -74,14 +78,12 @@ export default function Navbar() {
                     <span className="inline lg:hidden">RIKT</span>
                 </Link>
 
-                <ScrollLink
-                    to="contact"
-                    smooth
-                    duration={500}
+                <button
                     className="text-white cursor-pointer hover:text-yellow-400"
+                    onClick={() => handleNavClick("contact")}
                 >
                     Contact
-                </ScrollLink>
+                </button>
             </div>
 
             {/* Mobile Menu */}
@@ -89,49 +91,52 @@ export default function Navbar() {
                 <div className="absolute top-16 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
                     <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
                         <li>
-                            <ScrollLink
-                                to="home"
-                                smooth
-                                duration={500}
+                            <button
                                 className="hover:text-yellow-400"
-                                onClick={toggleMenu}
+                                onClick={() => {
+                                    toggleMenu();
+                                    handleNavClick("home");
+                                }}
                             >
                                 Home
-                            </ScrollLink>
+                            </button>
                         </li>
                         <li>
-                            <ScrollLink
-                                to="about"
-                                smooth
-                                duration={500}
+                            <button
                                 className="hover:text-yellow-400"
-                                onClick={toggleMenu}
+                                onClick={() => {
+                                    toggleMenu();
+                                    handleNavClick("about");
+                                }}
                             >
                                 About
-                            </ScrollLink>
+                            </button>
                         </li>
                         <li>
                             <Link
                                 to="/rikt"
                                 className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
-                    before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
-                    before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
-                    hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
-                                onClick={toggleMenu}
+                                before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
+                                before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
+                                hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
+                                onClick={() => {
+                                    toggleMenu();
+                                    handleRiktClick();
+                                }}
                             >
                                 RIKT
                             </Link>
                         </li>
                         <li>
-                            <ScrollLink
-                                to="contact"
-                                smooth
-                                duration={500}
+                            <button
                                 className="hover:text-yellow-400"
-                                onClick={toggleMenu}
+                                onClick={() => {
+                                    toggleMenu();
+                                    handleNavClick("contact");
+                                }}
                             >
                                 Contact
-                            </ScrollLink>
+                            </button>
                         </li>
                     </ul>
                 </div>

@@ -30,7 +30,7 @@ export default function Home() {
                     className="absolute w-[90%] h-[85vh] overflow-hidden rounded-xl"
                 >
                     <img
-                        src="src/assets/rmit.jpg"
+                        src="src/assets/rmit-kendo-club.jpg"
                         className="w-full h-full object-cover opacity-80 rounded-xl"
                         alt="RMIT"
                     />

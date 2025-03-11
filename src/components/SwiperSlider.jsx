@@ -8,23 +8,34 @@ import "../styles/SwiperSlider.css";
 
 const cardData = [
     {
-        image: "/img1.jpg",
+        image: "src/assets/about-rmit-kendo-training-01.jpg",
         title: "Kendo Training",
         description:
             "Weekly practice sessions covering footwork, strikes, and sparring.",
     },
     {
-        image: "/img2.jpg",
+        image: "src/assets/about-rmit-kendo-training-02.jpg",
         title: "Competitions & Gradings",
         description:
             "Opportunities to compete and advance through official Kendo ranks.",
     },
     {
-        image: "/img3.jpg",
+        image: "src/assets/about-rmit-kendo-training-03.jpg",
         title: "Workshops & Events",
         description:
             "Special workshops on techniques, philosophy, and cultural experiences.",
     },
+    {
+    image: "src/assets/about-rmit-kendo-training-04.jpg",
+    title: "Kiai & Spirit Training",
+    description: "Developing strong Kiai (battle shout) to enhance focus, energy, and presence in combat.",
+    },
+    {
+    image: "src/assets/about-rmit-kendo-training-05.jpg",
+    title: "Footwork & Movement",
+    description: "Drills focusing on agility, balance, and precise movements essential for effective Kendo techniques.",
+    },
+
 ];
 
 const SwiperSlider = () => {
