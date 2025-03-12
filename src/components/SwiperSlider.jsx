@@ -5,6 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Card from "./Card";
 import "../styles/SwiperSlider.css";
+import { content } from "../configs/content";
 
 const cardData = [
     {
@@ -28,14 +29,15 @@ const cardData = [
     {
         image: "/about-rmit-kendo-training-04.jpg",
         title: "Kiai & Spirit Training",
-        description: "Developing strong Kiai (battle shout) to enhance focus, energy, and presence in combat.",
+        description:
+            "Developing strong Kiai (battle shout) to enhance focus, energy, and presence in combat.",
     },
     {
         image: "/about-rmit-kendo-training-05.jpg",
         title: "Footwork & Movement",
-        description: "Drills focusing on agility, balance, and precise movements essential for effective Kendo techniques.",
+        description:
+            "Drills focusing on agility, balance, and precise movements essential for effective Kendo techniques.",
     },
-
 ];
 
 const SwiperSlider = () => {

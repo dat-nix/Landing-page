@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import {content} from "../configs/content";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [language, setLanguage] = useState("english");
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
 
     return (
         <nav className="bg-black w-full fixed top-0 z-50 px-8 flex items-center justify-between shadow-md">
-            {/* Logo */}
+            {/* Logo */
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
                     <img src="/logo.png" width="100px" alt="Logo" />
@@ -31,7 +33,7 @@ export default function Navbar() {
                     duration={500}
                     className="text-white cursor-pointer hover:text-yellow-400"
                 >
-                    Home
+                    {language === "english" ? content.navbar.english : content.navbar.vietnamm}
                 </ScrollLink>
 
                 <ScrollLink
