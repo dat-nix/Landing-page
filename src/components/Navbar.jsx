@@ -118,7 +118,7 @@ export default function Navbar() {
                 </button>
                 <button
                     onClick={toggleLanguage}
-                    className="text-white cursor-pointer hover:text-yellow-400"
+                    className="bg-gray-600 text-white px-2 py-0 rounded-md hover:bg-gray-800 transition duration-300"
                 >
                     {currentContent.language}
                 </button>
@@ -142,7 +142,7 @@ export default function Navbar() {
                             </button>
                         </li>
                         <li>
-                            <span onClick={handleRiktNavigation} onCLick = {toggleMenu}
+                            <span onClick={() => {handleRiktNavigation(); toggleMenu(); }} 
                                 className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
                                 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
                                 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
@@ -164,7 +164,7 @@ export default function Navbar() {
                                     toggleLanguage();
                                     toggleMenu();
                                 }}
-                                className="hover:text-yellow-400 cursor-pointer"
+                                className="bg-gray-600 text-white px-2 py-0 rounded-md hover:bg-gray-800 transition duration-300"
                             >
                                 {currentContent.language}
                             </button>

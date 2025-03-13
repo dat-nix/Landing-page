@@ -2,7 +2,7 @@ export const content = {
     en: {
         navbar: {
             home: "Home",
-            about: "About",
+            about: "About us",
             rikt: "RMIT Ichigeki Kendo Tournament",
             contact: "Contact",
             language: "Tiếng Việt",
