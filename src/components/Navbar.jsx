@@ -3,29 +3,29 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-import {content} from "../configs/content";
+import { content } from "../configs/content";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [language, setLanguage] = useState("english");
+    const [language, setLanguage] = useState("en");
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
+    const toggleLanguage = () => setLanguage((prevLanguage) => (prevLanguage === "en" ? "vn" : "en"));
+
+    const currentContent = content[language].navbar;
 
     return (
         <nav className="bg-black w-full fixed top-0 z-50 px-8 flex items-center justify-between shadow-md">
-            {/* Logo */
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
                     <img src="/logo.png" width="100px" alt="Logo" />
                 </Link>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button onClick={toggleMenu} className="text-white lg:hidden">
+            <button onClick={toggleMenu} className="text-white lg:hidden cursor-pointer">
                 <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="xl" />
             </button>
 
-            {/* Navigation Menu */}
             <div className="hidden lg:flex space-x-8 text-lg font-medium">
                 <ScrollLink
                     to="home"
@@ -33,7 +33,7 @@ export default function Navbar() {
                     duration={500}
                     className="text-white cursor-pointer hover:text-yellow-400"
                 >
-                    {language === "english" ? content.navbar.english : content.navbar.vietnamm}
+                    {currentContent.home}
                 </ScrollLink>
 
                 <ScrollLink
@@ -42,7 +42,7 @@ export default function Navbar() {
                     duration={500}
                     className="text-white cursor-pointer hover:text-yellow-400"
                 >
-                    About
+                    {currentContent.about}
                 </ScrollLink>
 
                 <Link
@@ -53,7 +53,7 @@ export default function Navbar() {
                     hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
                 >
                     <span className="hidden lg:inline">
-                        RMIT Ichigeki Kendo Tournament
+                        {currentContent.rikt}
                     </span>
                     <span className="inline lg:hidden">RIKT</span>
                 </Link>
@@ -64,11 +64,16 @@ export default function Navbar() {
                     duration={500}
                     className="text-white cursor-pointer hover:text-yellow-400"
                 >
-                    Contact
+                    {currentContent.contact}
                 </ScrollLink>
+                <button
+                    onClick={toggleLanguage}
+                    className="text-white cursor-pointer hover:text-yellow-400"
+                >
+                    {currentContent.language}
+                </button>
             </div>
 
-            {/* Mobile Menu */}
             {isOpen && (
                 <div className="absolute top-16 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
                     <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
@@ -77,10 +82,10 @@ export default function Navbar() {
                                 to="home"
                                 smooth
                                 duration={500}
-                                className="hover:text-yellow-400"
+                                className="hover:text-yellow-400 cursor-pointer"
                                 onClick={toggleMenu}
                             >
-                                Home
+                                {currentContent.home}
                             </ScrollLink>
                         </li>
                         <li>
@@ -88,10 +93,10 @@ export default function Navbar() {
                                 to="about"
                                 smooth
                                 duration={500}
-                                className="hover:text-yellow-400"
+                                className="hover:text-yellow-400 cursor-pointer"
                                 onClick={toggleMenu}
                             >
-                                About
+                                {currentContent.about}
                             </ScrollLink>
                         </li>
                         <li>
@@ -111,11 +116,22 @@ export default function Navbar() {
                                 to="contact"
                                 smooth
                                 duration={500}
-                                className="hover:text-yellow-400"
+                                className="hover:text-yellow-400 cursor-pointer"
                                 onClick={toggleMenu}
                             >
-                                Contact
+                                {currentContent.contact}
                             </ScrollLink>
+                        </li>
+                        <li>
+                            <button
+                                onClick={() => {
+                                    toggleLanguage();
+                                    toggleMenu();
+                                }}
+                                className="hover:text-yellow-400 cursor-pointer"
+                            >
+                                {currentContent.language}
+                            </button>
                         </li>
                     </ul>
                 </div>
