@@ -75,7 +75,7 @@ export default function Navbar() {
 };
 
     return (
-        <nav className="bg-black w-full fixed top-0 z-50 px-8 flex items-center justify-between shadow-md">
+        <nav className="bg-black w-full sticky top-0 z-50 px-8 flex items-center justify-between shadow-md">
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
                     <img src="/logo.png" width="100px" alt="Logo" />
