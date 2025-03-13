@@ -4,7 +4,7 @@ import Scoreboard from "../components/Scoreboard";
 function RIKT() {
   return (  
   <section>
-   <Scoreboard />
+  {/*} <Scoreboard /> */}
   </section>);
 }
 

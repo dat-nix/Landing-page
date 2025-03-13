@@ -83,7 +83,7 @@ export default function Navbar() {
             </div>
 
             <button onClick={toggleMenu} className="text-white lg:hidden cursor-pointer">
-                <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="xl" />
+                <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2xl" />
             </button>
 
             <div className="hidden lg:flex space-x-8 text-lg font-medium">
@@ -125,7 +125,7 @@ export default function Navbar() {
             </div>
 
             {isOpen && (
-                <div className="absolute top-16 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
+                <div className="absolute top-21 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
                     <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
                         <li>
                             <button onClick={() => { handleNavigation("home"); toggleMenu(); }}
