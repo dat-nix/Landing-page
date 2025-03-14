@@ -2,9 +2,8 @@ import { useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer";
 import About from "./About";
-import Contact from "./Contact";
+import { Footer, FAQs } from "../components";
 
 export default function Home() {
     useEffect(() => {
@@ -54,8 +53,9 @@ export default function Home() {
                         transition={{ duration: 1.5, delay: 0.3 }}
                         className="text-lg md:text-xl font-light text-gray-200 max-w-[600px] drop-shadow-lg"
                     >
-                        Train, compete, and excel with the RMIT Shinsei Kendo Club.
-                        Join a community dedicated to mastering the art of Kendo.
+                        Train, compete, and excel with the RMIT Shinsei Kendo
+                        Club. Join a community dedicated to mastering the art of
+                        Kendo.
                     </motion.p>
 
                     <motion.div
@@ -78,6 +78,11 @@ export default function Home() {
 
             {/* About Section */}
             <About />
+
+            {/* FAQs Section */}
+            <div className="mb-16">
+                <FAQs />
+            </div>
 
             {/* Contact Section */}
             {/* <Contact /> */}
