@@ -42,80 +42,38 @@ const cardData = [
 
 const SwiperSlider = () => {
     return (
-        <div className="container mx-auto py-16 bg-[#0D1B2A] text-white">
-            {/* About Us Section */}
-            <div className="about-us text-center py-14 px-10 bg-gradient-to-b from-[#102A43] to-[#0D1B2A] rounded-2xl shadow-lg">
-                {/* Title */}
-                <h2 className="text-5xl font-extrabold text-[#FFD700] tracking-wide drop-shadow-lg">
-                    Shinsei Kendo Club, RMIT SGS
-                </h2>
-
-                {/* Welcome Message */}
-                <p className="mt-6 text-lg leading-relaxed max-w-3xl mx-auto text-[#E0E0E0]">
-                    Welcome to{" "}
-                    <span className="text-[#FFD700] font-semibold">
-                        Shinsei Kendo Club
-                    </span>
-                    , the official Kendo club at{" "}
-                    <span className="text-[#FFD700] font-semibold">
-                        RMIT Saigon South (SGS)
-                    </span>
-                    . ⚔️ Our club is a dedicated space for students to train,
-                    grow, and embrace the way of the sword with discipline and
-                    respect.
+        <div className="container mx-auto py-10 bg-white text-black">
+        {/* About Us Section */}
+           <div className="flex flex-col items-center">
+        {/* Header */}
+            <div className="bg-[#E25822] text-white py-4 px-10 rounded-md shadow-md w-full max-w-5xl mx-auto text-center">
+                    <h1 className="text-4xl font-bold ">RMIT Shinsei Kendo Club</h1>
+            </div>
+        {/* Content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mt-8">
+        {/* Text Section */}
+            <div className="flex flex-col justify-center px-4 max-w-full text-justify">
+                <p className="text-xl text-gray-700">
+                    We are an official Kendo club in RMIT Saigon South (SGS). Our club is a dedicated space for students to
+                <strong> train, grow, and embody the way of the sword with discipline and respect.</strong>
                 </p>
-
-                <p className="mt-4 text-lg leading-relaxed max-w-3xl mx-auto text-[#E0E0E0]">
-                    Whether you're a **beginner** eager to start your journey or
-                    an **experienced kendoka** refining your skills, we provide
-                    structured training, traditional techniques, and a **strong,
-                    supportive community**.
+                <p className="mt-10 text-xl text-gray-700">
+                    Whether you're a beginner <strong>eager to start your journey</strong> or an <strong>experienced kendoka</strong> refining your skills, we provide structured training, traditional techniques, and a strong, supportive community.
                 </p>
-
-                {/* What We Offer Section */}
-                <div className="flex flex-col md:flex-row md:justify-center gap-10 mt-12">
-                    <div className="w-full md:w-1/3 text-center">
-                        <span className="text-[#F4A261] text-4xl">⚔️</span>
-                        <h3 className="text-xl font-bold mt-3 text-[#FFD700]">
-                            Kendo Training
-                        </h3>
-                        <p className="mt-2 text-[#E0E0E0]">
-                            Master Kendo fundamentals, techniques, and sparring
-                            with expert guidance.
-                        </p>
-                    </div>
-
-                    <div className="w-full md:w-1/3 text-center">
-                        <span className="text-[#F4A261] text-4xl">🎌</span>
-                        <h3 className="text-xl font-bold mt-3 text-[#FFD700]">
-                            Workshops & Events
-                        </h3>
-                        <p className="mt-2 text-[#E0E0E0]">
-                            Immerse yourself in the spirit of Bushido and
-                            Japanese martial arts.
-                        </p>
-                    </div>
-
-                    <div className="w-full md:w-1/3 text-center">
-                        <span className="text-[#F4A261] text-4xl">🤝</span>
-                        <h3 className="text-xl font-bold mt-3 text-[#FFD700]">
-                            A Strong Brotherhood
-                        </h3>
-                        <p className="mt-2 text-[#E0E0E0]">
-                            Train with dedicated members and experienced
-                            practitioners in a supportive community.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Call to Action */}
-                <div className="mt-12">
-                    <p className="text-lg font-semibold text-[#102A43] bg-[#F77F00] px-8 py-3 rounded-full inline-block shadow-md hover:bg-[#D62828] transition-all duration-300 hover:scale-105 cursor-pointer">
-                        🔥 <strong>Ready to start your Kendo journey?</strong>
-                        Join us and embrace the way of the sword!
-                    </p>
+            </div>
+ 
+        {/* Image Section */}
+                <div className="flex justify-center">
+                        <img src="/about-rmit-kendo.jpg" alt="Kendo Club" className="shadow-lg w-full max-w-lg" />
                 </div>
             </div>
+        </div>
+ 
+
+                {/* What We Offer Section */}
+                <div className="mt-16 text-center mb-8">
+                <h2 className="text-2xl font-bold bg-[#E25822] text-white py-3 rounded-lg inline-block px-6">What We Offer</h2>
+                </div>
 
             {/* Swiper Section */}
             <Swiper
@@ -123,7 +81,7 @@ const SwiperSlider = () => {
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
-                slidesPerView={1.3}
+                slidesPerView={1.8}
                 spaceBetween={-60}
                 coverflowEffect={{
                     rotate: 0,
@@ -133,7 +91,7 @@ const SwiperSlider = () => {
                 }}
                 pagination={{ clickable: true }}
                 modules={[EffectCoverflow, Pagination]}
-                className="swiper_container mt-16"
+                className="swiper_container mt-10"
             >
                 {cardData.map((card, index) => (
                     <SwiperSlide
@@ -149,6 +107,49 @@ const SwiperSlider = () => {
                     <div className="swiper-pagination"></div>
                 </div>
             </Swiper>
+             {/* Empty Space for Facebookposts */}
+            <div className="h-96"></div>
+
+            {/* Gallery Section */}
+                {/* kendo practive & tutorial class */}
+            <div className="text-center mt-20">
+                <h2 className="mb-8 text-2xl font-bold bg-[#E25822] text-white py-3 rounded-lg inline-block px-6">Gallery</h2>
+                <h2 className="text-2xl font-bold mb-8 ml-30 text-left">Kendo Practice & Tutorial Class</h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                    <img src="/kendo-practice-01.jpg" loading="lazy" alt="Gallery Image" className="w-full shadow-md" />
+                    <img src="/kendo-practice-02.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/kendo-practice-03.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/kendo-practice-04.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/kendo-practice-05.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/kendo-practice-06.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                </div>
+
+               <div className="h-20"></div>
+
+            </div>
+                {/*workshop & events */}
+                <h2 className="text-2xl font-bold mb-8 ml-30 text-left">Workshop & Cultural events</h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                    <img src="/event-01.jpg" loading="lazy" alt="Gallery Image" className="w-full shadow-md" />
+                    <img src="/event-02.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/event-03.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/event-04.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/event-05.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/event-06.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                </div>
+
+                <div className="h-20"></div>
+
+                {/*ASEAN kendo training */}
+                <h2 className="text-2xl font-bold mb-8 ml-30 text-left">ASEAN Kendo Training</h2>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                    <img src="/asean-training-01.jpg" loading="lazy" alt="Gallery Image" className="w-full shadow-md" />
+                    <img src="/asean-training-02.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/asean-training-03.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/asean-training-04.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/asean-training-05.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                    <img src="/asean-training-06.jpg" loading="lazy" alt="Gallery Image" className="w-full  shadow-md" />
+                </div>
         </div>
     );
 };
