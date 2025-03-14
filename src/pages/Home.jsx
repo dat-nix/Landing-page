@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import About from "./About";
 import Contact from "./Contact";
-import FAQs from "../components/FAQs";
 
 export default function Home() {
     useEffect(() => {
@@ -32,7 +31,7 @@ export default function Home() {
                 >
                     <img
                         src="/rmit-kendo-club.jpg"
-                        className="w-full h-full object-cover opacity-80 rounded-xl mb-6"
+                        className="w-full h-full object-cover opacity-80 rounded-xl"
                         alt="RMIT"
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
@@ -80,10 +79,8 @@ export default function Home() {
             {/* About Section */}
             <About />
 
-            {/* FAQs Section */}
-            <div className="mb-16"><FAQs/></div>
-
             {/* Contact Section */}
+            {/* <Contact /> */}
 
             {/* Footer */}
             <Footer />
