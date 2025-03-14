@@ -76,6 +76,38 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            {/* Ownership Statement */}
+            <div className="border-t border-gray-700 pt-6 mb-8">
+                <p className="text-center text-gray-400 text-sm">
+                    This product is fully belonged as a good for RMIT Shinsei Kendo Club
+                </p>
+            </div>
+
+            {/* Credit Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                <div>
+                    <h4 className="font-bold text-yellow-400 mb-3">Author</h4>
+                    <p>RMIT Shinsei Tech Team</p>
+                </div>
+                
+                <div>
+                    <h4 className="font-bold text-yellow-400 mb-3">Project Leader</h4>
+                    <p>Pham Hoang Duong</p>
+                </div>
+
+                <div>
+                    <h4 className="font-bold text-yellow-400 mb-3">Developer</h4>
+                    <p>Nguyen An</p>
+                    <p>Pham Dat</p>
+                </div>
+
+                <div>
+                    <h4 className="font-bold text-yellow-400 mb-3">Design</h4>
+                    <p>Pham Nguyen Ngoc Tran</p>
+                    <p>Nguyen Diem Phuong</p>
+                </div>
+            </div>
+
         </footer>
     );
 };

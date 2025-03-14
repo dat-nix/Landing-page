@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import About from "./About";
-import { Footer, FAQs } from "../components";
+import { Footer, FAQs, LinkPost } from "../components";
 
 export default function Home() {
     useEffect(() => {

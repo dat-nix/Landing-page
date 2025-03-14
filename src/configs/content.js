@@ -6,7 +6,7 @@ export const content = {
             rikt: "RMIT Ichigeki Kendo Tournament",
             contact: "Contact",
             language: "Tiếng Việt",
-            flag: "🇻🇳",
+            flag: "🇻🇳" ,
         },
         heroSection: {},
         cardData: [
