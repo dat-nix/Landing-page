@@ -1,6 +1,6 @@
 const Card = ({ image, title, description }) => {
     return (
-        <div className="flex flex-col md:flex-row w-full md:w-[70vw] h-auto md:h-[500px] bg-black overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 md:p-0">
+        <div className="flex flex-col md:flex-row w-full md:w-[60vw] h-auto md:h-[500px] bg-black overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 md:p-0">
             {/* Left Image Section */}
             <div className="w-full md:w-[60%] h-[350px] md:h-auto relative">
                 <img

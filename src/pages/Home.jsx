@@ -30,7 +30,7 @@ export default function Home() {
                 >
                     <img
                         src="/rmit-kendo-club.jpg"
-                        className="w-full h-full object-cover opacity-80 rounded-xl"
+                        className="w-full h-full object-cover opacity-80 rounded-xl mb-6"
                         alt="RMIT"
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
@@ -78,8 +78,10 @@ export default function Home() {
             {/* About Section */}
             <About />
 
+            {/* FAQs Section */}
+            <div className="mb-16"><FAQs/></div>
+
             {/* Contact Section */}
-            {/* <Contact /> */}
 
             {/* Footer */}
             <Footer />

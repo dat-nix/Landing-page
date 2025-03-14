@@ -8,9 +8,7 @@ export const content = {
             language: "Tiếng Việt",
             flag: "🇻🇳",
         },
-        heroSection: {
-
-        },
+        heroSection: {},
         cardData: [
             {
                 image: "/about-rmit-kendo-training-01.jpg",
@@ -41,6 +39,25 @@ export const content = {
                 title: "Footwork & Movement",
                 description:
                     "Drills focusing on agility, balance, and precise movements essential for effective Kendo techniques.",
+            },
+        ],
+        faqs: [
+            {
+                question: "Q: Where does our dojo located at ?",
+                answer: "A: Our dojo is in the Sports Hall, Building 10 in RMIT SGS",
+            },
+            {
+                question: "Q: How much is the membership fee ?",
+                answer: "A: Our membership fee is 550k per semester (3 months, including 1 month of semester break)",
+            },
+            {
+                question:
+                    "Q: Do I have to bring my own equipment (shinai, bogu) to the dojo ?",
+                answer: "A: We have spare shinais for everyone who doesn't have it. For anyone who can practice in bogu, you should bring your own bogu since we do not have enough spare bogu and storage to store bogu.",
+            },
+            {
+                question: "Q: Do we have any requirements to join the club ?",
+                answer: "A: To join our club, you must be a student or alumni of RMIT to access to our dojo. Besides, we welcome beginners who've never practiced Kendo and would like to try out, we also welcome anyone who used to train Kendo before to join us.",
             },
         ],
 

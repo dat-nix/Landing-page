@@ -3,7 +3,6 @@ import React from "react";
 const RiktPage = () => {
     return (
         <>
-            <RIKT />
             <div className="container mx-auto py-12 px-6 text-white bg-gray-900">
                 {/* Header Section */}
                 <div className="text-center py-12 bg-gradient-to-b from-[#EA4607] to-[#F2AF43] rounded-lg shadow-lg mt-10">
