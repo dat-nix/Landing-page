@@ -4,9 +4,9 @@ import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import { content } from "../configs/content";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ language, setLanguage }) {
     const [isOpen, setIsOpen] = useState(false);
-    const [language, setLanguage] = useState("en");
+
     const location = useLocation();
     const navigate = useNavigate();
 
