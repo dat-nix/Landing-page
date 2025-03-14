@@ -4,7 +4,6 @@ import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 import About from "./About";
-import Contact from "./Contact";
 
 export default function Home() {
     useEffect(() => {

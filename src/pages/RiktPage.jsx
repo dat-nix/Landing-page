@@ -1,5 +1,4 @@
 import React from "react";
-import RIKT from "./RIKT";
 
 const RiktPage = () => {
     return (
