@@ -77,7 +77,7 @@ const About = () => {
                 ))}
                 <div className="slider-controler">
                     <div className="swiper-pagination"></div>
-                </div>
+                </div> 
             </Swiper>
              {/* Empty Space for Facebookposts */}
             {/* <div className="h-96">
