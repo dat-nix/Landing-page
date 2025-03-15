@@ -31,8 +31,9 @@ export default function Navbar({ language, setLanguage }) {
         const element = document.getElementById(section);
         if (!element) return;
 
+        const navbarHeight = 80;
         const targetPosition =
-            element.getBoundingClientRect().top + window.scrollY;
+            element.getBoundingClientRect().top + window.scrollY - navbarHeight;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         const duration = 800; // Adjust duration (in ms) for smoother scrolling
@@ -193,15 +194,16 @@ export default function Navbar({ language, setLanguage }) {
                             </button>
                         </li>
                         <li>
-                            <button
-                                onClick={() => {
-                                    toggleLanguage();
-                                    toggleMenu();
-                                }}
-                                className="bg-gray-600 text-white px-2 py-0 rounded-md hover:bg-gray-800 transition duration-300"
-                            >
-                                {currentContent.language}
-                            </button>
+                        <button
+                    onClick={toggleLanguage}
+                    className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 
+               hover:bg-gray-800 transition duration-300"
+                >
+                    <span className="text-lg">{currentContent.flag}</span>
+                    <span className=" sm:inline hover:text-yellow-400">
+                        {currentContent.language}
+                    </span>
+                </button>
                         </li>
                     </ul>
                 </div>

@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white py-8 px-8 md:px-16">
             {/* Navigation Links */}
-            <div className="flex justify-between">
-                <div className="flex justify-center md:justify-start text-center md:text-left gap-20">
+            <div className="flex lg:justify-between pb-6 sm:flex-col">
+                <div className="flex sm:flex-col lg:justify-center md:justify-start text-center md:text-left gap-20">
                     <div className="flex flex-col space-y-3">
                         <ScrollLink
                             to="contact"
@@ -46,8 +46,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div>
-                    <div className="flex gap-3 mr-6 md:pl-9 right-0 top-[40%] bottom-[-40%]">
+                <div className="lg:flex lg:justify-between lg:items-center">
+                    <div className="flex sm:flex-col gap-3 mr-6 md:pl-9 right-0 top-[40%] bottom-[-40%]">
                         <a
                             href="https://www.facebook.com/rmitshinsei"
                             target="_blank"

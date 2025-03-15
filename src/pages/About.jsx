@@ -13,7 +13,7 @@ const cardData = content.en.cardData;
 
 const About = () => {
     return (
-       <section>
+       <section id="about">
          <div className="container mx-auto py-10 bg-white text-black">
         {/* About Us Section */}
            <div className="flex flex-col items-center">
