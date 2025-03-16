@@ -1,8 +1,7 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import RiktPage from "./pages/RiktPage";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Navbar } from "./components";
+import { HomePage, RiktPage } from "./pages";
 
 function App() {
     const [language, setLanguage] = useState("en");
@@ -14,7 +13,7 @@ function App() {
                     path="/"
                     element={
                         <>
-                            <Home language={language} />
+                            <HomePage language={language} />
                         </>
                     }
                 />

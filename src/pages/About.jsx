@@ -91,7 +91,7 @@ const About = ({ language }) => {
 
                 {gallery.sections.map((section, index) => (
                     <div key={index} className="mt-10">
-                        <h2 className="text-2xl font-bold mb-8 text-left">{section.title}</h2>
+                        <h2 className="text-2xl font-bold mb-8 text-center">{section.title}</h2>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
                             {section.images.map((image, imgIndex) => (
                                 <img
@@ -99,7 +99,7 @@ const About = ({ language }) => {
                                     src={`/${image}`}
                                     loading="lazy"
                                     alt="Gallery Image"
-                                    className="w-full shadow-md"
+                                    className="w-full h-[220px] shadow-md"
                                 />
                             ))}
                         </div>

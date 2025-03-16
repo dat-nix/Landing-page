@@ -6,7 +6,7 @@ import About from "./About";
 import content from "../configs/content";
 import { Footer, FAQs } from "../components";
 
-export default function Home({ language }) {  // ️ recieve language from props (from App.jsx)
+export default function HomePage({ language }) {  // ️ recieve language from props (from App.jsx)
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const scrollTo = params.get("scrollTo");
@@ -88,7 +88,7 @@ export default function Home({ language }) {  // ️ recieve language from props
             </div>
 
             {/* Footer */}
-            <Footer />
+            <Footer language={language}/>
         </div>
     );
 }
