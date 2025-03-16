@@ -80,7 +80,7 @@ export default function Home({ language }) {  // ️ recieve language from props
             </section>
 
             {/* About Section */}
-            <About />
+            <About language={language} />
 
             {/* FAQs Section */}
             <div className="mb-16">
