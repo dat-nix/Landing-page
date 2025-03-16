@@ -83,9 +83,9 @@ function RIKT() {
   <p className="contact-text">If there's any questions, contact us at:</p>
   <div className="contact-icons">
     <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
-    <img src="/public/facebook-white.png" alt="Facebook" className="contact-icon" /></a>
+    <img src="/facebook-white.png" alt="Facebook" className="contact-icon" /></a>
     <a href="https://www.instagram.com/rmitshinsei/" target="_blank" rel="noopener noreferrer">
-    <img src="/public/instagram-white.png" alt="Instagram" className="contact-icon" /></a>
+    <img src="/instagram-white.png" alt="Instagram" className="contact-icon" /></a>
   </div>
 </div>
 {/* ▲▲▲ End of Contact Us Section ▲▲▲ */}
