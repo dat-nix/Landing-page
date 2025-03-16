@@ -8,7 +8,12 @@ export const content = {
             language: "Tiếng Việt",
             flag: "🇻🇳" ,
         },
-        heroSection: {},
+        heroSection: {
+            title: "Elevate Your Kendo Journey",
+            description:
+                "Train, compete, and excel with the RMIT Shinsei Kendo Club. Join a community dedicated to mastering the art of Kendo.",
+            button: "Learn More",
+        },
         cardData: [
             {
                 image: "/about-rmit-kendo-training-01.jpg",
@@ -72,6 +77,12 @@ export const content = {
             language: "English",
 
             flag: "🇺🇸",
+        },
+        heroSection: {
+            title: "Nâng tầm hành trình Kendo của bạn",
+            description:
+                "Luyện tập, thi đấu và phát triển cùng Câu Lạc Bộ Kendo RMIT Shinsei. Hãy tham gia cùng cộng đồng đam mê nghệ thuật Kendo.",
+            button: "Tìm Hiểu Thêm",
         },
         cardData: [
             {

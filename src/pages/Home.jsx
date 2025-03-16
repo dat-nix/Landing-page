@@ -1,11 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react"; // ️ add useState here
 import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import About from "./About";
-import { Footer, FAQs, LinkPost } from "../components";
+import content from "../configs/content";
+import { Footer, FAQs } from "../components";
 
-export default function Home() {
+export default function Home({ language }) {  // ️ recieve language from props (from App.jsx)
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const scrollTo = params.get("scrollTo");
@@ -13,6 +14,9 @@ export default function Home() {
             scroller.scrollTo(scrollTo, { smooth: true, duration: 300 });
         }
     }, []);
+
+    // ️ check language state; if not valid set back to "en"
+    const langData = content[language]?.heroSection || content["en"].heroSection; 
 
     return (
         <div className="min-h-screen flex flex-col justify-between">
@@ -44,7 +48,7 @@ export default function Home() {
                         transition={{ duration: 1 }}
                         className="text-5xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg mb-6"
                     >
-                        Elevate Your Kendo Journey
+                        {langData.title}
                     </motion.h1>
 
                     <motion.p
@@ -53,9 +57,7 @@ export default function Home() {
                         transition={{ duration: 1.5, delay: 0.3 }}
                         className="text-lg md:text-xl font-light text-gray-200 max-w-[600px] drop-shadow-lg"
                     >
-                        Train, compete, and excel with the RMIT Shinsei Kendo
-                        Club. Join a community dedicated to mastering the art of
-                        Kendo.
+                        {langData.description} 
                     </motion.p>
 
                     <motion.div
@@ -71,7 +73,7 @@ export default function Home() {
                             offset={-80}
                             className="cursor-pointer px-6 py-3 text-lg font-semibold bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
                         >
-                            Learn More
+                            {langData.button}
                         </ScrollLink>
                     </motion.div>
                 </div>
@@ -84,9 +86,6 @@ export default function Home() {
             <div className="mb-16">
                 <FAQs />
             </div>
-
-            {/* Contact Section */}
-            {/* <Contact /> */}
 
             {/* Footer */}
             <Footer />
