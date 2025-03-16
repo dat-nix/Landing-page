@@ -1,5 +1,4 @@
 import React from "react";
-import { Scoreboard } from "../components";
 import "../styles/RIKT.css";
 {
     /*Date and time*/

@@ -103,7 +103,7 @@ const About = ({ language }) => {
                                 />
                             ))}
                         </div>
-                        <div className="h-20"></div>
+                        <div className="h-18"></div>
                     </div>
                 ))}
             </div>

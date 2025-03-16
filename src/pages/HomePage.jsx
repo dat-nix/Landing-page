@@ -84,7 +84,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
 
             {/* FAQs Section */}
             <div className="mb-16">
-                <FAQs />
+                <FAQs language={language}/>
             </div>
 
             {/* Footer */}
