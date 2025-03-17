@@ -1,5 +1,3 @@
-import { address, footer, title } from "framer-motion/client";
-
 export const content = {
     en: {
         navbar: {
@@ -72,9 +70,9 @@ export const content = {
                     "Drills focusing on agility, balance, and precise movements essential for effective Kendo techniques.",
             },
         ],
-        faqs: [
+    faqs: [
             {
-                question: "Q: Where does our dojo located at ?",
+                question: "Q: Where is our dojo located at ?",
                 answer: "A: Our dojo is in the Sports Hall, Building 10 in RMIT SGS",
             },
             {
@@ -91,7 +89,7 @@ export const content = {
                 answer: "A: To join our club, you must be a student or alumni of RMIT to access to our dojo. Besides, we welcome beginners who've never practiced Kendo and would like to try out, we also welcome anyone who used to train Kendo before to join us.",
             },
         ],
-        footer: [
+    footer: [
             {
                 about: "About Us",
                 contact: "Contact Us",
@@ -119,8 +117,64 @@ export const content = {
                 des1: "Pham Nguyen Ngoc Tran",
                 des2: "Nguyen Diem Phuong",
             },
-        ]
-
+        ],
+    FacebookPosts: {
+            
+                title: "Latest Facebook Posts"
+            
+        },
+    timelineData:  [
+        {
+            date: "May 30th 2025",
+            events: [
+                { time: "8:00 AM", activity: "Check-in and shinai check" },
+                { time: "9:15 AM", activity: "Opening Ceremony" },
+                { time: "9:30 AM", activity: "Morning Matches" },
+                { time: "12:00 PM", activity: "Lunch Break" },
+                { time: "1:00 PM", activity: "Afternoon Matches" },
+                { time: "3:00 PM", activity: "Award Ceremony" },
+            ],
+        },
+        {
+            date: "May 31st 2025",
+            events: [
+                { time: "8:00 AM", activity: "Check-in and shinai check" },
+                { time: "9:15 AM", activity: "Opening Ceremony" },
+                { time: "9:30 AM", activity: "Morning Matches" },
+                { time: "12:00 PM", activity: "Lunch Break" },
+                { time: "1:00 PM", activity: "Afternoon Matches" },
+                { time: "3:00 PM", activity: "Award Ceremony" },
+            ],
+        },
+        {
+            date: "June 1st 2025",
+            events: [
+                { time: "8:15 AM", activity: "Overview Ceremony" },
+                { time: "9:30 AM", activity: "Morning Matches" },
+                { time: "12:00 PM", activity: "Lunch Break" },
+                { time: "1:00 PM", activity: "Afternoon Matches" },
+                { time: "3:00 PM", activity: "Award Ceremony" },
+            ],
+        },
+    ],
+    riktData: {
+    eventTimeline: "Event Timeline",
+    eligibility: {
+        title: "Eligibility Requirements",
+        requirements: [
+            "+ Above 18 years old",
+            "+ For 0-dan participants, you must be able to fight in bogu",
+        ],
+    },
+    registration: {
+        title: "How to Register",
+        description: "To participate, complete the registration form and submit it before April 1st, 2025.",
+        button: "Coming soon...",
+    },
+    contact: {
+        text: "If there's any questions, contact us at:",
+    },
+}
     },
     vn: {
         navbar: {
@@ -239,7 +293,65 @@ export const content = {
                 des1: "Phạm Nguyễn Ngọc Trân",
                 des2: "Nguyễn Diễm Phương",
             },
-        ]
+        ],
+        FacebookPosts: { 
+            
+                title: "Bài Viết Mới Nhất Trên Facebook"
+            
+        },
+        timelineData: [
+            {
+                date: "30 Tháng 5 Năm 2025",
+                events: [
+                    { time: "8:00 Sáng", activity: "Check-in và kiểm tra shinai" },
+                    { time: "9:15 Sáng", activity: "Lễ Khai Mạc" },
+                    { time: "9:30 Sáng", activity: "Trận Đấu Buổi Sáng" },
+                    { time: "12:00 Trưa", activity: "Giờ Nghỉ Trưa" },
+                    { time: "1:00 Chiều", activity: "Trận Đấu Buổi Chiều" },
+                    { time: "3:00 Chiều", activity: "Lễ Trao Giải" },
+                ],
+            },
+            {
+                date: "31 Tháng 5 Năm 2025",
+                events: [
+                    { time: "8:00 Sáng", activity: "Check-in và kiểm tra shinai" },
+                    { time: "9:15 Sáng", activity: "Lễ Khai Mạc" },
+                    { time: "9:30 Sáng", activity: "Trận Đấu Buổi Sáng" },
+                    { time: "12:00 Trưa", activity: "Giờ Nghỉ Trưa" },
+                    { time: "1:00 Chiều", activity: "Trận Đấu Buổi Chiều" },
+                    { time: "3:00 Chiều", activity: "Lễ Trao Giải" },
+                ],
+            },
+            {
+                date: "1 Tháng 6 Năm 2025",
+                events: [
+                    { time: "8:15 Sáng", activity: "Lễ Tổng Kết" },
+                    { time: "9:30 Sáng", activity: "Trận Đấu Buổi Sáng" },
+                    { time: "12:00 Trưa", activity: "Giờ Nghỉ Trưa" },
+                    { time: "1:00 Chiều", activity: "Trận Đấu Buổi Chiều" },
+                    { time: "3:00 Chiều", activity: "Lễ Trao Giải" },
+                ],
+            },
+        ],
+        riktData: {
+                eventTimeline: "Lịch Trình Sự Kiện",
+                eligibility: {
+                    title: "Yêu Cầu Đủ Điều Kiện",
+                    requirements: [
+                        "+ Trên 18 tuổi",
+                        "+ Đối với các vận động viên 0-dan, bạn phải có thể chiến đấu trong bogu",
+                    ],
+                },
+                registration: {
+                    title: "Cách Đăng Ký",
+                    description: "Để tham gia, hoàn thành biểu mẫu đăng ký và nộp trước ngày 1 tháng 4 năm 2025.",
+                    button: "Sắp ra mắt...",
+                },
+                contact: {
+                    text: "Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi tại:",
+                },
+        },
+        
         },
 };
 

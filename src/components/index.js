@@ -4,3 +4,4 @@ export { default as Footer } from "./Footer.jsx";
 export { default as FAQs } from "./FAQs.jsx";
 export { default as Scoreboard } from "./Scoreboard.jsx";
 export { default as LinkPost } from "./linkpost.jsx";
+export { default as FacebookPosts } from "./FacebookPosts.jsx";

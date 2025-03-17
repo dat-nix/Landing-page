@@ -4,7 +4,7 @@ import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import About from "./About";
 import content from "../configs/content";
-import { Footer, FAQs } from "../components";
+import { Footer, FAQs, FacebookPosts } from "../components";
 
 export default function HomePage({ language }) {  // ️ recieve language from props (from App.jsx)
     useEffect(() => {
@@ -81,6 +81,9 @@ export default function HomePage({ language }) {  // ️ recieve language from p
 
             {/* About Section */}
             <About language={language} />
+
+            {/* Facebook Posts Section */}
+            <FacebookPosts language={language} />
 
             {/* FAQs Section */}
             <div className="mb-16">

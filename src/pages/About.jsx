@@ -5,7 +5,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Card from "../components/Card";
 import { content } from "../configs/content";
-import { LinkPost } from "../components";
 
 const About = ({ language }) => {
     const langData = content[language]?.about || content["en"].about; 
@@ -99,7 +98,7 @@ const About = ({ language }) => {
                                     src={`/${image}`}
                                     loading="lazy"
                                     alt="Gallery Image"
-                                    className="w-full h-[220px] shadow-md"
+                                    className="w-full h-[220px] shadow-md object-cover"
                                 />
                             ))}
                         </div>
