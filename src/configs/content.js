@@ -91,6 +91,7 @@ export const content = {
         ],
     footer: [
             {
+                address: "Address",
                 about: "About Us",
                 contact: "Contact Us",
                 address: "Address",
@@ -268,6 +269,7 @@ export const content = {
         ],
         footer: [
             {
+                address: "Địa Chỉ",
                 about: "Giới Thiệu",
                 contact: "Liên Hệ",
                 address: "Địa Chỉ",

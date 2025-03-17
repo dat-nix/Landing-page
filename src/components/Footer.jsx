@@ -1,5 +1,6 @@
 import { Link as ScrollLink } from "react-scroll";
 import { content } from "../configs/content";
+import { Link } from "react-router-dom";
 
 const Footer = ({ language }) => {
     const footer = content[language]?.footer || content["en"].footer || [];
@@ -22,12 +23,15 @@ const Footer = ({ language }) => {
                             <ScrollLink to="about" smooth duration={500} className="cursor-pointer hover:text-yellow-500">
                                {footer.find(item => item.about)?.about} 
                             </ScrollLink>
-                            <a href="/address" className="hover:text-yellow-500">Address</a>
+                            <a href="/address" className="hover:text-yellow-500">{footer.find(item => item.address)?.address}</a>
                         </div>
                         <div className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
                         before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
                         before:origin-left before:transition-transform before:duration-300 text-lg">
+                            <Link to="/rikt"
+                            onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)}>
                             RIKT
+                            </Link>
                         </div>
                     </div>
 
