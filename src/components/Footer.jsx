@@ -12,7 +12,7 @@ const Footer = ({ language }) => {
                 <div className="flex flex-col lg:flex-row lg:justify-between pb-6">
                     <div className="flex flex-col md:flex-row md:justify-center gap-10 md:gap-20 text-center md:text-left">
                         <div className="flex flex-col space-y-3">
-                            <ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-yellow-500">
+                            <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
                                 FAQs
                             </ScrollLink>
                             <ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-yellow-500">
@@ -20,7 +20,7 @@ const Footer = ({ language }) => {
                             </ScrollLink>
                         </div>
                         <div className="flex flex-col space-y-3">
-                            <ScrollLink to="about" smooth duration={500} className="cursor-pointer hover:text-yellow-500">
+                            <ScrollLink to="about" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-80}>
                                {footer.find(item => item.about)?.about} 
                             </ScrollLink>
                             <a href="/address" className="hover:text-yellow-500">{footer.find(item => item.address)?.address}</a>
