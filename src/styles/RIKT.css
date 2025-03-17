@@ -260,7 +260,7 @@ body {
   
   .register-button {
     display: inline-block;
-    background-color: #d35430;
+    background-color: #6f6f6f;
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
@@ -297,7 +297,7 @@ body {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #d35430;
+    background-color: #6f6f6f;
     color: white;
     border-radius: 12px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
