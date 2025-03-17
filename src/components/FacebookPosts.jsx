@@ -30,7 +30,7 @@ const FacebookPosts = ({ language }) => {
     return (
         <section className="py-10 bg-white">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-center text-xl font-bold text-white bg-orange-500 py-3 rounded-lg mb-6 mx-auto w-3/4">
+                <h2 className="text-center text-xl font-bold text-white bg-[#6f6f6f] py-3 rounded-lg mb-6 mx-auto w-3/4">
                   { langData.title}
                 </h2>
                 <div className="flex flex-wrap justify-center gap-6">

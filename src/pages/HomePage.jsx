@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"; // ️ add useState here
+import { useEffect, useState } from "react"; 
 import { Link as ScrollLink } from "react-scroll";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import About from "./About";
 import content from "../configs/content";
-import { Footer, FAQs, FacebookPosts } from "../components";
+import { Footer, FAQs } from "../components";
 
 export default function HomePage({ language }) {  // ️ recieve language from props (from App.jsx)
     useEffect(() => {
@@ -71,7 +71,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
                             smooth={true}
                             duration={500}
                             offset={-80}
-                            className="cursor-pointer px-6 py-3 text-lg font-semibold bg-orange-500 text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+                            className="cursor-pointer px-6 py-3 text-lg font-semibold bg-[#6f6f6f] text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
                         >
                             {langData.button}
                         </ScrollLink>
@@ -82,9 +82,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
             {/* About Section */}
             <About language={language} />
 
-            {/* Facebook Posts Section */}
-            <FacebookPosts language={language} />
-
+           
             {/* FAQs Section */}
             <div className="mb-16">
                 <FAQs language={language}/>

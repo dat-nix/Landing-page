@@ -5,6 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Card from "../components/Card";
 import { content } from "../configs/content";
+import FacebookPosts from "../components/FacebookPosts";
 
 const About = ({ language }) => {
     const langData = content[language]?.about || content["en"].about; 
@@ -18,7 +19,7 @@ const About = ({ language }) => {
             {/* About Us Section */}
             <div className="flex flex-col items-center">
                 {/* Header */}
-                <div className="bg-[#E25822] text-white py-4 px-10 rounded-md shadow-md w-full max-w-5xl mx-auto text-center">
+                <div className="bg-[#6f6f6f] text-white py-4 px-10 rounded-md shadow-md w-full max-w-5xl mx-auto text-center">
                     <h1 className="text-4xl font-bold">{langData.title}</h1>
                 </div>
                 
@@ -44,7 +45,7 @@ const About = ({ language }) => {
 
             {/* What We Offer Section */}
             <div className="mt-16 text-center mb-8">
-                <h2 className="text-2xl font-bold bg-[#E25822] text-white py-3 rounded-lg inline-block px-6">
+                <h2 className="text-2xl font-bold bg-[#6f6f6f] text-white py-3 rounded-lg inline-block px-6">
                     {offerings.title}
                 </h2>
             </div>
@@ -82,9 +83,13 @@ const About = ({ language }) => {
                 </div> 
             </Swiper>
 
+             {/* Facebook Posts Section */}
+            <FacebookPosts language={language} />
+
+
             {/* Gallery Section */}
             <div className="text-center mt-20">
-                <h2 className="mb-8 text-2xl font-bold bg-[#E25822] text-white py-3 rounded-lg inline-block px-6">
+                <h2 className="mb-8 text-2xl font-bold bg-[#6f6f6f] text-white py-3 rounded-lg inline-block px-6">
                     {gallery.title}
                 </h2>
 
