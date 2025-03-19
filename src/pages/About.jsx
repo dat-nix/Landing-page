@@ -20,18 +20,18 @@ const About = ({ language }) => {
             <div className="flex flex-col items-center">
                 {/* Header */}
                 <div className="bg-[#6f6f6f] text-white py-4 px-10 rounded-md shadow-md w-full max-w-5xl mx-auto text-center">
-                    <h1 className="text-4xl font-bold">{langData.title}</h1>
+                    <h1 className="text-6xl font-bold">{langData.title}</h1>
                 </div>
                 
                 {/* Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mt-8">
                     {/* Text Section */}
-                    <div className="flex flex-col justify-center px-4 max-w-full text-justify">
-                        <p className="text-xl text-gray-700">
+                    <div className="flex flex-col justify-center px-6 max-w-full text-justify">
+                        <p className="text-2xl text-gray-700">
                            {langData.description[0]} 
                             <strong> {langData.description[1]} </strong>
                         </p>
-                        <p className="mt-10 text-xl text-gray-700">
+                        <p className="mt-10 text-2xl text-gray-700">
                             {langData.description[2]} <strong> {langData.description[3]} </strong> {langData.description[4]} <strong> {langData.description[5]} </strong> {langData.description[6]}
                         </p>
                     </div>
