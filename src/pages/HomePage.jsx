@@ -23,55 +23,35 @@ export default function HomePage({ language }) {  // ️ recieve language from p
             {/* Hero Section */}
             <section
                 id="home"
-                className="relative h-screen flex justify-center items-center bg-white"
+                className="relative h-[40vh] lg:h-[120vh] flex justify-center items-center bg-white"
             >
                 {/* Background Image */}
                 <motion.div
                     initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.2 }}
-                    className="absolute w-[90%] h-[85vh] overflow-hidden rounded-xl"
+                    className="absolute w-full h-full object-cover overflow-hidden "
                 >
                     <img
-                        src="/rmit-kendo-club.jpg"
-                        className="w-full h-full object-cover opacity-80 rounded-xl"
+                        src="/rmit-kendo-club.png"
+                        className="lg:object-cover"
                         alt="RMIT"
                     />
-                    <div className="absolute inset-0 bg-black/50"></div>
                 </motion.div>
 
-                {/* Welcome Text */}
-                <div className="relative z-10 text-white flex flex-col items-center text-center px-8">
-                    <motion.h1
-                        initial={{ y: -50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        className="text-5xl md:text-6xl font-extrabold tracking-wide drop-shadow-lg mb-6"
-                    >
-                        {langData.title}
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1.5, delay: 0.3 }}
-                        className="text-lg md:text-xl font-light text-gray-200 max-w-[600px] drop-shadow-lg"
-                    >
-                        {langData.description} 
-                    </motion.p>
+                <div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.6 }}
-                        className="mt-6"
+                        initial={{ opacity: 0  }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.4 }}
                     >
                         <ScrollLink
                             to="about"
                             smooth={true}
                             duration={500}
-                            offset={-80}
-                            className="cursor-pointer px-6 py-3 text-lg font-semibold bg-[#6f6f6f] text-white rounded-lg shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+                            className="absolute lg:bottom-18 lg:left-15 cursor-pointer px-40 py-6 sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-black rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+
                         >
                             {langData.button}
                         </ScrollLink>

@@ -1,9 +1,6 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Card from "../components/Card";
 import { content } from "../configs/content";
 import FacebookPosts from "../components/FacebookPosts";
 
@@ -49,39 +46,6 @@ const About = ({ language }) => {
                     {offerings.title}
                 </h2>
             </div>
-
-            {/* Swiper Section */}
-            <Swiper
-                effect="coverflow"
-                grabCursor={true}
-                centeredSlides={true}
-                loop={true}
-                slidesPerView={1.8}
-                spaceBetween={-60}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: -20,
-                    depth: 100,
-                    modifier: 2.1,
-                }}
-                pagination={{ clickable: true }}
-                modules={[EffectCoverflow, Pagination]}
-                className="swiper_container mt-10"
-            >
-                {cardData.map((card, index) => (
-                    <SwiperSlide
-                        key={index}
-                        className="relative transition-all duration-300"
-                    >
-                        <div className="transition-transform duration-300 hover:scale-105 group-[.swiper-slide-active]:scale-110 group-[.swiper-slide-active]:z-20">
-                            <Card {...card} />
-                        </div>
-                    </SwiperSlide>
-                ))}
-                <div className="slider-controler">
-                    <div className="swiper-pagination"></div>
-                </div> 
-            </Swiper>
 
              {/* Facebook Posts Section */}
             <FacebookPosts language={language} />

@@ -12,7 +12,7 @@ export const content = {
             title: "Elevate Your Kendo Journey",
             description:
                 "Train, compete, and excel with the RMIT Shinsei Kendo Club. Join a community dedicated to mastering the art of Kendo.",
-            button: "Learn More",
+            button: "Register here",
         },
         about: {
             title: "RMIT Shinsei Kendo Club",
@@ -191,7 +191,7 @@ export const content = {
             title: "Thăng Hoa Cùng Kendo",
             description:
                 "Luyện tập, thi đấu và phát triển cùng Câu Lạc Bộ Kendo RMIT Shinsei. Hãy tham gia cùng cộng đồng đam mê nghệ thuật Kendo.",
-            button: "Tìm Hiểu Thêm",
+            button: "Đăng ký ngay",
         },
         about: {
             title: "Câu Lạc Bộ Kendo RMIT Shinsei",
