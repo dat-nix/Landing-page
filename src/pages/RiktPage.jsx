@@ -23,6 +23,51 @@ const RIKT = ( {language} ) => {
         for young kendokas to compete, improve their skills, and strengthen the Kendo community in Ho Chi Minh city.
     </p>
 </div>
+            {/* New Event Information Section */}
+<div className="w-full p-4 event-info-container">
+    <div className="flex flex-col md:flex-row items-start justify-between">
+        {/* Text Container - Adjusted for full width */}
+        <div className="md:w-7/12 event-details pr-4">
+            <div className="mb-8 w-full">
+                <h1 className="text-left w-full text-[7rem] md:text-[8rem] md:mb-20 font-bold text-[#FFCA5A] leading-[0.8] whitespace-nowrap">
+                    EVENT<br/>INFORMATION
+                </h1>
+            </div>
+            
+            <div className="text-left md:mt-20 md:ml-30 space-y-4 w-full">
+                <p className="text-white text-3xl">
+                    <span className="font-bold block">Date</span>
+                    May 30 - June 1st 2025
+                </p>
+                <p className="text-white text-3xl">
+                    <span className="font-bold block">Time</span>
+                    8:00 AM - 5:00 PM
+                </p>
+                <p className="text-white text-3xl">
+                    <span className="font-bold block">Venue</span>
+                    702 Nguyen Van Linh, Q7<br />RMIT University SGS
+                    Sports Hall Building 10
+                </p>
+            </div>
+       {/* Map Container - Adjusted alignment */}
+<div className="md:w-[507px] md:h-[475px] mt-5 md:mt-60 md:mr-30 event-map flex-grow-0">
+    <div className="relative aspect-square w-[400px]">
+        {/* Embedded Google Map */}
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3920.0637546456305!2d106.6937685!3d10.729566200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srmit%20sgs!5e0!3m2!1sen!2s!4v1742901966432!5m2!1sen!2s" 
+            width="507" 
+            height="435" 
+            style={{ border: 0, borderRadius: '10px' }} 
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+        ></iframe>
+    </div>
+    <p className="text-white mt-4 text-center text-lg">Location Map</p>
+</div>
+    </div>
+</div>
             <h1 className="timeline-title"> {riktData.eventTimeline} </h1>
 
             {timelineData.map((day, index) => (
