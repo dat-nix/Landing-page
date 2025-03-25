@@ -18,10 +18,13 @@ const About = ({ language }) => {
                 <div className="flex md:flex-col lg:flex-row items-center max-w-full h-screen">
                     {/* Left Side Text */}
                     <div className="py-10 flex md:flex-col lg:flex-row items-start w-3/4 pl-12">
-                        <img src="/logo-without-name.png" alt="Logo" className="w-[20vh] h-[20vh]"/>
-                        <h1 className="text-orange-600 font-extrabold md:text-6xl lg:text-9xl leading-tight uppercase">
-                            RMIT SHINSEI KENDO CLUB
-                        </h1>
+                        <img src="/logo-without-name.png" alt="Logo" className="w-[15vh] h-[15vh]"/>
+                        <h1 className="text-orange-600 font-extrabold leading-tight uppercase">
+                         <span className="block md:text-6xl lg:text-9xl">RMIT</span>
+                         <span className="block md:text-6xl lg:text-9xl md:mr-50">SHINSEI</span>
+                         <span className="block md:text-6xl lg:text-9xl">KENDO</span>
+                         <span className="block md:text-6xl lg:text-9xl">CLUB</span>
+                    </h1>
                     </div>
 
                     {/* Image Section */}
@@ -39,9 +42,9 @@ const About = ({ language }) => {
 
              {/* Instructor Profile Component */}
              <InstructorProfile />
-             <div className="w-[1440px] h-[400px] mx-auto bg-white relative">
+             <div className="w-full h-[400px] mx-auto bg-white relative">
              {/* OUR SEONSAENGNIM (Top-Left) */}
-                <h2 className="absolute top-1 left-4 text-[100px] font-bold text-orange-500">
+                <h2 className="absolute top-1 left-17 text-[100px] font-bold text-orange-500">
                 OUR SEONSAENGNIM
                 </h2>
 
@@ -55,7 +58,7 @@ const About = ({ language }) => {
             <FacebookPosts language={language} />
 
             {/* Gallery Section */}
-            <div className="w-[1286px] h-[2600] flex-shrink-0 bg-[#FFCA5A]">
+            <div className="w-full h-[2600] flex-shrink-0 bg-[#FFCA5A]">
                 <h2 className="text-[#EB4F0B] text-center font-extrabold text-[150px] leading-[96%]" style={{ fontFamily: "Uni Sans" }}>
                     {gallery.title}
                 </h2>
@@ -63,14 +66,15 @@ const About = ({ language }) => {
                 {gallery.sections.map((section, index) => (
                     <div key={index} className="mt-10">
                         <h2 className="text-2xl font-bold mb-8 text-center">{section.title}</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
                             {section.images.map((image, imgIndex) => (
                                 <img
                                     key={imgIndex}
                                     src={`/${image}`}
                                     loading="lazy"
                                     alt="Gallery Image"
-                                    className="w-full h-[220px] shadow-md object-cover"
+                                   className="w-full h-[220px] shadow-md object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
+
                                 />
                             ))}
                         </div>
