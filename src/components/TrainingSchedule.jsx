@@ -22,7 +22,7 @@ export default function TrainingSchedule() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full h-[808px] w-[1440px] flex items-center bg-black">
+    <section ref={sectionRef} className="relative  h-[808px] w-[1440px] flex items-center bg-black">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
