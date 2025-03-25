@@ -9,13 +9,9 @@ export const content = {
             flag: "🇻🇳" ,
         },
         heroSection: {
-            title: "Elevate Your Kendo Journey",
-            description:
-                "Train, compete, and excel with the RMIT Shinsei Kendo Club. Join a community dedicated to mastering the art of Kendo.",
             button: "Register here",
         },
         about: {
-            title: "RMIT Shinsei Kendo Club",
             description: [
         "We are an official Kendo club in RMIT Saigon South (SGS). Our club is a dedicated space for students to",
         "train, grow, and embody the way of the sword with discipline and respect.",
@@ -188,13 +184,9 @@ export const content = {
             flag: "🇺🇸",
         },
         heroSection: {
-            title: "Thăng Hoa Cùng Kendo",
-            description:
-                "Luyện tập, thi đấu và phát triển cùng Câu Lạc Bộ Kendo RMIT Shinsei. Hãy tham gia cùng cộng đồng đam mê nghệ thuật Kendo.",
             button: "Đăng ký ngay",
         },
         about: {
-            title: "Câu Lạc Bộ Kendo RMIT Shinsei",
             description: [
             "Chúng tôi là một câu lạc bộ Kendo chính thức tại RMIT Saigon South (SGS). Câu lạc bộ của chúng tôi là một không gian dành riêng cho sinh viên để",
             "rèn luyện, phát triển và thể hiện tinh thần của kiếm đạo với kỷ luật và sự tôn trọng.",

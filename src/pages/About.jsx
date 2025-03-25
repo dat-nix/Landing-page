@@ -5,55 +5,39 @@ import { content } from "../configs/content";
 import FacebookPosts from "../components/FacebookPosts";
 
 const About = ({ language }) => {
-    const langData = content[language]?.about || content["en"].about; 
-    const offerings = content[language]?.offerings || content["en"].offerings;
+    const langData = content[language]?.about || content["en"].about;
     const gallery = content[language]?.gallery || content["en"].gallery;
-    const cardData = content[language]?.cardData || content["en"].cardData;
 
     return (
-       <section id="about">
-         <div className="container mx-auto py-10 bg-white text-black">
-            {/* About Us Section */}
-            <div className="flex flex-col items-center">
-                {/* Header */}
-                <div className="bg-[#6f6f6f] text-white py-4 px-10 rounded-md shadow-md w-full max-w-5xl mx-auto text-center">
-                    <h1 className="text-6xl font-bold">{langData.title}</h1>
-                </div>
-                
-                {/* Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mt-8">
-                    {/* Text Section */}
-                    <div className="flex flex-col justify-center px-6 max-w-full text-justify">
-                        <p className="text-2xl text-gray-700">
-                           {langData.description[0]} 
-                            <strong> {langData.description[1]} </strong>
-                        </p>
-                        <p className="mt-10 text-2xl text-gray-700">
-                            {langData.description[2]} <strong> {langData.description[3]} </strong> {langData.description[4]} <strong> {langData.description[5]} </strong> {langData.description[6]}
-                        </p>
+        <section id="about">
+            <div className="bg-white">
+                {/* About Us Section */}
+                <div className="flex md:flex-col lg:flex-row items-center max-w-full h-screen">
+                    {/* Left Side Text */}
+                    <div className="py-10 flex md:flex-col lg:flex-row items-start w-3/4 pl-12">
+                        <img src="/logo-without-name.png" alt="Logo" className="w-[20vh] h-[20vh]"/>
+                        <h1 className="text-orange-600 font-extrabold md:text-6xl lg:text-9xl leading-tight uppercase">
+                            RMIT SHINSEI KENDO CLUB
+                        </h1>
                     </div>
-                    
+
                     {/* Image Section */}
-                    <div className="flex justify-center">
-                        <img src="/about-rmit-kendo.jpg" alt="Kendo Club" className="shadow-lg w-full max-w-lg" />
+                    <div className="relative w-2/4 h-full mr-[-50px]">
+                        <img
+                            src="/training-session.png"
+                            alt="Kendo Club"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                 </div>
             </div>
 
-            {/* What We Offer Section */}
-            <div className="mt-16 text-center mb-8">
-                <h2 className="text-2xl font-bold bg-[#6f6f6f] text-white py-3 rounded-lg inline-block px-6">
-                    {offerings.title}
-                </h2>
-            </div>
-
-             {/* Facebook Posts Section */}
+            {/* Facebook Posts Section */}
             <FacebookPosts language={language} />
 
-
             {/* Gallery Section */}
-            <div className="text-center mt-20">
-                <h2 className="mb-8 text-2xl font-bold bg-[#6f6f6f] text-white py-3 rounded-lg inline-block px-6">
+            <div className="w-[1286px] h-[2600] flex-shrink-0 bg-[#FFCA5A]">
+                <h2 className="text-[#EB4F0B] text-center font-extrabold text-[150px] leading-[96%]" style={{ fontFamily: "Uni Sans" }}>
                     {gallery.title}
                 </h2>
 
@@ -75,8 +59,7 @@ const About = ({ language }) => {
                     </div>
                 ))}
             </div>
-        </div>
-    </section>
+        </section>
     );
 };
 
