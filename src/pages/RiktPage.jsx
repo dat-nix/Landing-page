@@ -7,6 +7,7 @@ const RIKT = ({ language }) => {
     const timelineData = content[language]?.timelineData || content["en"].timelineData;
     const riktData = content[language]?.riktData || content["en"].riktData;
 
+   
     return (
         <section className="timeline-section">
             {/* Tournament Banner Section */}
@@ -19,7 +20,7 @@ const RIKT = ({ language }) => {
             </div>
 
             <div className="about-section">
-                <h2 className="about-title">ABOUT THE EVENT</h2>
+                <h2 className="about-title">ABOUT<br /> THE<br /> EVENT</h2>
                 <p className="about-text">
                     Hosted by RMIT Shinsei Kendo Club, The <strong>RMIT Ichigeki Kendo Tournament</strong> aims to create opportunities 
                     for young kendokas to compete, improve their skills, and strengthen the Kendo community in Ho Chi Minh City.
@@ -37,7 +38,7 @@ const RIKT = ({ language }) => {
                             </h1>
                         </div>
 
-                        <div className="text-left md:mt-20 md:ml-30 space-y-4 w-full">
+                        <div className="text-left md:mt-20 md:ml-18 space-y-9 w-full">
                             <p className="text-white text-3xl">
                                 <span className="font-bold block">Date</span>
                                 May 30 - June 1st 2025
@@ -54,12 +55,12 @@ const RIKT = ({ language }) => {
                     </div>
 
                     {/* Map Container */}
-                    <div className="md:w-[507px] md:h-[475px] mt-5 md:mt-60 md:mr-30 event-map flex-grow-0">
+                    <div className="md:w-[507px] md:h-[475px] mt-5 md:mt-60 md:mr-10 event-map flex-grow-0">
                         <div className="relative aspect-square w-[400px]">
                             {/* Embedded Google Map */}
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3920.0637546456305!2d106.6937685!3d10.729566200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srmit%20sgs!5e0!3m2!1sen!2s!4v1742901966432!5m2!1sen!2s" 
-                                width="507" 
+                                width="500" 
                                 height="435" 
                                 style={{ border: 0, borderRadius: '10px' }} 
                                 allowFullScreen 
@@ -68,7 +69,6 @@ const RIKT = ({ language }) => {
                                 className="w-full h-full"
                             ></iframe>
                         </div>
-                        <p className="text-white mt-4 text-center text-lg">Location Map</p>
                     </div>
                 </div>
             </div>
@@ -125,22 +125,24 @@ const RIKT = ({ language }) => {
             </div>
 
 {/*wavy effect*/}
-          <div className="banner-section">
+          <div className="wavyeffect">
         <img 
-          src="/wavyeffect.jpg" 
+          src="/wavyeffect.png" 
           alt="wavy design"
         />
       </div>
             {/* Sponsor Section */}
-            <section className="bg-white py-12 text-center">
-                <h2 className="text-2xl font-semibold">Thanks to our sponsor</h2>
-                <div className="grid grid-cols-4 gap-4 max-w-4xl mx-auto mt-6">
-                    {[...Array(10)].map((_, index) => (
-                        <div key={index} className="bg-gray-300 h-24"></div>
-                    ))}
-                </div>
-            </section>
-
+<section className="bg-white py-12 text-center">
+    <h2 className="text-4xl font-semibold">Thanks to our sponsor</h2>
+    <div className="grid grid-cols-4 gap-4 max-w-4xl mx-auto mt-6">
+        {[...Array(8)].map((_, index) => (
+            <div key={index} className="bg-gray-300 h-24"></div>
+        ))}
+        {/* Center the last two elements */}
+        <div className="bg-gray-300 h-24 col-span-2 mx-auto"></div>
+        <div className="bg-gray-300 h-24 col-span-2 mx-auto"></div>
+    </div>
+</section>
             <div className="flex flex-col h-20"> 
                 <Footer language={language} />
             </div>
