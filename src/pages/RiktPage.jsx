@@ -124,6 +124,13 @@ const RIKT = ({ language }) => {
                 </div>
             </div>
 
+{/*wavy effect*/}
+          <div className="banner-section">
+        <img 
+          src="/wavyeffect.jpg" 
+          alt="wavy design"
+        />
+      </div>
             {/* Sponsor Section */}
             <section className="bg-white py-12 text-center">
                 <h2 className="text-2xl font-semibold">Thanks to our sponsor</h2>
