@@ -28,7 +28,7 @@ const About = ({ language }) => {
                     </div>
 
                     {/* Image Section */}
-                    <div className="relative w-2/4 h-full mr-[-50px]">
+                    <div className="relative w-2/4 h-full">
                         <img
                             src="/training-session.png"
                             alt="Kendo Club"
