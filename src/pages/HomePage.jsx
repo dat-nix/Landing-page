@@ -50,7 +50,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
                             to="about"
                             smooth={true}
                             duration={500}
-                            className="absolute lg:bottom-18 lg:left-15 cursor-pointer px-40 py-6 sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-black rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+                            className="absolute lg:bottom-14 lg:left-15 cursor-pointer px-40 py-6 sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-black rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
 
                         >
                             {langData.button}
