@@ -166,7 +166,7 @@ export const content = {
     registration: {
         title: "How to Register",
         description: "To participate, complete the registration form and submit it before April 1st, 2025.",
-        button: "Coming soon...",
+        button: "Download Registration Form",
     },
     contact: {
         text: "If there's any questions, contact us at:",
@@ -339,7 +339,7 @@ export const content = {
                 registration: {
                     title: "Cách Đăng Ký",
                     description: "Để tham gia, hoàn thành biểu mẫu đăng ký và nộp trước ngày 1 tháng 4 năm 2025.",
-                    button: "Sắp ra mắt...",
+                    button: "Tải Biểu Mẫu Đăng Ký",
                 },
                 contact: {
                     text: "Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi tại:",
