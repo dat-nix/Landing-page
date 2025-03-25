@@ -2,15 +2,24 @@ import React from 'react';
 import '../styles/InstructorProfile.css';
 
 const InstructorProfile = () => {
+
   return (
     <div className="instructor-profile-container">
-      {/* Layer 1: Gallery Grid */}
+      {/* Layer 1: Gallery Grid with Infinite Slider */}
       <div className="gallery-grid">
-        <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 1" /></div>
-        <div className="gallery-item"><img src="/gallery2.png" alt="Gallery 2" /></div>
-        <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 3" /></div>
-        <div className="gallery-item"><img src="/gallery2.png" alt="Gallery 4" /></div>
-        <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 5" /></div>
+        <div className="gallery-track">
+          <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 1" /></div>
+          <div className="gallery-item"><img src="/gallery2.png" alt="Gallery 2" /></div>
+          <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 3" /></div>
+          <div className="gallery-item"><img src="/gallery2.png" alt="Gallery 4" /></div>
+          <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 5" /></div>
+          
+          <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 1" /></div>
+          <div className="gallery-item"><img src="/gallery2.png" alt="Gallery 2" /></div>
+          <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 3" /></div>
+          <div className="gallery-item"><img src="/gallery2.png" alt="Gallery 4" /></div>
+          <div className="gallery-item"><img src="/gallery1.JPG" alt="Gallery 5" /></div>
+        </div>
       </div>
 
       {/* Layer 2: Centered Mockup */}
