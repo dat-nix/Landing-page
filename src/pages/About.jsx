@@ -3,6 +3,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { content } from "../configs/content";
 import FacebookPosts from "../components/FacebookPosts";
+import TrainingSchedule from "../components/TrainingSchedule";
+import InstructorProfile from "../components/InstructorProfile"; // New import
+
 
 const About = ({ language }) => {
     const langData = content[language]?.about || content["en"].about;
@@ -30,6 +33,22 @@ const About = ({ language }) => {
                         />
                     </div>
                 </div>
+            </div>
+             {/* Training Schedule Section */}
+            <TrainingSchedule language={language}/>
+
+             {/* Instructor Profile Component */}
+             <InstructorProfile />
+             <div className="w-[1440px] h-[400px] mx-auto bg-white relative">
+             {/* OUR SEONSAENGNIM (Top-Left) */}
+                <h2 className="absolute top-1 left-4 text-[100px] font-bold text-orange-500">
+                OUR SEONSAENGNIM
+                </h2>
+
+             {/* LATEST (Bottom-Right) */}
+                <h2 className="absolute bottom-4 right-8 text-[190px] font-bold text-[#232323]">
+                LATEST
+            </h2>
             </div>
 
             {/* Facebook Posts Section */}

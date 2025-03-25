@@ -4,11 +4,77 @@ body {
   
   /* Full background color */
   .timeline-section {
-    background-color: #6f6f6f; /* gray background */
+    background-color: #185195; /* gray background */
     padding: 40px 0;
     text-align: center;
   }
-  
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem;
+    background-color: #185195; /* Adjust as needed */
+}
+
+.about-title {
+    font-size: 10rem;
+    line-height: 0.9;
+    font-weight: bold;
+    color: #FFCA5A; /* Adjust color as needed */
+    text-transform: uppercase;
+    flex: 1;
+    text-align: left;
+}
+
+.about-text {
+    flex: 2;
+    font-size: 1.8rem;
+    color: white;
+    line-height: 1.8;
+    max-width: 600px;
+    text-align: justify; /* Aligns text to both left and right margins */
+}
+/* Make "RMIT Ichigeki Kendo Tournament" bold */
+.about-text strong {
+  font-weight: bold;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem;
+  }
+
+  .about-title {
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .about-text {
+      font-size: 1.6rem;
+      text-align: justify;
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+      padding: 2rem;
+  }
+
+  .about-title {
+      font-size: 4rem;
+  }
+
+  .about-text {
+      font-size: 1.4rem;
+  }
+}
+
+
   /* Title */
   .timeline-title {
     background: white;
@@ -216,6 +282,10 @@ body {
       margin-bottom: 10px;
     }
   }
+
+
+
+
   /* Requirements Section */
   .requirements-container {
     display: flex;
@@ -271,7 +341,7 @@ body {
   }
   
   .register-button:hover {
-    background-color: #b5452b;
+    background-color: #ff5733;
     transform: translateY(-2px);
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
   }
@@ -292,15 +362,18 @@ body {
       font-size: 1.2rem;
     }
   }
+
+
+
+
   /* ▼▼▼ Contact Us Section ▼▼▼ */
   .contact-us-container {
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background-color: #6f6f6f;
+    background-color: #185195;
     color: white;
     border-radius: 12px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   }
   
   .contact-text {

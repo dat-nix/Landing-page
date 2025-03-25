@@ -7,7 +7,22 @@ const RIKT = ( {language} ) => {
     const riktData = content[language]?.riktData || content["en"].riktData;
     
     return (
-        <section className="timeline-section">
+        <section className="timeline-section relative">
+          {/* Tournament Banner Section */}
+          <div className="banner-section">
+        <img 
+          src="/rmit-kendo-club.png" 
+          alt="RMIT Ichigeki Kendo Tournament 2025"
+        />
+      </div>
+
+      <div className="about-section">
+    <h2 className="about-title">ABOUT THE EVENT</h2>
+    <p className="about-text">
+        Hosted by RMIT Shinsei Kendo Club, The <strong>RMIT Ichigeki Kendo Tournament</strong> aims to create opportunities 
+        for young kendokas to compete, improve their skills, and strengthen the Kendo community in Ho Chi Minh city.
+    </p>
+</div>
             <h1 className="timeline-title"> {riktData.eventTimeline} </h1>
 
             {timelineData.map((day, index) => (
