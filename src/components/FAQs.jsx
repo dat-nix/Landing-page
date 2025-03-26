@@ -12,7 +12,7 @@ const FAQ = ({ language = "en" }) => {
     };
 
     return (
-        <div className="mt-6 flex justify-center">
+        <div className="mt-15 flex lg:flex-col lg:ml-20 justify-center">
             <div className="bg-[#6f6f6f] text-white py-10 px-10 rounded-md shadow-md w-full max-w-lg">
                 <h2 className="text-3xl font-semibold text-center mb-6">
                     {content[language]?.faqTitle || "FAQs"}

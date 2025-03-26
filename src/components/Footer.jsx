@@ -15,7 +15,7 @@ const Footer = ({ language }) => {
                             <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
                                 FAQs
                             </ScrollLink>
-                            <ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-yellow-500">
+                            <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500">
                                {footer.find(item => item.contact)?.contact} 
                             </ScrollLink>
                         </div>

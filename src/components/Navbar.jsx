@@ -126,7 +126,7 @@ export default function Navbar({ language, setLanguage }) {
                 </span>
 
                 <button
-                    onClick={() => handleNavigation("contact")}
+                    onClick={() => handleNavigation("faqs")}
                     className="text-white cursor-pointer hover:text-yellow-400"
                 >
                     {currentContent.contact}
@@ -185,7 +185,7 @@ export default function Navbar({ language, setLanguage }) {
                         <li>
                             <button
                                 onClick={() => {
-                                    handleNavigation("contact");
+                                    handleNavigation("faqs");
                                     toggleMenu();
                                 }}
                                 className="hover:text-yellow-400 cursor-pointer"
