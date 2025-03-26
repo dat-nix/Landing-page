@@ -134,7 +134,7 @@ const RIKT = ({ language }) => {
       </div>
             {/* Sponsor Section */}
 <section className="bg-white py-12 text-center">
-    <h2 className="text-4xl font-semibold">Thanks to our sponsor</h2>
+    <h2 className="text-4xl font-semibold">{riktData.sponsor.text}</h2>
     <div className="grid grid-cols-4 gap-4 max-w-4xl mx-auto mt-6">
         {[...Array(8)].map((_, index) => (
             <div key={index} className="bg-gray-300 h-24"></div>

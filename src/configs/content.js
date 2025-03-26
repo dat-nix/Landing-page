@@ -177,8 +177,14 @@ export const content = {
     contact: {
         text: "If there's any questions, contact us at:",
     },
+    sponsor: {
+        text: "Thanks to our sponsors:",
+    },
 }
     },
+
+/* Vietnamese Content */
+
     vn: {
         navbar: {
             home: "Trang chủ",
@@ -353,6 +359,9 @@ export const content = {
                 contact: {
                     text: "Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi tại:",
                 },
+                sponsor: {
+                    text: "Cảm ơn các nhà tài trợ của chúng tôi:",
+                }
         },
         },
 };
