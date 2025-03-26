@@ -6,6 +6,7 @@ import { Footer } from "../components";
 const RIKT = ({ language }) => {
     const timelineData = content[language]?.timelineData || content["en"].timelineData;
     const riktData = content[language]?.riktData || content["en"].riktData;
+    const riktAbout = content[language]?.riktAbout || content["en"].riktAbout;
 
    
     return (
@@ -20,10 +21,10 @@ const RIKT = ({ language }) => {
             </div>
 
             <div className="about-section">
-                <h2 className="about-title">ABOUT<br /> THE<br /> EVENT</h2>
+                <h2 className="about-title">{riktAbout.about[0]}</h2>
                 <p className="about-text">
-                    Hosted by RMIT Shinsei Kendo Club, The <strong>RMIT Ichigeki Kendo Tournament</strong> aims to create opportunities 
-                    for young kendokas to compete, improve their skills, and strengthen the Kendo community in Ho Chi Minh City.
+                    {riktAbout.about[1]} <strong>{riktAbout.about[2]}</strong> {riktAbout.about[3]}
+                    {riktAbout.about[4]}
                 </p>
             </div>
 
@@ -34,22 +35,22 @@ const RIKT = ({ language }) => {
                     <div className="md:w-7/12 event-details pr-4">
                         <div className="mb-8 w-full">
                             <h1 className="lg:ml-17 text-left w-full text-[7rem] md:text-[8rem] md:mb-20 font-bold text-[#FFCA5A] leading-[0.8] whitespace-nowrap">
-                                EVENT<br />INFORMATION
+                                {riktAbout.information[0]}<br />{riktAbout.information[1]}
                             </h1>
                         </div>
 
                         <div className="text-left md:mt-20 md:ml-18 space-y-9 w-full">
                             <p className="text-white text-3xl">
-                                <span className="font-bold block">Date</span>
-                                May 30 - June 1st 2025
+                                <span className="font-bold block">{riktAbout.information[2]}</span>
+                                {riktAbout.information[3]}
                             </p>
                             <p className="text-white text-3xl">
-                                <span className="font-bold block">Time</span>
-                                8:00 AM - 5:00 PM
+                                <span className="font-bold block">{riktAbout.information[4]}</span>
+                                {riktAbout.information[5]}
                             </p>
                             <p className="text-white text-3xl">
-                                <span className="font-bold block">Venue</span>
-                                702 Nguyen Van Linh, Q7<br />RMIT University SGS Sports Hall Building 10
+                                <span className="font-bold block">{riktAbout.information[6]}</span>
+                                {riktAbout.information[7]}<br />{riktAbout.information[8]}
                             </p>
                         </div>
                     </div>

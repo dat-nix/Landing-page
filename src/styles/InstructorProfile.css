@@ -137,8 +137,8 @@
 .right-black-text {
   position: absolute;
   bottom: 40px;
-  right: 40px;
-  font-size: 2rem;
+  right: 20px;
+  font-size: 1.9em;
   line-height: 1.8;
   color: #333;
   font-weight: 600;

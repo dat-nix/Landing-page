@@ -1,4 +1,4 @@
-import { desc } from "framer-motion/client";
+import { info } from "autoprefixer";
 
 export const content = {
     en: {
@@ -140,6 +140,26 @@ export const content = {
             ],
         },
     ],
+
+    riktAbout: {
+        about: [
+            "About the Event",
+            "Hosted by RMIT Shinsei Kendo club, The ",
+            "RMIT Ichigeki Kendo Tournament",
+            "aims to create opportunities for young kendokas to compete, improve their skills, and strengthen the Kendo community in Ho Chi Minh City.",
+        ],
+        information: [
+            "Event",
+            "Information",
+            "Date",
+            "May 30 - June 1st 2025",
+            "Time",
+            "8:00 AM - 5:00 PM",
+            "Venue",
+            "702 Nguyen Van Linh, Q7",
+            "RMIT University SGS Sports Hall Building 10",
+        ],
+    },
     riktData: {
     eventTimeline: "Event Timeline",
     eligibility: {
@@ -296,6 +316,26 @@ export const content = {
                 ],
             },
         ],
+
+        riktAbout: {
+           about: [
+            "Về sự kiện",
+            "Được tổ chức bởi Câu Lạc Bộ Kendo RMIT Shinsei, ", 
+            "giải Đấu Kendo RMIT Ichigeki",
+            "nhằm tạo cơ hội cho các vận động viên trẻ thi đấu, cải thiện kỹ năng và củng cố cộng đồng Kendo tại Thành Phố Hồ Chí Minh.",
+           ],
+           information: [
+            "Thông tin",
+            "sự kiện",
+            "Ngày",
+            "30 Tháng 5 - 1 Tháng 6 Năm 2025",
+            "Thời Gian",
+            "8:00 Sáng - 5:00 Chiều",
+            "Địa Điểm",
+            "702 Nguyễn Văn Linh, Q7",
+            "Nhà Thể Thao SGS RMIT Tòa Nhà 10",
+           ],
+        },
         riktData: {
                 eventTimeline: "Lịch Trình Sự Kiện",
                 eligibility: {
@@ -314,7 +354,6 @@ export const content = {
                     text: "Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi tại:",
                 },
         },
-        
         },
 };
 
