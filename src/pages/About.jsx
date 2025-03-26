@@ -26,12 +26,10 @@ const About = ({ language }) => {
                     {/* Right Side: Club Description */}
                     <div className="w-full lg:w-1/2 px-6">
                         <p className="text-xl text-black">
-                            We are an official Kendo club in <strong>RMIT Saigon South (SGS)</strong>. Our club is a dedicated space for students to{" "}
-                            <strong>train, grow, and embody the way of the sword with discipline and respect.</strong>
+                            {langData.description[0]} <strong>{langData.description[1]}</strong> {langData.description[2]} <strong>{langData.description[3]}</strong>
                         </p>
                         <p className="mt-4 text-xl text-black">
-                            Whether you're a beginner <strong>eager to start your journey</strong> or an <strong>experienced kendoka</strong> refining your skills, we provide structured training, 
-                            traditional techniques, and a strong, supportive community.
+                            {langData.description[4]} <strong>{langData.description[5]}</strong> {langData.description[6]} <strong>{langData.description[7]}</strong> {langData.description[8]}
                         </p>
                     </div>
                 </div>

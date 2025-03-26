@@ -1,3 +1,5 @@
+import { desc } from "framer-motion/client";
+
 export const content = {
     en: {
         navbar: {
@@ -12,19 +14,23 @@ export const content = {
             button: "Register here",
         },
         about: {
-            title: "RMIT Shinsei Kendo Club",
             description: [
-        "We are an official Kendo club in RMIT Saigon South (SGS). Our club is a dedicated space for students to",
+        "We are an official Kendo club in",
+        "RMIT Saigon South (SGS).",
+        " Our club is a dedicated space for students to",
         "train, grow, and embody the way of the sword with discipline and respect.",
-        "Whether you're a beginner", 
-        "eager to start your journey", 
-        "or an", 
-        "experienced kendoka", 
+        " Whether you're a beginner",
+        "eager to start your journey",
+        "or an",
+        "experienced kendoka",
         "refining your skills, we provide structured training, traditional techniques, and a strong, supportive community."
       ]
         },
-            offerings: {
-            title: "What We Offer"
+            trainingschedule: {
+            time: "5:30 PM - 7:30 PM",
+            days: "MON - WED - FRI",
+            description: "TRAINING SCHEDULE",
+
         },
         gallery: {
             title: "Gallery",
@@ -188,19 +194,22 @@ export const content = {
             button: "Đăng ký ngay",
         },
         about: {
-            title: "Câu Lạc Bộ Kendo RMIT Shinsei",
             description: [
-            "Chúng tôi là một câu lạc bộ Kendo chính thức tại RMIT Saigon South (SGS). Câu lạc bộ của chúng tôi là một không gian dành riêng cho sinh viên để",
-            "rèn luyện, phát triển và thể hiện tinh thần của kiếm đạo với kỷ luật và sự tôn trọng.",
-            "Dù bạn là một người mới bắt đầu",
-            "háo hức khởi đầu hành trình của mình",
-            "hay một",
-            "kendoka giàu kinh nghiệm",
-            "muốn trau dồi kỹ năng, chúng tôi cung cấp chương trình đào tạo bài bản, các kỹ thuật truyền thống và một cộng đồng mạnh mẽ, đầy sự hỗ trợ."
+                "Chúng tôi là câu lạc bộ Kendo chính thức tại",
+                "RMIT Saigon South (SGS).",
+                " Câu lạc bộ của chúng tôi là một không gian dành riêng cho sinh viên để",
+                "tập luyện, phát triển và thể hiện con đường của kiếm với kỷ luật và tôn trọng.",
+                " Dù bạn là người mới bắt đầu",
+                "muốn bắt đầu hành trình của mình",
+                "hoặc là",
+                "kendoka có kinh nghiệm",
+                "đang hoàn thiện kỹ năng của mình, chúng tôi cung cấp lịch trình tập luyện cấu trúc, kỹ thuật truyền thống và một cộng đồng mạnh mẽ, hỗ trợ."
             ]
         },
-            offerings: {
-                title: "Chúng Tôi Cung Cấp"
+            trainingschedule: {
+                time: "5:30 PM - 7:30 PM",
+                days: "THỨ 2 - THỨ 4 - THỨ 6",
+                description: "LỊCH TẬP LUYỆN",
         },  
             gallery: {
             title: "Thư Viện Ảnh",
