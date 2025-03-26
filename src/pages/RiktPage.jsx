@@ -127,7 +127,7 @@ const RIKT = ({ language }) => {
 {/*wavy effect*/}
           <div className="wavyeffect">
         <img 
-          src="/wavyeffect.jpg" 
+          src="/wavyeffect.png" 
           alt="wavy design"
         />
       </div>
