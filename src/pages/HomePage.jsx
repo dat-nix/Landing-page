@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"; 
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";  
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion";
 import About from "./About";
@@ -46,15 +47,13 @@ export default function HomePage({ language }) {  // ️ recieve language from p
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.4 }}
                     >
-                        <ScrollLink
-                            to="about"
-                            smooth={true}
-                            duration={500}
+                        <Link
+                            to="/rikt"
                             className="absolute lg:bottom-14 lg:left-15 cursor-pointer px-40 py-6 sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-black rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
 
                         >
                             {langData.button}
-                        </ScrollLink>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
