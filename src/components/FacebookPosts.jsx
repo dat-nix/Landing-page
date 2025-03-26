@@ -26,29 +26,29 @@ const FacebookPosts = ({ language }) => {
     ];
 
     return (
-        <section className="w-full h-[800px] bg-gray-300 relative flex flex-col items-center pt-[100px]">
+        <section className="w-full min-h-[500px] sm:min-h-[700px] md:min-h-[800px] bg-gray-300 relative flex flex-col items-center pt-[50px] sm:pt-[80px] md:pt-[100px]">
             {/* UPDATES Header */}
             <div className="absolute top-0 right-5 w-full flex justify-end pr-5">
-                <h2 className="text-[190px] font-bold text-black leading-none">
+            <h2 className="text-[80px] md:text-[150px] lg:text-[190px] font-bold text-black leading-none">
                     UPDATES
                 </h2>
             </div>
 
-            {/* Posts Grid */}
-            <div className="relative z-10 grid grid-cols-3 gap-16 mt-[200px]">
-                {posts.map((post) => (
-                    <a
-                        key={post.id}
-                        href={post.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 p-4 text-center w-[350px] h-[450px]"
-                    >
-                        <img 
-                            src={post.image} 
-                            alt={post.title} 
-                            className="w-full h-[250px] object-cover"
-                        />
+           {/* Posts Grid */}
+    <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-[150px] px-4">
+        {posts.map((post) => (
+            <a
+                key={post.id}
+                href={post.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105 p-4 text-center w-full max-w-[350px] h-auto"
+            >
+                <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    className="w-full h-[200px] md:h-[250px] object-cover"
+                />
                         <div className="mt-2 text-black font-semibold text-lg">
                             {post.title}
                         </div>
