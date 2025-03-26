@@ -32,6 +32,11 @@ export const content = {
             description: "TRAINING SCHEDULE",
 
         },
+        instructor: {
+            description: "OUR SEONSAENGNIM",
+            text: "LATEST",
+        },
+
         gallery: {
             title: "Gallery",
              sections: [
@@ -210,7 +215,11 @@ export const content = {
                 time: "5:30 PM - 7:30 PM",
                 days: "THỨ 2 - THỨ 4 - THỨ 6",
                 description: "LỊCH TẬP LUYỆN",
-        },  
+        }, 
+        instructor: {
+            description: "THẦY CỦA CHÚNG TÔI",
+            text: "CẬP NHẬT",
+        },
             gallery: {
             title: "Thư Viện Ảnh",
             sections: [

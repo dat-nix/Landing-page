@@ -42,17 +42,17 @@ export default function TrainingSchedule({ language = "en" }) {
       </div>
       
       {/* Overlay Text with Transition */}
-      <div className={`absolute inset-0 flex flex-col items-center sm:items-end justify-center text-center sm:text-right font-['Reddit Sans'] right-0 sm:right-8 
+      <div className={`absolute inset-0 flex flex-col items-center lg:items-end justify-center text-center lg:text-right font-['Reddit Sans'] right-0 lg:right-8 
         transition-all duration-1000 ease-out 
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"}`}
       >
-        <p className="text-orange-500 text-[40px] sm:text-[70px] md:text-[100px] font-bold">
+        <p className="text-orange-500 sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
           {trainingschedule?.time || "Time Missing"}
         </p>
-        <p className="text-white text-[40px] sm:text-[70px] md:text-[100px] font-bold">
+        <p className="text-white sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
           {trainingschedule?.days || "Days Missing"}
         </p>
-        <p className="text-yellow-200 text-[70px] sm:text-[120px] md:text-[180px] font-extrabold leading-none">
+        <p className="text-yellow-200 sm:text-[70px] md:text-[120px] lg:text-[180px] font-extrabold leading-none">
           {trainingschedule?.description || "Description Missing"}
         </p>
       </div>

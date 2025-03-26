@@ -6,6 +6,7 @@ import InstructorProfile from "../components/InstructorProfile"; // New import
 const About = ({ language }) => {
     const langData = content[language]?.about || content["en"].about;
     const gallery = content[language]?.gallery || content["en"].gallery;
+    const instructor= content[language]?.instructor || content["en"].instructor;
 
     return (
         <section id="about">
@@ -39,18 +40,18 @@ const About = ({ language }) => {
             <TrainingSchedule language={language} />
 
             {/* Instructor Profile Section */}
-            <InstructorProfile />
+            <InstructorProfile language={language}/>
 
             {/* Instructor Highlight & Latest Updates */}
             <div className="w-full min-h-[250px] sm:min-h-[50px] md:min-h-[400px] mx-auto bg-white relative sm:pt-1 mt-[-20px] sm:mt-[-10px] pt-0">
                 {/* OUR SEONSAENGNIM (Top-Left) */}
                 <h2 className="absolute top-0 left-5 sm:left-10 md:left-17 text-[40px] sm:text-[60px] md:text-[100px] font-bold text-orange-500">
-                    OUR SEONSAENGNIM
+                    {instructor.description}
                 </h2>
 
                 {/* LATEST (Bottom-Right) */}
                 <h2 className="absolute bottom-2 sm:bottom-4 right-5 sm:right-8 text-[60px] sm:text-[100px] md:text-[190px] font-bold text-[#232323]">
-                    LATEST
+                    {instructor.text}
                 </h2>
             </div>
 
