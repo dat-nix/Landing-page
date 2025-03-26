@@ -7,6 +7,7 @@ const FAQ = ({ language = "en" }) => {
 
     // Get FAQs data based on the selected language
     const faqs = content[language]?.faqs || content["en"].faqs || [];
+    const contact = content[language]?.contact || content["en"].contact;
 
     const handleToggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -47,7 +48,9 @@ const FAQ = ({ language = "en" }) => {
 
             {/* Contact Us Section */}
             <div className="flex flex-col items-start w-[500px] h-[295px] text-black font-[Reddit Sans] text-[32px] font-semibold leading-normal p-5 bg-white rounded-lg shadow-lg">
-                <p className="text-3xl mb-4">If there’s any questions, contact us at:</p>
+                <p className="text-3xl mb-4">
+                    {contact.text}
+                </p>
                 <div className="mt-5 grid grid-cols-2 items-center gap-10 text-5xl ml-40">
                     <FaEnvelope className="cursor-pointer hover:text-gray-500" />
                <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">

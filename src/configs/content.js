@@ -51,38 +51,6 @@ export const content = {
       ]
         },
 
-    cardData: [ 
-            {
-                image: "/about-rmit-kendo-training-01.jpg",
-                title: "Kendo Training",
-                description:
-                    "Weekly practice sessions covering footwork, strikes, and sparring.",
-            },
-            {
-                image: "/about-rmit-kendo-training-02.jpg",
-                title: "Competitions & Gradings",
-                description:
-                    "Opportunities to compete and advance through official Kendo ranks.",
-            },
-            {
-                image: "/about-rmit-kendo-training-03.jpg",
-                title: "Workshops & Events",
-                description:
-                    "Special workshops on techniques, philosophy, and cultural experiences.",
-            },
-            {
-                image: "/about-rmit-kendo-training-04.jpg",
-                title: "Kiai & Spirit Training",
-                description:
-                    "Developing strong Kiai (battle shout) to enhance focus, energy, and presence in combat.",
-            },
-            {
-                image: "/about-rmit-kendo-training-05.jpg",
-                title: "Footwork & Movement",
-                description:
-                    "Drills focusing on agility, balance, and precise movements essential for effective Kendo techniques.",
-            },
-        ],
     faqs: [
             {
                 question: "Q: Where is our dojo located at ?",
@@ -102,6 +70,7 @@ export const content = {
                 answer: "A: To join our club, you must be a student or alumni of RMIT to access to our dojo. Besides, we welcome beginners who've never practiced Kendo and would like to try out, we also welcome anyone who used to train Kendo before to join us.",
             },
         ],
+    contact: {text:"If there's any questions, contact us at:"},
     footer: [
             {
                 address: "Address",
@@ -237,38 +206,7 @@ export const content = {
                 { title: "Huấn Luyện Kendo ASEAN", images: ["asean-training-01.jpg", "asean-training-02.jpg", "asean-training-03.jpg", "asean-training-04.jpg", "asean-training-05.jpg", "asean-training-06.jpg"] }     
             ]
         },
-        cardData: [
-            {
-                image: "/about-rmit-kendo-training-01.jpg",
-                title: "Luyện Tập Kendo",
-                description:
-                    "Buổi tập hàng tuần bao gồm kỹ thuật chân, đòn đánh và đấu tập.",
-            },
-            {
-                image: "/about-rmit-kendo-training-02.jpg",
-                title: "Thi Đấu & Thăng Cấp",
-                description:
-                    "Cơ hội tham gia thi đấu và thăng cấp theo hệ thống Kendo chính thức.",
-            },
-            {
-                image: "/about-rmit-kendo-training-03.jpg",
-                title: "Hội Thảo & Sự Kiện",
-                description:
-                    "Các hội thảo đặc biệt về kỹ thuật, triết lý và trải nghiệm văn hóa Kendo.",
-            },
-            {
-                image: "/about-rmit-kendo-training-04.jpg",
-                title: "Luyện Tập Kiai & Tinh Thần",
-                description:
-                    "Phát triển Kiai (tiếng hô chiến đấu) để tăng cường tập trung, năng lượng và sự hiện diện khi giao đấu.",
-            },
-            {
-                image: "/about-rmit-kendo-training-05.jpg",
-                title: "Kỹ Thuật Chân & Di Chuyển",
-                description:
-                    "Các bài tập rèn luyện sự nhanh nhẹn, thăng bằng và di chuyển chính xác - yếu tố quan trọng trong kỹ thuật Kendo.",
-            },
-        ],
+        
         faqs: [
             {
                 question: "Q: Địa chỉ của đội tập chúng ta ở đâu ?",
@@ -288,6 +226,8 @@ export const content = {
                 answer: "A: Để tham gia câu lạc bộ của chúng ta, bạn phải là sinh viên hoặc cựu sinh viên của RMIT để truy cập vào đội tập của chúng ta. Ngoài ra, chúng tôi chào đón những người mới bắt đầu chưa từng tập luyện Kendo và muốn thử sức, chúng tôi cũng chào đón bất kỳ ai đã từng tập luyện Kendo trước đó tham gia cùng chúng tôi.",
             },
         ],
+
+        contact: {text:"Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi tại:"},
         footer: [
             {
                 address: "Địa Chỉ",
