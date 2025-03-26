@@ -35,6 +35,11 @@ export const content = {
         instructor: {
             description: "OUR SEONSAENGNIM",
             text: "LATEST",
+            years: "30 years of experience",
+            rank: "6-Dan Kendo",
+            president: "President of KKA Vietnam",
+            viceCoach: "Vice Coach for VN National team",
+
         },
 
         gallery: {
@@ -129,7 +134,7 @@ export const content = {
         ],
     FacebookPosts: {
             
-                title: "Latest Facebook Posts"
+                title: "UPDATES"
             
         },
     timelineData:  [
@@ -219,6 +224,10 @@ export const content = {
         instructor: {
             description: "THẦY CỦA CHÚNG TÔI",
             text: "CẬP NHẬT",
+            years: "30 năm kinh nghiệm",
+            rank: "6-Dan Kendo",
+            president: "Chủ tịch KKA Việt Nam",
+            viceCoach: "Phó Huấn Luyện Đội Tuyển Quốc Gia",
         },
             gallery: {
             title: "Thư Viện Ảnh",
@@ -310,7 +319,7 @@ export const content = {
         ],
         FacebookPosts: { 
             
-                title: "Bài Viết Mới Nhất Trên Facebook"
+                title: "MỚI NHẤT",
             
         },
         timelineData: [

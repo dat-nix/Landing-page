@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/InstructorProfile.css';
+import {content } from '../configs/content';
 
-const InstructorProfile = () => {
+const InstructorProfile = ({ language }) => { 
+  const instructor= content[language]?.instructor || content["en"].instructor;
 
   return (
     <div className="instructor-profile-container">
@@ -39,10 +41,10 @@ const InstructorProfile = () => {
         <h1>HUN</h1>
     </div>
         <div className="right-black-text">
-          <p>6-Dan Kendo</p>
-          <p>30 years of experience</p>
-          <p>President of KKA Vietnam</p>
-          <p>Vice Coach for VN National team</p>
+          <p>{instructor.rank}</p>
+          <p>{instructor.years}</p>
+          <p>{instructor.president}</p>
+          <p>{instructor.viceCoach}</p>
         </div>
       </div>
     </div>

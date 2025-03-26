@@ -30,7 +30,7 @@ const FacebookPosts = ({ language }) => {
             {/* UPDATES Header */}
             <div className="absolute top-0 right-5 w-full flex justify-end pr-5">
             <h2 className="text-[80px] md:text-[150px] lg:text-[190px] font-bold text-black leading-none">
-                    UPDATES
+                    {langData.title}
                 </h2>
             </div>
 

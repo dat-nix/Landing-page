@@ -26,10 +26,10 @@ const About = ({ language }) => {
 
                     {/* Right Side: Club Description */}
                     <div className="w-full lg:w-1/2 px-6">
-                        <p className="text-xl text-black">
+                        <p className="text-2xl text-black">
                             {langData.description[0]} <strong>{langData.description[1]}</strong> {langData.description[2]} <strong>{langData.description[3]}</strong>
                         </p>
-                        <p className="mt-4 text-xl text-black">
+                        <p className="mt-4 text-2xl text-black">
                             {langData.description[4]} <strong>{langData.description[5]}</strong> {langData.description[6]} <strong>{langData.description[7]}</strong> {langData.description[8]}
                         </p>
                     </div>
