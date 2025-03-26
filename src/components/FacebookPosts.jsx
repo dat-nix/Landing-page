@@ -15,7 +15,7 @@ const FacebookPosts = ({ language }) => {
             id: 2, 
             image: "https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/486149612_122223844340231453_925366375001440328_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEU07e_ZAC3HKe0njwi2IBp-G-ob1yp0AX4b6hvXKnQBXiq8GnZZg6WlsY4BP9UJlimn0TP0yfNhlJxCS0UkNVV&_nc_ohc=ccdKCWxnYzcQ7kNvgEKOjzE&_nc_oc=AdlsehnBtY8pt51JcDAj8LY2ZAq2GSZgAbFe_tBS3NdvQ4HmZPCzk3rSJYwwYF4bxc67gt-myVdlhYsVvDU1IFq1&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=jM5foBFdgZ3drCx1powcAg&oh=00_AYFx3L79mMb-ToVgXkkB7rfF1DMmhpuv2DIN3Aj5NNphoA&oe=67E881FE", 
             title: "🎉𝗖𝗹𝘂𝗯 𝗗𝗮𝘆 + 𝗜𝗻𝗱𝘂𝗰𝘁𝗶𝗼𝗻 𝗗𝗮𝘆 𝗥𝗲𝗰𝗮𝗽 - 𝗡𝗲𝘄 𝗬𝗲𝗮𝗿, 𝗡𝗲𝘄 𝗕𝗲𝗴𝗶𝗻𝗻𝗶𝗻𝗴𝘀🎉", 
-            link: "https://facebook.com/post2" 
+            link: "https://www.facebook.com/share/p/1B4qtgGcQM/" 
         },
         { 
             id: 3, 
