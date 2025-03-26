@@ -28,7 +28,7 @@ const About = ({ language }) => {
                     </div>
 
                     {/* Image Section */}
-                    <div className="relative w-2/4 h-full">
+                    <div className="relative w-2/4 h-full mr-[-50px]">
                         <img
                             src="/training-session.png"
                             alt="Kendo Club"
@@ -42,14 +42,14 @@ const About = ({ language }) => {
 
              {/* Instructor Profile Component */}
              <InstructorProfile />
-             <div className="w-full h-[400px] mx-auto bg-white relative">
+             <div className="w-full min-h-[250px] sm:min-h-[50px] md:min-h-[400px] mx-auto bg-white relative sm:pt-1  mt-[-20px] sm:mt-[-10px] pt-0">
              {/* OUR SEONSAENGNIM (Top-Left) */}
-                <h2 className="absolute top-1 left-17 text-[100px] font-bold text-orange-500">
+             <h2 className="absolute top-0 left-5 sm:left-10 md:left-17 text-[40px] sm:text-[60px] md:text-[100px] font-bold text-orange-500">
                 OUR SEONSAENGNIM
                 </h2>
 
              {/* LATEST (Bottom-Right) */}
-                <h2 className="absolute bottom-4 right-8 text-[190px] font-bold text-[#232323]">
+             <h2 className="absolute bottom-2 sm:bottom-4 right-5 sm:right-8 text-[60px] sm:text-[100px] md:text-[190px] font-bold text-[#232323]">
                 LATEST
             </h2>
             </div>
@@ -58,7 +58,7 @@ const About = ({ language }) => {
             <FacebookPosts language={language} />
 
             {/* Gallery Section */}
-            <div className="w-full h-[2600] flex-shrink-0 bg-[#FFCA5A]">
+            <div className="w-full min-h-screen flex-shrink-0 bg-[#FFCA5A] py-10">
                 <h2 className="text-[#EB4F0B] text-center font-extrabold text-[150px] leading-[96%]" style={{ fontFamily: "Uni Sans" }}>
                     {gallery.title}
                 </h2>
@@ -66,14 +66,14 @@ const About = ({ language }) => {
                 {gallery.sections.map((section, index) => (
                     <div key={index} className="mt-10">
                         <h2 className="text-2xl font-bold mb-8 text-center">{section.title}</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
                             {section.images.map((image, imgIndex) => (
                                 <img
                                     key={imgIndex}
                                     src={`/${image}`}
                                     loading="lazy"
                                     alt="Gallery Image"
-                                   className="w-full h-[220px] shadow-md object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
+                                   className="w-full h-[150px] sm:h-[200px] md:h-[220px] shadow-md object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
 
                                 />
                             ))}
