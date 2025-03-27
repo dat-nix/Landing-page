@@ -35,7 +35,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
                 >
                     <img
                         src="/rmit-kendo-club.png"
-                        className="lg:object-cover"
+                        className="lg:object-cover sm:object-contain md:object-contain"
                         alt="RMIT"
                     />
                 </motion.div>
@@ -49,7 +49,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
                     >
                         <Link
                             to="/rikt"
-                            className="absolute lg:bottom-14 lg:left-15 cursor-pointer px-40 py-6 sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+                            className="absolute bottom-8 left-4 lg:bottom-14 lg:left-15 cursor-pointer px-8 py-3 lg:px-40 lg:py-6 text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
 
                         >
                             {langData.button}
