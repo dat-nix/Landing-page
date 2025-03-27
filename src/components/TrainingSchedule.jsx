@@ -31,7 +31,7 @@ export default function TrainingSchedule({ language = "en" }) {
   }
 
   return (
-    <section ref={sectionRef} className="relative w-full h-auto min-h-[808px] flex items-center bg-black">
+    <section ref={sectionRef} className="relative w-full h-auto min-h-[300px] sm:min-h-[500px] md:min-h-[700px] lg:min-h-[808px] flex items-center bg-black">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -46,13 +46,13 @@ export default function TrainingSchedule({ language = "en" }) {
         transition-all duration-1000 ease-out 
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"}`}
       >
-        <p className="text-orange-500 sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
+        <p className="text-orange-500 text-[24px] sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
           {trainingschedule?.time || "Time Missing"}
         </p>
-        <p className="text-white sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
+        <p className="text-white text-[24px] sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
           {trainingschedule?.days || "Days Missing"}
         </p>
-        <p className="text-yellow-200 sm:text-[70px] md:text-[120px] lg:text-[180px] font-extrabold leading-none">
+        <p className="text-yellow-200 text-[36px] sm:text-[70px] md:text-[120px] lg:text-[180px] font-extrabold leading-none">
           {trainingschedule?.description || "Description Missing"}
         </p>
       </div>
