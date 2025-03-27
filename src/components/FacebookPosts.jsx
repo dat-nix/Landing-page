@@ -9,7 +9,7 @@ const FacebookPosts = ({ language }) => {
             id: 3, 
             image: "https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/486554544_122224434584231453_7608000793104703063_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF9PkKyJOovh2vkMYYWIOyGeQTd2H5U8ml5BN3YflTyaReq4fb46IDGUtcH3Uc0nT_IHUXuiW1MUeq0gKLzu1Ty&_nc_ohc=RvmMrM_9YXoQ7kNvgGX8MFa&_nc_oc=AdlsncinnhVJB0hlM6DqkCGVgr-_3EAiRY-V1Xc8g03DiXHkA3kWz-opSVauhiUd8Ns&_nc_zt=23&_nc_ht=scontent.fhan4-3.fna&_nc_gid=OIHoVDBuv6a-DfjBObBVjQ&oh=00_AYH1trtwwaiGvU_hNLoukJ58chlL6pamqUMjFRkQze30rQ&oe=67EB2788", 
             title: "🏅 𝗜𝗡𝗧𝗥𝗢𝗗𝗨𝗖𝗜𝗡𝗚 𝗥𝗠𝗜𝗧 𝗜𝗖𝗛𝗜𝗚𝗘𝗞𝗜 𝟮𝟬𝟮𝟱 𝗦𝗛𝗜𝗡𝗣𝗔𝗡𝗖𝗛𝗢 🏅", 
-            link: "https://www.facebook.com/share/p/1AKyb9kN3Y//" 
+            link: "https://www.facebook.com/share/p/1A2f6H1qbs/" 
         },
         { 
             id: 1, 
