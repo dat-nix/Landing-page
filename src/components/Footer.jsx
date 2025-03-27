@@ -6,7 +6,7 @@ const Footer = ({ language }) => {
     const footer = content[language]?.footer || content["en"].footer || [];
 
     return (
-        <section id="contact">
+        <section>
             <footer className="bg-black text-white py-8 px-6 md:px-12">
                 {/* Navigation Links */}
                 <div className="flex flex-col lg:flex-row lg:justify-between pb-6">
@@ -15,7 +15,7 @@ const Footer = ({ language }) => {
                             <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
                                 FAQs
                             </ScrollLink>
-                            <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
+                            <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-80}>
                                {footer.find(item => item.contact)?.contact} 
                             </ScrollLink>
                         </div>

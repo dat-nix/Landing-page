@@ -6,21 +6,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar({ language, setLanguage }) {
     const [isOpen, setIsOpen] = useState(false);
-
     const location = useLocation();
     const navigate = useNavigate();
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
-    const toggleLanguage = () =>
-        setLanguage((prevLanguage) => (prevLanguage === "en" ? "vn" : "en"));
-
+    const toggleLanguage = () => setLanguage((prevLanguage) => (prevLanguage === "en" ? "vn" : "en"));
     const currentContent = content[language].navbar;
 
     const handleNavigation = (section) => {
         if (location.pathname !== "/") {
             navigate("/", { replace: true });
-
-            // Ensure the page loads before scrolling
             setTimeout(() => smoothScroll(section), 500);
         } else {
             smoothScroll(section);
@@ -32,22 +27,16 @@ export default function Navbar({ language, setLanguage }) {
         if (!element) return;
 
         const navbarHeight = 80;
-        const targetPosition =
-            element.getBoundingClientRect().top + window.scrollY - navbarHeight;
+        const targetPosition = element.getBoundingClientRect().top + window.scrollY - navbarHeight;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
-        const duration = 800; // Adjust duration (in ms) for smoother scrolling
+        const duration = 800;
         let startTime = null;
 
         const animation = (currentTime) => {
             if (!startTime) startTime = currentTime;
             const elapsedTime = currentTime - startTime;
-            const ease = easeInOutQuad(
-                elapsedTime,
-                startPosition,
-                distance,
-                duration
-            );
+            const ease = easeInOutQuad(elapsedTime, startPosition, distance, duration);
             window.scrollTo(0, ease);
 
             if (elapsedTime < duration) requestAnimationFrame(animation);
@@ -62,8 +51,9 @@ export default function Navbar({ language, setLanguage }) {
 
         requestAnimationFrame(animation);
     };
+
     const smoothScrollToTop = () => {
-        const scrollStep = -window.scrollY / 20; // Adjust for smoothness
+        const scrollStep = -window.scrollY / 20;
         const scrollAnimation = () => {
             if (window.scrollY !== 0) {
                 window.scrollBy(0, scrollStep);
@@ -76,7 +66,7 @@ export default function Navbar({ language, setLanguage }) {
     const handleRiktNavigation = () => {
         if (location.pathname !== "/rikt") {
             navigate("/rikt", { replace: true });
-            setTimeout(smoothScrollToTop, 200); // Ensures page loads before scrolling
+            setTimeout(smoothScrollToTop, 200);
         } else {
             smoothScrollToTop();
         }
@@ -90,121 +80,38 @@ export default function Navbar({ language, setLanguage }) {
                 </Link>
             </div>
 
-            <button
-                onClick={toggleMenu}
-                className="text-white lg:hidden cursor-pointer"
-            >
+            <button onClick={toggleMenu} className="text-white lg:hidden cursor-pointer">
                 <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2xl" />
             </button>
 
             <div className="hidden lg:flex space-x-8 text-lg font-medium">
-                <button
-                    onClick={() => handleNavigation("home")}
-                    className="text-white cursor-pointer hover:text-yellow-400"
-                >
+                <button onClick={() => handleNavigation("home")} className="text-white cursor-pointer hover:text-yellow-400">
                     {currentContent.home}
                 </button>
-
-                <button
-                    onClick={() => handleNavigation("about")}
-                    className="text-white cursor-pointer hover:text-yellow-400"
-                >
+                <button onClick={() => handleNavigation("about")} className="text-white cursor-pointer hover:text-yellow-400">
                     {currentContent.about}
                 </button>
-
-                <span
-                    onClick={handleRiktNavigation}
-                    className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
-                    before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
-                    before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
-                    hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
-                >
-                    <span className="hidden lg:inline">
-                        {currentContent.rikt}
-                    </span>
+                <span onClick={handleRiktNavigation} className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]">
+                    <span className="hidden lg:inline">{currentContent.rikt}</span>
                     <span className="inline lg:hidden">RIKT</span>
                 </span>
-
-                <button
-                    onClick={() => handleNavigation("faqs")}
-                    className="text-white cursor-pointer hover:text-yellow-400"
-                >
+                <button onClick={() => handleNavigation("faqs")} className="text-white cursor-pointer hover:text-yellow-400">
                     {currentContent.contact}
                 </button>
-                <button
-                    onClick={toggleLanguage}
-                    className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 
-               hover:bg-gray-800 transition duration-300"
-                >
+                <button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300">
                     <span className="text-lg">{currentContent.flag}</span>
-                    <span className="hidden sm:inline hover:text-yellow-400">
-                        {currentContent.language}
-                    </span>
+                    <span className="hidden sm:inline hover:text-yellow-400">{currentContent.language}</span>
                 </button>
             </div>
 
             {isOpen && (
                 <div className="absolute top-21 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
                     <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
-                        <li>
-                            <button
-                                onClick={() => {
-                                    handleNavigation("home");
-                                    toggleMenu();
-                                }}
-                                className="hover:text-yellow-400 cursor-pointer"
-                            >
-                                {currentContent.home}
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                onClick={() => {
-                                    handleNavigation("about");
-                                    toggleMenu();
-                                }}
-                                className="hover:text-yellow-400 cursor-pointer"
-                            >
-                                {currentContent.about}
-                            </button>
-                        </li>
-                        <li>
-                            <span
-                                onClick={() => {
-                                    handleRiktNavigation();
-                                    toggleMenu();
-                                }}
-                                className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
-                                before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
-                                before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100
-                                hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]"
-                            >
-                                RIKT
-                            </span>
-                        </li>
-                        <li>
-                            <button
-                                onClick={() => {
-                                    handleNavigation("faqs");
-                                    toggleMenu();
-                                }}
-                                className="hover:text-yellow-400 cursor-pointer"
-                            >
-                                {currentContent.contact}
-                            </button>
-                        </li>
-                        <li>
-                        <button
-                    onClick={toggleLanguage}
-                    className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 
-               hover:bg-gray-800 transition duration-300"
-                >
-                    <span className="text-lg">{currentContent.flag}</span>
-                    <span className=" sm:inline hover:text-yellow-400">
-                        {currentContent.language}
-                    </span>
-                </button>
-                        </li>
+                        <li><button onClick={() => { handleNavigation("home"); toggleMenu(); }} className="hover:text-yellow-400 cursor-pointer">{currentContent.home}</button></li>
+                        <li><button onClick={() => { handleNavigation("about"); toggleMenu(); }} className="hover:text-yellow-400 cursor-pointer">{currentContent.about}</button></li>
+                        <li><span onClick={() => { handleRiktNavigation(); toggleMenu(); }} className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]">RIKT</span></li>
+                        <li><button onClick={() => { handleNavigation("contact"); toggleMenu(); }} className="hover:text-yellow-400 cursor-pointer">{currentContent.contact}</button></li>
+                        <li><button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300"><span className="text-lg">{currentContent.flag}</span><span className="sm:inline hover:text-yellow-400">{currentContent.language}</span></button></li>
                     </ul>
                 </div>
             )}
