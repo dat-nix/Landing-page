@@ -6,12 +6,6 @@
   overflow: hidden;
   padding: 40px 0; /* Add padding instead of fixed height */
 }
-@media screen and (max-width: 768px) {
-  .instructor-profile-container {
-    padding: 20px 0; /* Add padding instead of fixed height */
-  }
-  
-}
 /* Layer 1: Gallery Grid with Infinite Slider - Two Rows */
 .gallery-grid {
   position: absolute;
@@ -51,18 +45,7 @@
   object-fit: cover;
   border-radius: 4px; /* Optional: slight rounding */
 }
-/* Mobile: Move Gallery to the middle */
-@media (max-width: 768px) {
-  .gallery-grid {
-    top: 50%;  /* Move to center */
-    transform: translateY(-50%);  /* Center it */
-    height: 250px;
-  }
 
-  .gallery-item {
-    height: 250px;
-  }
-}
   /* Layer 2: Centered Mockup */
   .center-mockup {
     position: absolute;
@@ -84,17 +67,6 @@
     transform: scale(1.05);
     transition: transform 0.5s;
   }
-  
-/* Mobile: Move mockup 30px to the left */
-@media (max-width: 768px) {
-  .center-mockup {
-    width: 90%;
-    max-width: 100%;
-    height: 80%;
-    left: 50%;
-    transform: translate(calc(-50% - 30px), -50%); /* Shift 30px left */
-  }
-}
   
   /* Layer 3: Text Overlay with Pop-up Animation */
 .text-overlay {
@@ -124,12 +96,7 @@
   animation: slideInFromLeft 0.8s 0.2s ease-out forwards;
   opacity: 0;
 }
-@media (max-width: 768px) {
-  .left-orange-text h1 {
-    font-size: 4rem;
-    left: 4%;
-  }
-}
+
 .left-orange-text h1:nth-child(2) { animation-delay: 0.3s; }
 .left-orange-text h1:nth-child(3) { animation-delay: 0.4s; }
 
@@ -140,7 +107,7 @@
   right: 20px;
   font-size: 1.9em;
   line-height: 1.8;
-  color: #333;
+  color: #000000;
   font-weight: 600;
   text-align: right;
   animation: fadeIn 1s 0.5s ease-out forwards;
@@ -155,13 +122,84 @@
   opacity: 0;
 }
 
-/* Mobile: Move text to the upper right */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+  .instructor-profile-container {
+    height: 40vh;
+    min-height: 300px;
+  }
+  .mockup-image {
+    margin-bottom: -20px;
+    margin-top: 0px;
+    width: 100%;
+    height: 80%;
+    margin-right: 160px;
+    margin-left: -150px;
+  }
+  .gallery-item {
+    margin-top: -50px;
+    width: 150px;
+    height: 80px;
+    margin-bottom: 100px;
+  }
+  
+  .text-overlay {
+    width: 100%;
+  }
+
+
+ /* Mobile Text Scaling */
+.left-orange-text {
+  position: absolute;
+  top: 20%; /* Positions in top half */
+  left: 10%;
+  transform: translateX(-50%);
+  text-align: right;
+  width: 100%;
+  font-size: 5rem;
+}
+
+.left-orange-text h1 {
+  font-size: 5rem;
+  margin: 10px 0; /* Reduced margins */
+  line-height: 1;
+  display: block;
+}
+
+.right-black-text {
+  position: absolute;
+  bottom: -10%; /* Positions in bottom half */
+  left: 10%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: right;
+}
+
+.right-black-text p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 8px 0; /* Consistent spacing */
+  line-height: 1.4;
+}
+
+  /* Adjust line heights for better mobile readability */
+  .left-orange-text {
+    line-height: 0.9;
+  }
+
   .right-black-text {
-    top: 17%;  /* Move to upper right */
-    bottom: auto;  /* Remove bottom positioning */
-    right: 2%;
-    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+
+/* Small Mobile Devices (e.g., iPhone SE) */
+@media (max-width: 375px) {
+  .left-orange-text h1 {
+    font-size: 2rem;
+  }
+
+  .right-black-text p {
+    font-size: 0.7rem;
   }
 }
 
