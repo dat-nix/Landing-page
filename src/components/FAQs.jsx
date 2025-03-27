@@ -46,7 +46,7 @@ const FAQ = ({ language = "en" }) => {
 
             {/* Contact Us Section */}
             <div id="contact" className="flex flex-col items-center w-full max-w-sm text-black font-[Reddit Sans] text-[28px] sm:text-[32px] font-semibold leading-normal p-5 bg-white rounded-lg shadow-lg text-center">
-                <p className="text-3xl mb-4">{contact.text}</p>
+                <p className="sm:text-2xl lg:text-3xl mb-4">{contact.text}</p>
                 <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-6 text-4xl sm:text-5xl justify-center">
                     <FaEnvelope className="cursor-pointer hover:text-gray-500" />
                     <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
