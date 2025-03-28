@@ -1,9 +1,22 @@
 import { Link as ScrollLink } from "react-scroll";
 import { content } from "../configs/content";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer = ({ language }) => {
     const footer = content[language]?.footer || content["en"].footer || [];
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleNavigation = (sectionId) => {
+        if (location.pathname === "/rikt" && (sectionId === "about" || sectionId === "faqs")) {
+            navigate("/", { replace: true });
+            setTimeout(() => {
+                document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        } else {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     return (
         <section>
@@ -12,18 +25,18 @@ const Footer = ({ language }) => {
                 <div className="flex flex-col items-center lg:flex-row lg:justify-between pb-6">
                     <div className="lg:text-xl font-semithin flex flex-col items-center gap-4 sm:flex-row sm:gap-10 md:gap-20 text-center">
                         
-                        <ScrollLink to="about" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-80}>
+                        <button onClick={() => handleNavigation("about")} className="cursor-pointer hover:text-yellow-500">
                             {footer.find(item => item.about)?.about} 
-                        </ScrollLink>
+                        </button>
                         <ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
                             {footer.find(item => item.contact)?.contact} 
                         </ScrollLink>
                         <a href="https://maps.app.goo.gl/qEVmLVwqFDgyCqKi9" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500">
                             {footer.find(item => item.address)?.address}
                         </a>
-                        <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
+                        <button onClick={() => handleNavigation("faqs")} className="cursor-pointer hover:text-yellow-500">
                             FAQs
-                        </ScrollLink>
+                        </button>
                         <div className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
                             before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
                             before:origin-left before:transition-transform before:duration-300 text-lg lg:text-xl">

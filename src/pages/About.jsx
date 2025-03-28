@@ -16,12 +16,12 @@ const About = ({ language }) => {
                     {/* Left Side: Logo & Club Name */}
                     <div className="py-5 lg:py-10 flex flex-col w-full lg:w-3/4 px-4 sm:px-6 lg:pl-12">
                       <div className="flex flex-col sm:flex-row items-center sm:items-center gap-2 sm:gap-4">
-    <img src="/logo-without-name.png" alt="Logo" 
-        className="w-[10vh] h-[10vh] sm:w-[12vh] sm:h-[12vh] lg:w-[15vh] lg:h-[15vh]" />
-    <span className="text-orange-600 font-[Anton] text-3xl sm:text-5xl lg:text-9xl tracking-wide sm:leading-none align-middle">
-        RMIT
-    </span>
-</div>
+                        <img src="/logo-without-name.png" alt="Logo" 
+                            className="w-[10vh] h-[10vh] sm:w-[12vh] sm:h-[12vh] lg:w-[15vh] lg:h-[15vh]" />
+                            <span className="text-orange-600 font-[Anton] text-3xl sm:text-5xl lg:text-9xl tracking-wide sm:leading-none align-middle">
+                                    RMIT
+                            </span>
+                    </div>
  
                         <h1 className="text-orange-600 font-extrabold leading-tight uppercase text-center lg:text-left mt-0 sm:mt-4">
                             <span className="block text-3xl sm:text-5xl lg:text-9xl font-[Anton] tracking-wide">SHINSEI</span>
