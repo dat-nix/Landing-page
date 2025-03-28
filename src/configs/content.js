@@ -43,7 +43,7 @@ export const content = {
         },
 
         gallery: {
-            title: "Gallery",
+            title: "GALLERY",
              sections: [
         { title: "Kendo Practice & Tutorial Class", images: ["kendo-practice-01.jpg", "kendo-practice-02.jpg", "kendo-practice-03.jpg", "kendo-practice-04.jpg", "kendo-practice-05.jpg", "kendo-practice-06.jpg"] },
         { title: "Workshop & Cultural Events", images: ["event-01.jpg", "event-02.jpg", "event-03.jpg", "event-04.jpg", "event-05.jpg", "event-06.jpg"] },
@@ -108,7 +108,7 @@ export const content = {
         },
     timelineData:  [
         {
-            date: "May 30th 2025",
+            date: "May 30th 2025 - TO BE ANNOUNCED",
             events: [
                  {/*
                 { time: "8:00 AM", activity: "Check-in and shinai check" },
@@ -144,7 +144,7 @@ export const content = {
 
     riktAbout: {
         about: [
-            "About the Event",
+            "About The Event",
             "Hosted by RMIT Shinsei Kendo club, The ",
             "RMIT Ichigeki Kendo Tournament",
             "aims to create opportunities for young kendokas to compete, improve their skills, and strengthen the Kendo community in Ho Chi Minh City.",
@@ -291,14 +291,16 @@ export const content = {
         },
         timelineData: [
             {
-                date: "30 Tháng 5 Năm 2025",
+                date: "30 Tháng 5 Năm 2025 - SẼ ĐƯỢC THÔNG BÁO",
                 events: [
+                    {/*}
                     { time: "8:00 Sáng", activity: "Check-in và kiểm tra shinai" },
                     { time: "9:15 Sáng", activity: "Lễ Khai Mạc" },
                     { time: "9:30 Sáng", activity: "Trận Đấu Buổi Sáng" },
                     { time: "12:00 Trưa", activity: "Giờ Nghỉ Trưa" },
                     { time: "1:00 Chiều", activity: "Trận Đấu Buổi Chiều" },
-                    { time: "3:00 Chiều", activity: "Lễ Trao Giải" },
+                    { time: "3:00 Chiều", activity: "Lễ Trao Giải" }, 
+                     */}
                 ],
             },
             {
