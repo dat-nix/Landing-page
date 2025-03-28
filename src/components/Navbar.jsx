@@ -73,10 +73,10 @@ export default function Navbar({ language, setLanguage }) {
     };
 
     return (
-        <nav className="bg-black w-full sticky top-0 z-50 px-8 flex items-center justify-between shadow-md">
+        <nav className="bg-[#EB4E0B] w-full sticky top-0 py-5 z-50 px-8 flex items-center justify-between shadow-md">
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
-                    <img src="/logo.png" width="100px" alt="Logo" />
+                    <img src="/white-logo.svg" className="w-[59px] h-[65px]" alt="Logo" />
                 </Link>
             </div>
 
@@ -85,33 +85,33 @@ export default function Navbar({ language, setLanguage }) {
             </button>
 
             <div className="hidden lg:flex space-x-8 text-lg font-medium">
-                <button onClick={() => handleNavigation("home")} className="text-white cursor-pointer hover:text-yellow-400">
+                <button onClick={() => handleNavigation("home")} className="text-white cursor-pointer hover:text-cyan-300">
                     {currentContent.home}
                 </button>
-                <button onClick={() => handleNavigation("about")} className="text-white cursor-pointer hover:text-yellow-400">
+                <button onClick={() => handleNavigation("about")} className="text-white cursor-pointer hover:text-cyan-300">
                     {currentContent.about}
                 </button>
-                <span onClick={handleRiktNavigation} className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]">
+                <span onClick={handleRiktNavigation} className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-cyan-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(174,238,238,0.8)]">
                     <span className="hidden lg:inline">{currentContent.rikt}</span>
                     <span className="inline lg:hidden">RIKT</span>
                 </span>
-                <button onClick={() => handleNavigation("contact")} className="text-white cursor-pointer hover:text-yellow-400">
+                <button onClick={() => handleNavigation("contact")} className="text-white cursor-pointer hover:text-cyan-300">
                     {currentContent.contact}
                 </button>
                 <button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300">
                     <span className="text-lg">{currentContent.flag}</span>
-                    <span className="hidden sm:inline hover:text-yellow-400">{currentContent.language}</span>
+                    <span className="hidden sm:inline hover:text-cyan-300">{currentContent.language}</span>
                 </button>
             </div>
 
             {isOpen && (
-                <div className="absolute top-21 left-0 w-full bg-black text-white py-6 shadow-md lg:hidden">
+                <div className="absolute top-21 left-0 w-full bg-[#EB4E0B] text-white py-6 shadow-md lg:hidden">
                     <ul className="flex flex-col items-center space-y-6 text-lg font-medium">
-                        <li><button onClick={() => { handleNavigation("home"); toggleMenu(); }} className="hover:text-yellow-400 cursor-pointer">{currentContent.home}</button></li>
-                        <li><button onClick={() => { handleNavigation("about"); toggleMenu(); }} className="hover:text-yellow-400 cursor-pointer">{currentContent.about}</button></li>
-                        <li><span onClick={() => { handleRiktNavigation(); toggleMenu(); }} className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.8)]">RIKT</span></li>
-                        <li><button onClick={() => { handleNavigation("contact"); toggleMenu(); }} className="hover:text-yellow-400 cursor-pointer">{currentContent.contact}</button></li>
-                        <li><button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300"><span className="text-lg">{currentContent.flag}</span><span className="sm:inline hover:text-yellow-400">{currentContent.language}</span></button></li>
+                        <li><button onClick={() => { handleNavigation("home"); toggleMenu(); }} className="hover:text-cyan-300 cursor-pointer">{currentContent.home}</button></li>
+                        <li><button onClick={() => { handleNavigation("about"); toggleMenu(); }} className="hover:text-cyan-300 cursor-pointer">{currentContent.about}</button></li>
+                        <li><span onClick={() => { handleRiktNavigation(); toggleMenu(); }} className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-cyan-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(174,238,238,0.8)]">RIKT</span></li>
+                        <li><button onClick={() => { handleNavigation("contact"); toggleMenu(); }} className="hover:text-cyan-300 cursor-pointer">{currentContent.contact}</button></li>
+                        <li><button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300"><span className="text-lg">{currentContent.flag}</span><span className="sm:inline hover:text-cyan-300">{currentContent.language}</span></button></li>
                     </ul>
                 </div>
             )}

@@ -38,10 +38,10 @@ const Footer = ({ language }) => {
                     <div className="mt-6 lg:mt-0 flex justify-center lg:justify-end">
                         <div className="flex gap-4">
                             <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
-                                <img src="/facebook.png" alt="facebook" width={36} height={36} className="rounded-full" />
+                                <img src="/messenger.png" alt="facebook" width={36} height={36} className="rounded-full" />
                             </a>
                             <a href="https://www.instagram.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
-                                <img src="/instagram.png" alt="instagram" width={36} height={36} />
+                                <img src="/phone-number.png" alt="instagram" width={36} height={36} />
                             </a>
                         </div>
                     </div>
