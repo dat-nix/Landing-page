@@ -7,30 +7,29 @@ const Footer = ({ language }) => {
 
     return (
         <section>
-            <footer className="bg-black text-white py-8 px-6 md:px-12">
-                {/* Navigation Links */}
-                <div className="flex flex-col lg:flex-row lg:justify-between pb-6">
-                    <div className="flex flex-col md:flex-row md:justify-center gap-10 md:gap-20 text-center md:text-left">
-                        <div className="flex flex-col space-y-3">
-                            <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
-                                FAQs
-                            </ScrollLink>
-                            <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-80}>
-                               {footer.find(item => item.contact)?.contact} 
-                            </ScrollLink>
-                        </div>
-                        <div className="flex flex-col space-y-3">
-                            <ScrollLink to="about" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-80}>
-                               {footer.find(item => item.about)?.about} 
-                            </ScrollLink>
-                            <a href="/address" className="hover:text-yellow-500">{footer.find(item => item.address)?.address}</a>
-                        </div>
+            <footer className="bg-black min-h-[260px] text-white py-8 px-6 md:px-12">
+                {/* Navigation Links - Responsive */}
+                <div className="flex flex-col items-center lg:flex-row lg:justify-between pb-6">
+                    <div className="lg:text-xl font-semithin flex flex-col items-center gap-4 sm:flex-row sm:gap-10 md:gap-20 text-center">
+                        
+                        <ScrollLink to="about" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-80}>
+                            {footer.find(item => item.about)?.about} 
+                        </ScrollLink>
+                        <ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
+                            {footer.find(item => item.contact)?.contact} 
+                        </ScrollLink>
+                        <a href="https://maps.app.goo.gl/qEVmLVwqFDgyCqKi9" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-500">
+                            {footer.find(item => item.address)?.address}
+                        </a>
+                        <ScrollLink to="faqs" smooth duration={500} className="cursor-pointer hover:text-yellow-500" offset={-90}>
+                            FAQs
+                        </ScrollLink>
                         <div className="relative cursor-pointer font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500 
-                        before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
-                        before:origin-left before:transition-transform before:duration-300 text-lg">
+                            before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-400 before:scale-x-0 
+                            before:origin-left before:transition-transform before:duration-300 text-lg lg:text-xl">
                             <Link to="/rikt"
-                            onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)}>
-                            RIKT
+                                onClick={() => setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100)}>
+                                RIKT
                             </Link>
                         </div>
                     </div>
@@ -49,35 +48,10 @@ const Footer = ({ language }) => {
                 </div>
 
                 {/* Ownership Statement */}
-                <div className="border-t border-gray-700 pt-6 mb-6 text-center">
+                <div className="-mx-6 md:-mx-12 border-t border-gray-600 pt-6 mb-6 text-center">
                     <p className="text-gray-400 text-sm">
-                        {footer.find(item => item.ownership)?.ownership}
+                        RMIT Shinsei Kendo Club @2025
                     </p>
-                </div>
-
-                {/* Credit Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-center md:text-left">
-                    <div>
-                        <h4 className="font-bold text-yellow-400 mb-2">{footer.find(item => item.author)?.author}</h4>
-                        <p>{footer.find(item => item.author)?.description}</p>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold text-yellow-400 mb-2">{footer.find(item => item.leader)?.leader}</h4>
-                        <p>{footer.find(item => item.leader)?.leaderName}</p>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold text-yellow-400 mb-2">{footer.find(item => item.devs)?.devs}</h4>
-                        <p>{footer.find(item => item.devs)?.dev1}</p>
-                        <p>{footer.find(item => item.devs)?.dev2}</p>
-                    </div>
-
-                    <div>
-                        <h4 className="font-bold text-yellow-400 mb-2">{footer.find(item => item.designers)?.designers}</h4>
-                        <p>{footer.find(item => item.designers)?.des1}</p>
-                        <p>{footer.find(item => item.designers)?.des2}</p>
-                    </div>
                 </div>
             </footer>
         </section>

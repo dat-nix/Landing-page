@@ -95,7 +95,7 @@ export default function Navbar({ language, setLanguage }) {
                     <span className="hidden lg:inline">{currentContent.rikt}</span>
                     <span className="inline lg:hidden">RIKT</span>
                 </span>
-                <button onClick={() => handleNavigation("faqs")} className="text-white cursor-pointer hover:text-yellow-400">
+                <button onClick={() => handleNavigation("contact")} className="text-white cursor-pointer hover:text-yellow-400">
                     {currentContent.contact}
                 </button>
                 <button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300">

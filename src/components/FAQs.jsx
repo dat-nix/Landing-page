@@ -12,9 +12,9 @@ const FAQ = ({ language = "en" }) => {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-10 px-4 lg:px-20">
+        <div className="flex flex-col items-center gap-10 mt-10 px-4 lg:px-20 w-full">
             {/* FAQs Section */}
-            <div className="bg-[#6f6f6f] text-white py-10 px-6 sm:px-10 rounded-md shadow-md w-full max-w-lg">
+            <div className="bg-[#6f6f6f] text-white py-10 px-6 sm:px-10 rounded-md shadow-md w-full max-w-2xl">
                 <h2 className="text-3xl font-semibold text-center mb-6">
                     {content[language]?.faqTitle || "FAQs"}
                 </h2>
@@ -45,9 +45,9 @@ const FAQ = ({ language = "en" }) => {
             </div>
 
             {/* Contact Us Section */}
-            <div id="contact" className="flex flex-col items-center w-full max-w-sm text-black font-[Reddit Sans] text-[28px] sm:text-[32px] font-semibold leading-normal p-5 bg-white rounded-lg shadow-lg text-center">
-                <p className="sm:text-2xl lg:text-3xl mb-4">{contact.text}</p>
-                <div className="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-6 text-4xl sm:text-5xl justify-center">
+            <div id="contact" className="w-full max-w-xl text-black font-[Reddit Sans] text-center p-5 bg-white">
+                <p className="lg:text-3xl text-2xl font-thin mb-4">{contact.text}</p>
+                <div className="mt-8 flex justify-center gap-10 lg:gap-22 text-4xl lg:text-5xl">
                     <FaEnvelope className="cursor-pointer hover:text-gray-500" />
                     <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF className="cursor-pointer hover:text-gray-500" />
