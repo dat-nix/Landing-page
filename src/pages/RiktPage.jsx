@@ -34,7 +34,8 @@ const RIKT = ({ language }) => {
                     {/* Text Container */}
                     <div className="md:w-7/12 event-details px-1 md:pr-4"> {/* Added px-4 for mobile padding */}
                         <div className="mb-8 w-full">
-                        <h1 className="text-left w-full text-[3.5rem] sm:text-[5rem] md:text-[3.5rem] lg:text-[8rem] font-bold text-[#FFCA5A] leading-[0.9] md:leading-[0.8] whitespace-normal md:whitespace-nowrap">
+                        <h1 
+                        className="text-left w-full text-[3.5rem] sm:text-[5rem] md:text-[3.5rem] lg:text-[8rem] font-bold text-[#FFCA5A] leading-[1.2] md:leading-[1.2] whitespace-normal md:whitespace-nowrap font-['Anton'] tracking-[0.1em] ml-[30px]">
                                 {riktAbout.information[0]}<br />{riktAbout.information[1]}
                             </h1>
                         </div>
@@ -56,13 +57,13 @@ const RIKT = ({ language }) => {
                     </div>
 
                     {/* Map Container */}
-                    <div className="md:w-[510px] md:h-[480px] mt-5 md:mt-60 md:mr-10 event-map flex-grow-0">
+                    <div className="md:w-[600px] md:h-[600px] mt-5 md:mt-80 md:mr-10 event-map flex-grow-0">
                         <div className="relative aspect-square w-[400px]">
                             {/* Embedded Google Map */}
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3920.0637546456305!2d106.6937685!3d10.729566200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srmit%20sgs!5e0!3m2!1sen!2s!4v1742901966432!5m2!1sen!2s" 
-                                width="510" 
-                                height="480" 
+                                width="600px" 
+                                height="600px" 
                                 style={{ border: 0, borderRadius: '10px' }} 
                                 allowFullScreen 
                                 loading="lazy" 
@@ -105,7 +106,7 @@ const RIKT = ({ language }) => {
                     <p className="registration-text">{riktData.registration.description}</p>
                     <button 
                         className="register-button" 
-                        onClick={() => window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeDh1nk2ZrgkMdPqUVULepuEg1c1suve47upcgtTC1QwGVNMw/viewform?pli=1"}
+                        onClick={() => window.location.href = "https://docs.google.com/document/d/1BxNh6MUfEN4eCtX5AJNHmi0npxMiFWIc20FMADJG3zM/edit?fbclid=IwY2xjawJSZoRleHRuA2FlbQIxMAABHZJwMa5y0pQeS69FhxPXA2PNByXHS114SkLwHkGYWvZD2RnJdd3SxQxPhg_aem_JC4ZikG7M6Y0Riv63_9_KQ&tab=t.0"}
                     >
                         {riktData.registration.button}
                     </button>
@@ -132,18 +133,17 @@ const RIKT = ({ language }) => {
           alt="wavy design"
         />
       </div>
-            {/* Sponsor Section */}
+            {/* Sponsor Section 
 <section className="bg-white py-12 text-center">
     <h2 className="text-4xl font-semibold">{riktData.sponsor.text}</h2>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:md-30 md:gap-3 max-w-4xl mx-auto mt-4 md:mt-6 px-4">
         {[...Array(8)].map((_, index) => (
             <div key={index} className="bg-gray-300 h-24"></div>
         ))}
-        {/* Center the last two elements */}
         <div className="bg-gray-300 h-16 md:h-24 col-span-2 md:col-span-2 mx-auto rounded-sm"></div>
         <div className="bg-gray-300 h-16 md:h-24 col-span-2 md:col-span-2 mx-auto rounded-sm"></div>
     </div>
-</section>
+</section> */}
             <div className="flex flex-col h-20"> 
                 <Footer language={language} />
             </div>
