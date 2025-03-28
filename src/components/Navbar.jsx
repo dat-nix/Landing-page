@@ -85,22 +85,22 @@ export default function Navbar({ language, setLanguage }) {
     </button>
 
     <div className="hidden lg:flex space-x-6 sm:space-x-8 text-base sm:text-lg font-medium">
-        <button onClick={() => handleNavigation("home")} className="text-white cursor-pointer hover:text-cyan-300">
+        <button onClick={() => handleNavigation("home")} className="text-white cursor-pointer hover:text-yellow-300">
             {currentContent.home}
         </button>
-        <button onClick={() => handleNavigation("about")} className="text-white cursor-pointer hover:text-cyan-300">
+        <button onClick={() => handleNavigation("about")} className="text-white cursor-pointer hover:text-yellow-300">
             {currentContent.about}
         </button>
-        <span onClick={handleRiktNavigation} className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-cyan-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(174,238,238,0.8)]">
+        <span onClick={handleRiktNavigation} className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(174,238,238,0.8)]">
             <span className="hidden lg:inline">{currentContent.rikt}</span>
             <span className="inline lg:hidden">RIKT</span>
         </span>
-        <button onClick={() => handleNavigation("contact")} className="text-white cursor-pointer hover:text-cyan-300">
+        <button onClick={() => handleNavigation("contact")} className="text-white cursor-pointer hover:text-yellow-300">
             {currentContent.contact}
         </button>
         <button onClick={toggleLanguage} className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300">
             <span className="text-lg">{currentContent.flag}</span>
-            <span className="hidden sm:inline hover:text-cyan-300">{currentContent.language}</span>
+            <span className="hidden sm:inline hover:text-yellow-300">{currentContent.language}</span>
         </button>
     </div>
 
