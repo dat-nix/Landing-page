@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react"; 
-import { Link as ScrollLink } from "react-scroll";
+import { useEffect } from "react"; 
 import { Link } from "react-router-dom";  
 import { scroller } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import About from "./About";
 import content from "../configs/content";
 import { Footer, FAQs } from "../components";

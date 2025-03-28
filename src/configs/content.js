@@ -1,4 +1,3 @@
-import { info } from "autoprefixer";
 
 export const content = {
     en: {
@@ -73,7 +72,6 @@ export const content = {
     contact: {text:"If there's any questions, contact us at:"},
     footer: [
             {
-                address: "Address",
                 about: "About Us",
                 contact: "Contact Us",
                 address: "Address",
@@ -257,7 +255,6 @@ export const content = {
         contact: {text:"Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi tại:"},
         footer: [
             {
-                address: "Địa Chỉ",
                 about: "Giới Thiệu",
                 contact: "Liên Hệ",
                 address: "Địa Chỉ",
