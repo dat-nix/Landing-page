@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body {
     font-family: 'Ariel', sans-serif;
   }
@@ -41,7 +42,8 @@ body {
 }
 
 .about-title {
-    font-size: 10rem;
+    font-family: 'Anton', sans-serif; /* Use the Anton font */
+    font-size: 16rem;
     line-height: 1;
     font-weight: bold;
     color: #FFCA5A; /* Adjust color as needed */
@@ -51,8 +53,8 @@ body {
 }
 
 .about-text {
-    flex: 2;
-    font-size: 1.8rem;
+    flex: 1;
+    font-size: 2rem;
     color: white;
     line-height: 1.8;
     max-width: 600px;
@@ -81,21 +83,22 @@ body {
 
   /* Title */
   .timeline-title {
-    background: white;
+    background: none;
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.8rem;
+    font-size: 10rem;
     font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    color: #FFCA5A;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
   }
   
   /* Timeline Card */
   .timeline-card {
     background: white;
     width: 80%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 12px;
@@ -107,7 +110,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-    align-items: left;
+    align-items: center;
   }
   
   /* Timeline Structure */
@@ -158,7 +161,7 @@ body {
   }
   
   .event-time {
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: block;
     font-weight: bold;
     color: black;
@@ -210,12 +213,12 @@ body {
   
   .event-time {
     display: block;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin-bottom: 4px;
   }
   
   .event-activity {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.2;
     max-width: 120px;
     margin: 0 auto;
@@ -233,6 +236,10 @@ body {
       height: 100%;
       width: 2px;
       transform: translateX(-50%);
+    }
+    .timeline-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
   
     .timeline-event {
@@ -295,38 +302,39 @@ body {
     display: flex;
     justify-content: left;
     gap: 20px;
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1600px;
     margin: 20px auto;
   }
   
   .requirement-card {
-    background: white;
+    background: none;
     flex: 1;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   }
   
   .requirement-title {
-    font-size: 1.3rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 9rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 15px;
     margin-bottom: 20px;
+    color: #FFCA5A ;
   }
   
   .requirement-text {
-    font-size: 1rem;
+    font-size: 4rem;
     line-height: 1.5;
-    color: #444;
+    color: #FFCA5A;
     text-align: left;
     margin-bottom: 25px;
   }
   .registration-text {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.5;
-    color: #444;
+    color: #fffcfc;
     text-align: center;
     margin-bottom: 25px;
   }
@@ -334,18 +342,22 @@ body {
   
   .register-button {
     display: inline-block;
-    background-color: #65b509;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
+    background-color: #FFCA5A;
+    color: black;
+    padding: 6vh 45vh; /* Increased from 12px 25px */
+    border-radius: 10px; /* Slightly larger radius */
     text-decoration: none;
     font-weight: bold;
+    font-size: 2rem; /* Slightly larger text */
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
+    min-width: 220px; /* Ensures consistent width */
+    text-align: center;
+    margin-top: 40px;
+}
   
   .register-button:hover {
-    background-color: #ff5733;
+    background-color: #f24900;
     transform: translateY(-2px);
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
   }
@@ -363,7 +375,17 @@ body {
     }
     
     .requirement-title {
-      font-size: 1.2rem;
+      font-size: 2rem;
+      letter-spacing: 5px;
+    }
+    .registration-text {
+      font-size: 1rem;
+      
+    }
+    .register-button {
+      padding: 10px 20px; /* Adjusted for mobile */
+      font-size: 1.2rem; /* Adjusted for mobile */
+      min-width: auto; /* Remove fixed width on mobile */
     }
   }
 
@@ -382,8 +404,8 @@ body {
   
   .contact-text {
     font-size: 2rem;
-    margin-bottom: 15px;
-    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .contact-icons {
@@ -393,8 +415,8 @@ body {
   }
   
   .contact-icon {
-    width: 60px; /* Increased size */
-    height: 60px;
+    width: 70px; /* Increased size */
+    height: 70px;
     transition: transform 0.2s ease-in-out;
   }
   
@@ -411,6 +433,9 @@ body {
     .contact-icons {
       flex-direction: row;
       gap: 10px;
+    }
+    .contact-text {
+      font-size: 1.5rem;
     }
   }
   /* ▲▲▲ End of Contact Us Section ▲▲▲ */
