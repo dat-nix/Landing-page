@@ -34,9 +34,9 @@ const InstructorProfile = ({ language }) => {
        {/* Layer 3: Text Overlay */}
        <div className="text-overlay scale-75 md:scale-100">
         <div className="left-orange-text">
-          <h1 className="text-3xl md:text-6xl">OH</h1>
-          <h1 className="text-3xl md:text-6xl">JAE</h1>
-          <h1 className="text-3xl md:text-6xl">HUN</h1>
+          <h1 className="text-3xl md:text-6xl font-['Anton'] tracking-[0.15]">OH</h1>
+          <h1 className="text-3xl md:text-6xl font-['Anton'] tracking-[0.15] ">JAE</h1>
+          <h1 className="text-3xl md:text-6xl font-['Anton'] tracking-[0.15]">HUN</h1>
         </div>
         <div className="right-black-text absolute bottom-0 md:bottom-4" style={{ transform: 'translateY(20px)' }}>
           <p className="text-3x1 sm md:text-4x1">{instructor.rank}</p>
