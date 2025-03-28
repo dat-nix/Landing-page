@@ -44,7 +44,7 @@ export default function HomePage({ language }) {  // Receive language from props
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    className="absolute top-4/5 lg:top-3/4 lg:justify-start lg:ml-25 w-full flex justify-center items-center"
+                    className="absolute top-3/5 lg:top-3/4 lg:justify-start lg:ml-25 w-full flex justify-center items-center"
                 >
                     <Link
                         to="/rikt"
