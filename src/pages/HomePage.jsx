@@ -6,7 +6,7 @@ import About from "./About";
 import content from "../configs/content";
 import { Footer, FAQs } from "../components";
 
-export default function HomePage({ language }) {  // ️ recieve language from props (from App.jsx)
+export default function HomePage({ language }) {  // Receive language from props (from App.jsx)
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const scrollTo = params.get("scrollTo");
@@ -15,7 +15,7 @@ export default function HomePage({ language }) {  // ️ recieve language from p
         }
     }, []);
 
-    // ️ check language state; if not valid set back to "en"
+    // Check language state; if not valid, set back to "en"
     const langData = content[language]?.heroSection || content["en"].heroSection; 
 
     return (
@@ -23,44 +23,44 @@ export default function HomePage({ language }) {  // ️ recieve language from p
             {/* Hero Section */}
             <section
                 id="home"
-                className="relative h-[40vh] lg:h-[120vh] flex justify-center items-center bg-white"
+                className="relative h-[60vh] lg:h-[140vh] flex justify-center items-center bg-white"
             >
                 {/* Background Image */}
                 <motion.div
                     initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.2 }}
-                    className="absolute w-full h-full object-cover overflow-hidden "
+                    className="absolute top-0 left-0 w-full h-full overflow-hidden"
                 >
                     <img
                         src="/rmit-kendo-club.png"
-                        className="lg:object-cover sm:object-contain md:object-contain"
+                        className="w-full h-auto object-cover"
                         alt="RMIT"
                     />
                 </motion.div>
-
-                <div>
-
-                    <motion.div
-                        initial={{ opacity: 0  }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.4 }}
+ 
+                {/* Button */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.4 }}
+                    className="absolute top-1/2 lg:top-3/4 lg:justify-start lg:ml-25 w-full flex justify-center items-center"
+                >
+                    <Link
+                        to="/rikt"
+                        className="px-10 py-4 sm:px-8 sm:py-4 md:px-14 md:py-5 lg:px-43 lg:py-8 
+                        text-sm sm:text-base md:text-xl lg:text-3xl font-bold 
+                        bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
+                        transition-all duration-300 hover:bg-orange-600 hover:scale-105"
                     >
-                        <Link
-                            to="/rikt"
-                            className="absolute bottom-8 left-4 lg:bottom-14 lg:left-15 cursor-pointer px-8 py-3 lg:px-40 lg:py-6 text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg transition-all duration-300 hover:bg-orange-600 hover:scale-105"
-
-                        >
-                            {langData.button}
-                        </Link>
-                    </motion.div>
-                </div>
+                        {langData?.button || "Explore RIKT"}
+                    </Link>
+                </motion.div>
             </section>
 
             {/* About Section */}
             <About language={language} />
 
-           
             {/* FAQs Section */}
             <div className="mb-16" id="faqs">
                 <FAQs language={language}/>
