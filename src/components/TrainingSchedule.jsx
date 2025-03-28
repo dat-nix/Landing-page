@@ -46,13 +46,13 @@ export default function TrainingSchedule({ language = "en" }) {
         transition-all duration-1000 ease-out 
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"}`}
       >
-        <p className="text-orange-500 text-[24px] sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
+        <p className="text-white text-[24px] sm:text-[40px] md:text-[70px] lg:text-[113px] font-bold md:mt-4">
           {trainingschedule?.time || "Time Missing"}
         </p>
-        <p className="text-white text-[24px] sm:text-[40px] md:text-[70px] lg:text-[100px] font-bold">
+        <p className="text-white text-[24px] sm:text-[40px] md:text-[70px] lg:text-[120px] font-bold md:mb-4">
           {trainingschedule?.days || "Days Missing"}
         </p>
-        <p className="text-yellow-200 text-[36px] sm:text-[70px] md:text-[120px] lg:text-[180px] font-extrabold leading-none">
+        <p className="text-yellow-200 text-[36px] sm:text-[70px] md:text-[120px] lg:text-[180px] font-extrabold leading-none font-['Anton'] tracking-[0.23em]">
           {trainingschedule?.description || "Description Missing"}
         </p>
       </div>
