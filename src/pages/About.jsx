@@ -9,8 +9,7 @@ const About = ({ language }) => {
     const instructor = content[language]?.instructor || content["en"].instructor;
 
     return (
-        <section id="about">
-            <div className="bg-white">
+        <section id="about" className="bg-white">
                {/* About Us Section */}
                 <div className="flex flex-col lg:flex-row items-center max-w-full h-auto lg:h-screen px-4 sm:px-6">
                     {/* Left Side: Logo & Club Name */}
@@ -41,7 +40,6 @@ const About = ({ language }) => {
                         </p>
                     </div>
                 </div>
-            </div> 
 
             {/* Training Schedule Section */}
             <TrainingSchedule language={language} />
