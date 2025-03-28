@@ -93,7 +93,7 @@ const RIKT = ({ language }) => {
                 </div>
             ))}
             {/* Registration and Requirement Section */} {/*Đang tạm ẩn*/}
-            *<div className="requirements-container">
+            <div className="requirements-container">
                 {/*<div className="requirement-card">
                     <h2 className="requirement-title">{riktData.eligibility.title}</h2>
                     <p className="requirement-text">{riktData.eligibility.requirements[0]}</p>
