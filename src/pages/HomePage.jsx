@@ -23,7 +23,7 @@ export default function HomePage({ language }) {  // Receive language from props
             {/* Hero Section */}
             <section
                 id="home"
-                className="relative h-[60vh] lg:h-[140vh] flex justify-center items-center bg-white"
+                className="relative h-[45vh] lg:h-[140vh] flex justify-center items-center bg-white"
             >
                 {/* Background Image */}
                 <motion.div
@@ -44,7 +44,7 @@ export default function HomePage({ language }) {  // Receive language from props
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    className="absolute top-3/5 lg:top-3/4 lg:justify-start lg:ml-25 w-full flex justify-center items-center"
+                    className="relative top-1/4 lg:top-1/4 lg:justify-start lg:ml-15 w-full flex justify-center items-center"
                 >
                     <Link
                         to="/rikt"

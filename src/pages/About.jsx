@@ -69,7 +69,7 @@ const About = ({ language }) => {
                 {gallery.sections.map((section, index) => (
                     <div key={index} className="mt-10">
                         <h2 className="lg:text-3xl text-2xl font-bold mb-8 text-center lg:text-left lg:ml-6 text-orange-500 sm:text-[2rem]">{section.title}</h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-8xl mx-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 max-w-8xl mx-6">
                             {section.images.map((image, imgIndex) => (
                                 <img
                                     key={imgIndex}
