@@ -13,7 +13,7 @@ const FAQ = ({ language = "en" }) => {
     return (
         <div className="flex flex-col items-center gap-8 mt-8 px-2 lg:px-6 w-full">
             {/* FAQs Section - Full Width with Small Padding */}
-            <div className="bg-[#6f6f6f] text-white py-14 lg:py-16 px-6 lg:px-12 rounded-md shadow-md w-full max-w-[95vw]">
+            <div className="bg-[#6f6f6f] text-white py-14 lg:py-16 px-6 lg:px-12 rounded-md shadow-md w-full max-w-[80vw]">
                 <h2 className="text-4xl lg:text-5xl font-semibold text-center mb-6">
                     {content[language]?.faqTitle || "FAQs"}
                 </h2>
