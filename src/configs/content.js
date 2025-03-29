@@ -101,7 +101,7 @@ export const content = {
         ],
     FacebookPosts: {
             
-                title: "UPDATES"
+                title: "LATEST UPDATES"
             
         },
     timelineData:  [
