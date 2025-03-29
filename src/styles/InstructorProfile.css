@@ -50,7 +50,7 @@
   .center-mockup {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(calc(-50% + 60px), -50%); /* Shift 30px right */
     z-index: 2;
     width: 45%;
@@ -105,7 +105,7 @@
 .right-black-text {
   position: absolute;
   bottom: 40px;
-  right: 20px;
+  right: 3%;
   font-size: 1.9em;
   line-height: 1.8;
   color: #000000;
@@ -164,7 +164,7 @@
 }
 
 .left-orange-text h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 10px 10x; /* Reduced margins */
   line-height: 1;
   display: flex;
