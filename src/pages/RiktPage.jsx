@@ -73,7 +73,7 @@ const RIKT = ({ language }) => {
                     </div>
                 </div>
             </div>
-
+            {/* Event Timeline Section hiện đã ẩn chờ dev lại
             <h1 className="timeline-title">{riktData.eventTimeline}</h1>
             {timelineData.map((day, index) => (
                 <div key={index} className="timeline-card">
@@ -91,7 +91,7 @@ const RIKT = ({ language }) => {
                         ))}
                     </div>
                 </div>
-            ))}
+            ))}*/}
             {/* Registration and Requirement Section */} {/*Đang tạm ẩn*/}
             <div className="requirements-container">
                 {/*<div className="requirement-card">
