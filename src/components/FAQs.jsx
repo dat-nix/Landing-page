@@ -47,14 +47,14 @@ const FAQ = ({ language = "en" }) => {
             <div id="contact" className="w-full max-w-xl text-black font-[Reddit Sans] text-center p-5 bg-white">
                 <p className="lg:text-3xl text-2xl font-thin mb-4">{contact.text}</p>
                <div className="mt-6 flex justify-center gap-10 lg:gap-18 text-4xl lg:text-5xl">
-                    <img src="/Mail.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
+                    <img src="/Mail.png" className="w-14 h-14 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
-                        <img src="/Facebook.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
+                        <img src="/Facebook.png" className="w-14 h-14 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     </a>
                     <a href="https://www.instagram.com/rmitshinsei/" target="_blank" rel="noopener noreferrer">
-                        <img src="Instagram.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
+                        <img src="Instagram.png" className="w-14 h-14 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     </a>
-                    <img src="Linkedin.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
+                    <img src="Linkedin.png" className="w-14 h-14 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                 </div>  
             </div>
         </div>
