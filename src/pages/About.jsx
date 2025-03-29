@@ -53,11 +53,6 @@ const About = ({ language }) => {
                 <h2 className="absolute top-0 left-4 sm:left-10 md:left-17 text-2xl sm:text-[40px] md:text-[100px] font-bold text-orange-500 ">
                     {instructor.description}
                 </h2>
-
-                {/* LATEST (Bottom-Right) */}
-                <h2 className="absolute bottom-1 sm:bottom-4 right-4 sm:right-8 text-7xl sm:text-[60px] md:text-[190px] font-bold text-[#232323] font-[Anton] tracking-[0.15em]">
-                    {instructor.text}
-                </h2>
             </div>
 
             {/* Facebook Posts Section */}
@@ -74,7 +69,7 @@ const About = ({ language }) => {
                 {gallery.sections.map((section, index) => (
                     <div key={index} className="mt-10">
                         <h2 className="lg:text-3xl text-2xl font-bold mb-8 text-center lg:text-left lg:ml-6 text-orange-500 sm:text-[2rem]">{section.title}</h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-5">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-8xl mx-6">
                             {section.images.map((image, imgIndex) => (
                                 <img
                                     key={imgIndex}
