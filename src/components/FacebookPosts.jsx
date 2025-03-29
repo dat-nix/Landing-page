@@ -28,14 +28,18 @@ const FacebookPosts = ({ language }) => {
     return (
         <section className="w-full min-h-[500px] sm:min-h-[700px] md:min-h-[800px] bg-gray-300 relative flex flex-col items-center pt-[50px] sm:pt-[80px] md:pt-[100px]">
             {/* UPDATES Header */}
-            <div className="absolute top-0 right-0 w-full flex justify-end pr-5">
-            <h2 className="text-[80px] md:text-[150px] lg:text-[190px] font-bold text-black font-[Anton] tracking-[0.15em] leading-none">
-                    {langData.title}
-                </h2>
-            </div>
+            <div className="absolute top-0 right-3 w-full flex justify-end pr-5 mb-[2400px] sm:mb-[200px] md:mb-[320px]">
+            <h2 className="text-[80px] md:text-[140px] lg:text-[150px] font-bold text-black font-[Anton] tracking-[0.15em] leading-none">
+                {langData.title.split(' ').map((word, index) => (
+                    <span key={index} className="block text-right w-full">
+                        {word}
+                    </span>
+                ))}
+            </h2>
+        </div>
 
            {/* Posts Grid */}
-    <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-[150px] px-4">
+        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-[200px] sm:mt-[220px] md:mt-[240px] px-8">
         {posts.map((post) => (
             <a
                 key={post.id}
