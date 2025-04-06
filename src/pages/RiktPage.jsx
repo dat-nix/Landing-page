@@ -120,22 +120,6 @@ const RIKT = ({ language }) => {
 
             {/* Facebook Posts Section */}
             <FacebookPosts language={language} />
-            {/* Contact US*/}
-            <div id="contact" className="w-full max-w-xl text-black font-[Reddit Sans] text-center p-5 bg-blue-[185195] mx-auto flex flex-col items-center justify-center">
-                <p className="lg:text-3xl text-2xl font-thin mb-4">{contact.text}</p>
-               <div className="mt-6 flex justify-center gap-10 lg:gap-18 text-4xl lg:text-5xl">
-                    <a href="shinseikendoclub.sgs@rmit.edu.vn" target="_blank" rel="noopener noreferrer">
-                        <img src="/Mail.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
-                    </a>
-                    <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
-                        <img src="/Facebook.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
-                    </a>
-                </div>   
-            </div>
-
-            <div className="wavyeffect">
-                <img src="/wavyeffect.png" alt="wavy design" />
-            </div>
 
             {/* Sponsor Section */}
             <section className="bg-white py-12 text-center">
@@ -147,7 +131,7 @@ const RIKT = ({ language }) => {
                     <div className="bg-gray-300 h-16 md:h-24 col-span-2 md:col-span-2 mx-auto rounded-sm"></div>
                     <div className="bg-gray-300 h-16 md:h-24 col-span-2 md:col-span-2 mx-auto rounded-sm"></div>
                 </div>*/}
-            {/* Contact US*
+            {/* Contact US* */}
             <div id="contact" className="w-full max-w-xl text-black font-[Reddit Sans] text-center p-5 bg-white mx-auto flex flex-col items-center justify-center">
                 <p className="lg:text-3xl text-2xl font-thin mb-4">{contact.text}</p>
                <div className="mt-6 flex justify-center gap-10 lg:gap-18 text-4xl lg:text-5xl">
@@ -156,7 +140,7 @@ const RIKT = ({ language }) => {
                         <img src="/Facebook.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     </a>
                 </div>   
-            </div> */}
+            </div> 
             </section>
 
             {/* Footer Section */}
