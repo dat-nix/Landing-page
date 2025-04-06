@@ -3,12 +3,7 @@ import '../styles/Agenda.css';
 
 const agendaData = {
   'May 30th': [
-    { time: '8:00 AM', activity: 'Check in and shinai check' },
-    { time: '9:15 AM', activity: 'Opening Ceremony' },
-    { time: '9:30 AM', activity: 'Morning Matches' },
-    { time: '12:00 PM', activity: 'Lunch Break' },
-    { time: '1:00 PM', activity: 'Afternoon Matches' },
-    { time: '3:00 PM', activity: 'Award Ceremony' },
+    { time: 'SEMINAR', activity: 'To Be Updated' },
   ],
   'May 31st': [
     { time: '8:00 AM', activity: 'Check in and shinai check' },
