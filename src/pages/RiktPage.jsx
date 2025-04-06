@@ -23,7 +23,7 @@ const RIKT = ({ language }) => {
 
 <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
   <a
-    href="https://docs.google.com/document/d/1ULqZoZ235xmzRWGJfTORwiBW0JaIK44N/edit"
+    href="https://docs.google.com/document/d/12AStHddUluEN0GxCe0IDq5OV5d2ZTxzL/edit?tab=t.0"
     className="px-10 py-5 sm:px-12 sm:py-5 md:px-16 md:py-6 lg:px-24 lg:py-7 
                text-base sm:text-lg md:text-xl lg:text-2xl font-bold 
                bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
