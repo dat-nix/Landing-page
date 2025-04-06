@@ -1,5 +1,4 @@
 import { content } from "../configs/content";
-import FacebookPosts from "../components/FacebookPosts";
 import TrainingSchedule from "../components/TrainingSchedule";
 import InstructorProfile from "../components/InstructorProfile"; // New import
 
@@ -54,9 +53,6 @@ const About = ({ language }) => {
                     {instructor.description}
                 </h2>
             </div>
-
-            {/* Facebook Posts Section */}
-            <FacebookPosts language={language} />
 
             {/* Gallery Section */}
             <div className="w-full min-h-screen flex-shrink-0 py-10">
