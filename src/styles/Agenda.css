@@ -1,0 +1,241 @@
+.agenda-section {
+    display: flex;
+    padding: 4rem 2rem;
+    background-color: #154c9e;
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .agenda-left {
+    flex: 1;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .agenda-title {
+    margin-right: 20%;
+    font-size: 10rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #ffd041;
+    margin-bottom: 1rem;
+    font-family: 'Anton', sans-serif;
+  }
+  
+  .agenda-subtitle {
+    margin-right: 56%;
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+    font-family: 'Reddit Sans', sans-serif;
+  }
+  
+  .agenda-date {
+    font-size: 7rem;
+    font-weight: bold;
+    color: #7fa3d6;
+    margin-bottom: 0.5px;
+    margin-left: 10%;
+    transition: all 0.5s ease;
+    text-align: left;
+    line-height: 1.2;
+  }
+  
+  .agenda-date.active {
+    color: white;
+  }
+  
+  .agenda-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .agenda-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    padding-left: 40%;
+    padding-top: 15%;
+  }
+  /*white line*/
+  .agenda-timeline::before {
+    content: '';
+    position: absolute;
+    justify-content: left;
+    margin-left: -2.6%;
+    top: 22%;
+    bottom: 7%;
+    width: 6px;
+    height: 80%;
+    background-color: white;
+  }
+  
+  .agenda-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .agenda-item::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: -1.5rem;
+    top: 2rem;
+    
+  }
+  
+  .agenda-time {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: left;
+    padding-left: 10%;
+  }
+  
+  .agenda-activity {
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 10%;
+  }
+
+
+  .agenda-timeline.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+  }
+  
+  .agenda-timeline.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .agenda-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5rem;
+    margin-left: 10%;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #ffd041;
+  }
+ /* Mobile Responsive */
+@media (max-width: 768px) {
+    .agenda-section {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .agenda-content-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .agenda-title {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-right:  70%;
+        
+    }
+    .agenda-subtitle {
+        margin-right: 72%;
+        font-size: 0.9rem;
+        margin-bottom: -1rem;
+        font-family: 'Reddit Sans', sans-serif;
+      }
+
+    .agenda-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        margin-top: 1rem;
+    }
+
+    /* Move agenda date to the right */
+    .agenda-date {
+        font-size: 0.775rem;
+        margin: 0.25rem 0;
+        margin-left: auto; /* Align to the right */
+    }
+
+    .agenda-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .agenda-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Move timeline to the left */
+    .agenda-timeline {
+        gap: 1.25rem;
+        margin-top: 1rem;
+        padding-left: 0; /* Remove previous padding */
+        padding-right: 0; /* Ensure no unnecessary padding */
+    }
+
+    .agenda-item {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .agenda-item::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        left: -0.5rem;
+        top: 2rem;
+        
+      }
+    .agenda-timeline::before {
+        content: '';
+        position: absolute;
+        justify-content: left;
+        margin-left: -2.6%;
+        top: 22%;
+        bottom: 7%;
+        width: 2px;
+        height: 80%;
+        background-color: white;
+      }
+
+    .agenda-time {
+        font-size: 0.875rem;
+        min-width: 3rem;
+    }
+
+    .agenda-activity {
+        font-size: 0.875rem;
+        padding-left: 1rem;
+    }
+
+    .agenda-dots {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+}
