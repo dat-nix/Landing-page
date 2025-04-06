@@ -73,6 +73,8 @@ const RIKT = ({ language }) => {
                     </div>
                 </div>
             </div>
+             {/* Event Information Section}*/}
+            <AgendaSection language={language} />
             {/* Event Timeline Section hiện đã ẩn chờ dev lại
             <h1 className="timeline-title">{riktData.eventTimeline}</h1>
             {timelineData.map((day, index) => (
