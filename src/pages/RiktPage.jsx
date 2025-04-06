@@ -13,7 +13,7 @@ const RIKT = ({ language }) => {
 
     return (
         <section className="timeline-section">
-            {/* Tournament Banner Section */}
+            {/* Banner */}
             <div className="banner-section">
                 <img 
                     src="/rmit-kendo-club.png" 
@@ -22,6 +22,7 @@ const RIKT = ({ language }) => {
                 />
             </div>
 
+            {/* About */}
             <div className="about-section">
                 <h2 className="about-title">{riktAbout.about[0]}</h2>
                 <p className="about-text">
@@ -30,10 +31,9 @@ const RIKT = ({ language }) => {
                 </p>
             </div>
 
-            {/* Event Information Section */}
+            {/* Event Info */}
             <div className="w-full p-4 md:mt-30 event-info-container">
                 <div className="flex flex-col md:flex-row items-start justify-between">
-                    {/* Text Container */}
                     <div className="md:w-7/12 event-details px-1 md:pr-4">
                         <div className="mb-8 w-full">
                             <h1 
@@ -58,13 +58,13 @@ const RIKT = ({ language }) => {
                         </div>
                     </div>
 
-                    {/* Map Container */}
-                    <div className="md:w-[600px] md:h-[600px] mt-5 md:mt-80 md:mr-10 event-map flex-grow-0">
-                        <div className="relative aspect-square w-[400px]">
+                    {/* Map - Shrunk */}
+                    <div className="md:w-[500px] md:h-[500px] mt-5 md:mt-80 md:mr-10 event-map flex-grow-0">
+                        <div className="relative aspect-square w-[300px] md:w-[400px] lg:w-[450px]">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3920.0637546456305!2d106.6937685!3d10.729566200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srmit%20sgs!5e0!3m2!1sen!2s!4v1742901966432!5m2!1sen!2s" 
-                                width="600px" 
-                                height="600px" 
+                                width="100%" 
+                                height="100%" 
                                 style={{ border: 0, borderRadius: '10px' }} 
                                 allowFullScreen 
                                 loading="lazy" 
@@ -75,36 +75,12 @@ const RIKT = ({ language }) => {
                     </div>
                 </div>
             </div>
-            {/* Event Information Section}*/}
-            <AgendaSection language={language} />
-            
 
-            {/* Event Timeline Section hiện đã ẩn chờ dev lại
-            <h1 className="timeline-title">{riktData.eventTimeline}</h1>
-            {timelineData.map((day, index) => (
-                <div key={index} className="timeline-card">
-                    <h2 className="timeline-date">{day.date}</h2>
-                    <div className="timeline-container">
-                        <div className="timeline-connector"></div>
-                        {day.events.map((event, idx) => (
-                            <div key={idx} className="timeline-event">
-                                <div className="timeline-dot"></div>
-                                <div className="event-info">
-                                    <span className="event-time">{event.time}</span>
-                                    <span className="event-activity">{event.activity}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            ))}*/}
-            {/* Registration and Requirement Section */} {/*Đang tạm ẩn*/}
+            {/* Agenda */}
+            <AgendaSection language={language} />
+
+            {/* Requirements & Registration */}
             <div className="requirements-container">
-                {/*<div className="requirement-card">
-                    <h2 className="requirement-title">{riktData.eligibility.title}</h2>
-                    <p className="requirement-text">{riktData.eligibility.requirements[0]}</p>
-                    <p className="requirement-text">{riktData.eligibility.requirements[1]}</p>
-                </div> */}
                 <div className="requirement-card">
                     <h2 className="requirement-title">{riktData.registration.title}</h2>
                     <p className="registration-text">{riktData.registration.description}</p>
@@ -116,38 +92,28 @@ const RIKT = ({ language }) => {
                     </button>
                 </div>
             </div>
-            
 
-            {/* Facebook Posts Section */}
+            {/* Facebook Posts */}
             <FacebookPosts language={language} />
 
-            {/* Sponsor Section */}
-            <section className="bg-white py-12 text-center">
-                {/*<h2 className="text-4xl font-semibold">{riktData.sponsor.text}</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:md-30 md:gap-3 max-w-4xl mx-auto mt-4 md:mt-6 px-4">
-                    {[...Array(8)].map((_, index) => (
-                        <div key={index} className="bg-gray-300 h-24"></div>
-                    ))}
-                    <div className="bg-gray-300 h-16 md:h-24 col-span-2 md:col-span-2 mx-auto rounded-sm"></div>
-                    <div className="bg-gray-300 h-16 md:h-24 col-span-2 md:col-span-2 mx-auto rounded-sm"></div>
-                </div>*/}
-            {/* Contact US* */}
-            <div id="contact" className="w-full max-w-xl text-black font-[Reddit Sans] text-center p-5 bg-white mx-auto flex flex-col items-center justify-center">
-                <p className="lg:text-3xl text-2xl font-thin mb-4">{contact.text}</p>
-               <div className="mt-6 flex justify-center gap-10 lg:gap-18 text-4xl lg:text-5xl">
+            {/* Contact Us */}
+            <div id="contact" className="w-full max-w-xl text-white font-[Reddit Sans] text-center mx-auto flex flex-col items-center justify-center">
+                <p className="lg:text-3xl text-2xl font-semibold mb-4">{contact.text}</p>
+                <div className="mt-6 flex justify-center gap-10 lg:gap-18 text-4xl lg:text-5xl">
                     <img src="/Mail.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
                         <img src="/Facebook.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     </a>
-                </div>   
-            </div> 
-            </section>
-
-            {/* Footer Section */}
-
-            <div className="flex flex-col h-20"> 
-                <Footer language={language} />
+                </div>
             </div>
+
+            {/* Wavy Effect */}
+            <div className="wavyeffect">
+                <img src="/wavyeffect.png" alt="wavy design" />
+            </div>
+
+            {/* Footer */}
+            <Footer language={language} />
         </section>
     );
 };
