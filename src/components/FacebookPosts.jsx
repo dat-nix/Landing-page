@@ -37,21 +37,21 @@ const FacebookPosts = ({ language }) => {
             </div>
     
             {/* Posts Grid */}
-            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 sm:mt-10 md:mt-12 px-6 sm:px-8">
+            <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-9 sm:mt-10 md:mt-14 px-6 sm:px-8">
                 {posts.map((post) => (
                     <a
                         key={post.id}
                         href={post.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 p-4 text-center w-full max-w-[360px] sm:max-w-[384px] h-auto"
+                        className="block bg-white rounded-2xl shadow-xl overflow-hidden transition-transform transform hover:scale-105 p-6 text-center w-full max-w-[460px] sm:max-w-[420px] h-auto"
                     >
                         <img 
                             src={post.image} 
                             alt={post.title} 
-                            className="w-full h-[180px] sm:h-[216px] md:h-[240px] object-cover"
+                            className="w-full h-[240px] sm:h-[260px] md:h-[280px] object-cover"
                         />
-                        <div className="mt-3 text-black font-semibold text-base sm:text-xl">
+                        <div className="mt-4 text-black font-bold text-lg sm:text-2xl">
                             {post.title}
                         </div>
                     </a>
