@@ -21,18 +21,19 @@ const RIKT = ({ language }) => {
     className="w-full h-auto object-contain"
   />
 
-  <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-    <a
-      href="https://docs.google.com/document/d/1ULqZoZ235xmzRWGJfTORwiBW0JaIK44N/edit"
-      className="px-14 py-4 sm:px-10 sm:py-4 md:px-20 md:py-5 lg:px-48 lg:py-8 
-           text-sm sm:text-base md:text-xl lg:text-3xl font-bold 
-           bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
-           transition-all duration-300 hover:bg-orange-600 hover:scale-105"
-
-    >
-      REGISTER HERE
-    </a>
-  </div>
+<div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+  <a
+    href="https://docs.google.com/document/d/1ULqZoZ235xmzRWGJfTORwiBW0JaIK44N/edit"
+    className="px-10 py-5 sm:px-12 sm:py-5 md:px-16 md:py-6 lg:px-24 lg:py-7 
+               text-base sm:text-lg md:text-xl lg:text-2xl font-bold 
+               bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
+               transition-all duration-300 hover:bg-orange-600 hover:scale-105 
+               whitespace-normal break-words"
+  >
+    TOURNAMENT CHARTER
+  </a>
+</div>
+ 
 </div>
  
 
@@ -115,7 +116,7 @@ const RIKT = ({ language }) => {
                 <div className="mt-6 flex justify-center gap-10 lg:gap-18 text-4xl lg:text-5xl">
                     <img src="/Mail.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     <a href="https://www.facebook.com/rmitshinsei" target="_blank" rel="noopener noreferrer">
-                        <img src="/Facebook.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
+                        <img src="/facebook.png" className="w-15 h-15 lg:w-16 lg:h-16 cursor-pointer hover:text-gray-500" />
                     </a>
                 </div>
             </div>
