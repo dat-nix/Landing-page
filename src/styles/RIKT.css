@@ -54,6 +54,7 @@ body {
   text-transform: uppercase;
   flex: 1;
   text-align: left;
+  letter-spacing: 0.1em;
 }
 
 .about-text {
@@ -77,7 +78,7 @@ body {
 
   .about-title {
     font-size: 3rem !important;
-    text-align: center !important; /* mobile vẫn giữ canh giữa để đẹp */
+    text-align: center !important;
   }
 
   .about-text {
@@ -100,8 +101,6 @@ body {
   text-align: center;
   width: 100%;
 }
-
-/* Timeline Styles ... (unchanged code omitted for brevity) */
 
 /* Requirements Section */
 .requirements-container {
@@ -128,7 +127,7 @@ body {
   letter-spacing: 15px;
   margin-bottom: 20px;
   color: #FFCA5A;
-  text-align: center; /* align center */
+  text-align: center;
 }
 
 .requirement-text {
@@ -147,20 +146,52 @@ body {
   margin-bottom: 25px;
 }
 
+/* ===== How to Register Section (updated to match About style) ===== */
+.register-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #185195;
+  animation: popIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.register-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 10rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #FFCA5A;
+  text-transform: uppercase;
+  flex: 1;
+  text-align: left;
+  letter-spacing: 0.1em;
+}
+
+.register-content {
+  flex: 1;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.8;
+  max-width: 600px;
+  text-align: justify;
+  position: relative;
+  margin-left: 3rem;
+}
+
 .register-button {
   display: inline-block;
   background-color: #FFCA5A;
   color: black;
-  padding: 6vh 45vh;
+  padding: 1rem 3rem;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
   font-size: 2rem;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 220px;
-  text-align: center;
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 .register-button:hover {
@@ -169,6 +200,7 @@ body {
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .requirements-container {
     flex-direction: column;
@@ -180,20 +212,32 @@ body {
     letter-spacing: 5px;
   }
 
-  .register-button {
-    padding: 15px 25px;
+  .register-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .register-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .register-content {
     font-size: 1.2rem;
-    min-width: auto;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .register-button {
+    float: none;
+    margin: 2rem auto 0 auto;
+    font-size: 1.2rem;
   }
 
   .registration-text {
     font-size: 1rem;
   }
 }
-
-/* Contact Us Section ... (unchanged) */
-
-/* Sponsors Section ... (unchanged) */
 
 /* Animation Keyframes */
 @keyframes popIn {

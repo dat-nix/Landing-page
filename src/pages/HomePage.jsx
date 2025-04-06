@@ -53,7 +53,7 @@ export default function HomePage({ language }) {  // Receive language from props
                         bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
                         transition-all duration-300 hover:bg-orange-600 hover:scale-105"
                     >
-                        {langData?.button || "Explore RIKT"}
+                        {langData?.button }
                     </Link>
                 </motion.div>
             </section>

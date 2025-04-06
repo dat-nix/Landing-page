@@ -14,13 +14,27 @@ const RIKT = ({ language }) => {
     return (
         <section className="timeline-section">
             {/* Banner */}
-            <div className="banner-section">
-                <img 
-                    src="/rmit-kendo-club.png" 
-                    alt="RMIT Ichigeki Kendo Tournament 2025"
-                    className="w-full object-cover"
-                />
-            </div>
+  <div className="relative banner-section">
+  <img
+    src="rmit-kendo-club.png"
+    alt="Banner"
+    className="w-full h-auto object-contain"
+  />
+
+  <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <a
+      href="https://docs.google.com/document/d/1ULqZoZ235xmzRWGJfTORwiBW0JaIK44N/edit"
+      className="px-14 py-4 sm:px-10 sm:py-4 md:px-20 md:py-5 lg:px-48 lg:py-8 
+           text-sm sm:text-base md:text-xl lg:text-3xl font-bold 
+           bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
+           transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+
+    >
+      REGISTER HERE
+    </a>
+  </div>
+</div>
+ 
 
             {/* About */}
             <div className="about-section">
@@ -42,7 +56,7 @@ const RIKT = ({ language }) => {
                             </h1>
                         </div>
 
-                        <div className="text-left mt-10 md:mt-25 space-y-5 md:space-y-8 w-full px-1 md:px-0 md:ml-18">
+                        <div className="text-left mt-10 md:mt-25 space-y-5 md:space-y-8 w-full px-1 md:px-0 md:ml-[30px]">
                             <p className="text-white text-xl sm:text-2xl md:text-3xl">
                                 <span className="font-bold block">{riktAbout.information[2]}</span>
                                 {riktAbout.information[3]}
@@ -58,7 +72,7 @@ const RIKT = ({ language }) => {
                         </div>
                     </div>
 
-                    {/* Map - Shrunk */}
+                    {/* Map */}
                     <div className="md:w-[500px] md:h-[500px] mt-5 md:mt-80 md:mr-10 event-map flex-grow-0">
                         <div className="relative aspect-square w-[300px] md:w-[400px] lg:w-[450px]">
                             <iframe 
@@ -80,16 +94,15 @@ const RIKT = ({ language }) => {
             <AgendaSection language={language} />
 
             {/* Requirements & Registration */}
-            <div className="requirements-container">
-                <div className="requirement-card">
-                    <h2 className="requirement-title">{riktData.registration.title}</h2>
-                    <p className="registration-text">{riktData.registration.description}</p>
-                    <button 
-                        className="register-button" 
-                        onClick={() => window.location.href = "https://docs.google.com/document/d/1BxNh6MUfEN4eCtX5AJNHmi0npxMiFWIc20FMADJG3zM/edit?fbclid=IwY2xjawJSZoRleHRuA2FlbQIxMAABHZJwMa5y0pQeS69FhxPXA2PNByXHS114SkLwHkGYWvZD2RnJdd3SxQxPhg_aem_JC4ZikG7M6Y0Riv63_9_KQ&tab=t.0"}
-                    >
-                        {riktData.registration.button}
-                    </button>
+            <div className="register-section">
+                <h2 className="register-title">{riktData.registration.title}</h2>
+                <div className="register-content">
+                    <p>{riktData.registration.description}</p>
+                     <a href="https://docs.google.com/document/d/1BxNh6MUfEN4eCtX5AJNHmi0npxMiFWIc20FMADJG3zM/edit?fbclid=IwY2xjawJSZoRleHRuA2FlbQIxMAABHZJwMa5y0pQeS69FhxPXA2PNByXHS114SkLwHkGYWvZD2RnJdd3SxQxPhg_aem_JC4ZikG7M6Y0Riv63_9_KQ&tab=t.0">
+                        <button className="register-button">
+                            {riktData.registration.button}
+                        </button>
+                    </a>
                 </div>
             </div>
 
