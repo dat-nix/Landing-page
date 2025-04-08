@@ -1,12 +1,12 @@
-import { useEffect } from "react"; 
-import { Link } from "react-router-dom";  
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { scroller } from "react-scroll";
 import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
-import About from "./About";
 import content from "../configs/content";
-import { Footer, FAQs } from "../components";
+import { Footer, FAQs, About } from "../components";
 
-export default function HomePage({ language }) {  // Receive language from props (from App.jsx)
+export default function HomePage({ language }) {
+    // Receive language from props (from App.jsx)
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const scrollTo = params.get("scrollTo");
@@ -16,7 +16,8 @@ export default function HomePage({ language }) {  // Receive language from props
     }, []);
 
     // Check language state; if not valid, set back to "en"
-    const langData = content[language]?.heroSection || content["en"].heroSection; 
+    const langData =
+        content[language]?.heroSection || content["en"].heroSection;
 
     return (
         <div className="min-h-screen flex flex-col justify-between">
@@ -38,7 +39,7 @@ export default function HomePage({ language }) {  // Receive language from props
                         alt="RMIT"
                     />
                 </motion.div>
- 
+
                 {/* Button */}
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -53,7 +54,7 @@ export default function HomePage({ language }) {  // Receive language from props
                         bg-[#ffcc5c] text-gray-900 rounded-2xl shadow-lg 
                         transition-all duration-300 hover:bg-orange-600 hover:scale-105"
                     >
-                        {langData?.button }
+                        {langData?.button}
                     </Link>
                 </motion.div>
             </section>
@@ -63,11 +64,11 @@ export default function HomePage({ language }) {  // Receive language from props
 
             {/* FAQs Section */}
             <div className="mb-16" id="faqs">
-                <FAQs language={language}/>
+                <FAQs language={language} />
             </div>
 
             {/* Footer */}
-            <Footer language={language}/>
+            <Footer language={language} />
         </div>
     );
 }
