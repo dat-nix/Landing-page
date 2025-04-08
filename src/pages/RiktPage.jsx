@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import content from "../configs/content";
-import { Footer, AgendaSection, FacebookPosts } from "../components";
+import { Footer, FacebookPosts } from "../components";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const agendaData = {
+    "May 30th": [
+        { time: "6:30 PM", activity: "Seminar begin" },
+        { time: "8:30 PM", activity: "Seminar ends" },
+    ],
+    "May 31st": [
+        { time: "8:00 AM", activity: "Check-in" },
+        { time: "9:30 AM", activity: "Opening Ceremony" },
+        { time: "10:00 AM", activity: "Morning Matches" },
+        { time: "12:00 PM", activity: "Lunch Break" },
+        { time: "1:00 PM", activity: "Afternoon Matches" },
+        { time: "4:30 PM", activity: "End of day 1" },
+    ],
+    "June 1st": [
+        { time: "8:00 AM", activity: "Check-in" },
+        { time: "9:10 AM", activity: "Day 2 Opening Speech" },
+        { time: "9:15 AM", activity: "Morning Matches" },
+        { time: "12:00 PM", activity: "Lunch Break" },
+        { time: "1:00 PM", activity: "Afternoon Matches" },
+        { time: "3:45 PM", activity: "Awards and Closing Ceremony" },
+    ],
+};
 
 const RiktPage = ({ language }) => {
     const timelineData =
@@ -8,6 +35,37 @@ const RiktPage = ({ language }) => {
     const riktData = content[language]?.riktData || content["en"].riktData;
     const riktAbout = content[language]?.riktAbout || content["en"].riktAbout;
     const contact = content[language]?.contact || content["en"].contact;
+
+    // Agenda states
+    const dates = Object.keys(agendaData);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const agendaSectionRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const section = agendaSectionRef.current;
+        const totalSteps = dates.length;
+
+        const ctx = gsap.context(() => {
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top top",
+                end: "+=100%", // adjust scroll range here
+                pin: true,
+                scrub: true,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    const index = Math.min(
+                        totalSteps - 1,
+                        Math.floor(progress * totalSteps)
+                    );
+                    if (index !== currentIndex) setCurrentIndex(index);
+                },
+            });
+        }, section);
+
+        return () => ctx.revert();
+    }, [currentIndex, dates.length]);
 
     return (
         <section className="bg-[#185195] text-white font-sans">
@@ -47,7 +105,6 @@ const RiktPage = ({ language }) => {
                             {riktAbout.information[0]} <br />{" "}
                             {riktAbout.information[1]}
                         </h1>
-
                         <div className="space-y-6 text-xl sm:text-2xl md:text-3xl mt-6 text-left">
                             {[2, 4, 6].map((index) => (
                                 <p key={index}>
@@ -65,7 +122,6 @@ const RiktPage = ({ language }) => {
                             ))}
                         </div>
                     </div>
-
                     {/* Map */}
                     <div className="md:w-[500px] md:h-[500px] mt-10 md:mt-0">
                         <iframe
@@ -81,25 +137,81 @@ const RiktPage = ({ language }) => {
                 </div>
             </div>
 
-            {/* Agenda */}
-            <AgendaSection language={language} />
+            {/* Agenda Section */}
+            <section
+                ref={agendaSectionRef}
+                className="relative bg-[#154c9e] text-white"
+            >
+                <div className="h-screen flex flex-col px-4 sm:px-4 lg:px-20 md:px-12 pt-24 pb-8">
+                    {/* Top: Title */}
+                    <div className="mb-8">
+                        <h2 className="text-[clamp(3rem,8vw,8rem)] font-bold text-[#FFCA5A] uppercase tracking-widest leading-tight font-['Anton']">
+                            Agenda
+                        </h2>
+                    </div>
+
+                    {/* Flex Row: Left and Right */}
+                    <div className="flex flex-1 gap-12">
+                        {/* Left Side: Text and Dates */}
+                        <div className="flex flex-col justify-start flex-1">
+                            <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-['Reddit Sans'] mb-6">
+                                Scroll to explore the dates
+                            </p>
+                            <div className="space-y-2">
+                                {dates.map((date, index) => (
+                                    <div
+                                        key={date}
+                                        className={`transition-all duration-300 ${
+                                            index === currentIndex
+                                                ? "text-white text-2xl sm:text-3xl md:text-7xl lg:text-7xl font-bold"
+                                                : "text-blue-300 text-xl sm:text-2xl md:text-3xl lg:text-[3.35rem]"
+                                        }`}
+                                    >
+                                        {date.toUpperCase()}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right Side: Timeline */}
+                        <div className="flex-1 flex items-start justify-center relative">
+                            <div className="relative w-full max-w-md">
+                                <div className="absolute left-13.5 top-0 h-full w-1 bg-white"></div>
+                                <div className="flex flex-col gap-8 pl-12 transition-opacity duration-500">
+                                    {agendaData[dates[currentIndex]].map(
+                                        (item, index, arr) => (
+                                            <div
+                                                key={index}
+                                                className="relative flex items-center gap-4"
+                                            >
+                                                <div className="flex flex-col items-center">
+                                                    <div className="w-4 h-4 rounded-full bg-white border-2 border-white"></div>
+                                                    {index !==
+                                                        arr.length - 1 && (
+                                                        <div className="flex-1 w-px bg-white opacity-50 mt-1"></div>
+                                                    )}
+                                                </div>
+                                                <div>
+                                                    <div className="text-lg md:text-xl font-bold">
+                                                        {item.time}
+                                                    </div>
+                                                    <div className="text-sm md:text-base opacity-90">
+                                                        {item.activity}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Registration Section */}
             <div className="flex flex-col md:flex-row items-start justify-between px-4 sm:px-8 md:px-20 py-16 animate-fadeIn">
-                <h2
-                    className="
-        font-['Anton'] 
-        text-[clamp(2rem,8vw,8rem)] 
-        font-black 
-        text-[#FFCA5A] 
-        uppercase 
-        tracking-widest 
-        text-center 
-        md:text-left  
-        leading-snug  
-        break-words
-    "
-                >
+                <h2 className="font-['Anton'] text-[clamp(2rem,8vw,8rem)] font-black text-[#FFCA5A] uppercase tracking-widest text-center md:text-left  leading-snug break-words">
                     {riktData.registration.title}
                 </h2>
 
