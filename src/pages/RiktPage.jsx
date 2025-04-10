@@ -150,9 +150,9 @@ const RiktPage = ({ language }) => {
 
             {/* Right Side: Timeline */}
             <div className="flex-1 flex items-start justify-center relative">
-              <div className="relative w-full max-w-md">
+              <div className="relative w-full max-w-md lg:-mt-32 ">
                 <div className="absolute left-13.5 top-0 h-full w-1 bg-white"></div>
-                <div className="flex flex-col gap-8 pl-12 transition-opacity duration-500">
+                <div className="flex flex-col gap-10 pl-12 transition-opacity duration-500">
                   {AgendaData[currentIndex].events.map((item, index, arr) => (
                     <div
                       key={index}
