@@ -1,5 +1,3 @@
-import { desc } from "framer-motion/client";
-
 export const content = {
   en: {
     navbar: {
@@ -132,9 +130,12 @@ export const content = {
       },
     ],
     FacebookPosts: {
-      title: "LATEST UPDATES",
+      social: [
+        "Follow", 
+        "RMIT SGS Shinsei Kendo Club on Facebook",
+        "for more information",
+      ],
     },
-
     AgendaData: [
       {
         date: "May 30th",
@@ -187,7 +188,7 @@ export const content = {
     },
     riktData: {
       heroSection: {
-        button: "TOURNAMENT CHARTER"
+        button: "TOURNAMENT CHARTER",
       },
       agendaTitle: "Agenda",
       agendaDescription: "Scroll to explore the dates",
@@ -202,11 +203,9 @@ export const content = {
       registration: {
         title: "How to Register",
         description:
-        "Read the tournament charter in our registration package and follow the guide on PC/Laptop to register.",
-        description1:
-        "Registration deadline:", 
-        description2:
-        "Sunday, 4th May 2025, 23:59 p.m (GMT+7)",
+          "Read the tournament charter in our registration package and follow the guide on PC/Laptop to register.",
+        description1: "Registration deadline:",
+        description2: "Sunday, 4th May 2025, 23:59 p.m (GMT+7)",
         button: "Registration Package",
       },
       contact: {
@@ -355,7 +354,11 @@ export const content = {
       },
     ],
     FacebookPosts: {
-      title: "MỚI NHẤT",
+      social: [
+        "Theo dõi", 
+        "Câu Lạc Bộ Kendo RMIT SGS trên Facebook",
+        "để biết thêm thông tin",
+      ],
     },
 
     AgendaData: [
@@ -427,8 +430,7 @@ export const content = {
         description:
           "Đọc điều lệ giải đấu trong gói đăng ký của chúng tôi và làm theo hướng dẫn trên PC/Laptop để đăng ký.",
         description1: "Thời hạn đăng ký:",
-        description2:
-          "Chủ Nhật, 4 tháng 5 năm 2025, 23:59 tối (GMT+7)",
+        description2: "Chủ Nhật, 4 tháng 5 năm 2025, 23:59 tối (GMT+7)",
         button: "Tải Biểu Mẫu Đăng Ký",
       },
       contact: {
