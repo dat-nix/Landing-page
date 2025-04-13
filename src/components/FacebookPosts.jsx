@@ -8,19 +8,19 @@ const FacebookPosts = ({ language }) => {
     const posts = [
         {
             id: 2,
-            image: "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/485147247_122223650060231453_874071710195790293_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHEo0hBsnu0c9kL4Oo-TPNyolNSjv6Q7guiU1KO_pDuCzqNYHQk8SADI0Ved1zOuau0qig1sMlSPG-VmhsPLt5I&_nc_ohc=3airvd94TrQQ7kNvwEYKdrB&_nc_oc=AdlgZlMbDRRu0m3jEPn9LIDnDYdoo0Gt-syzA202krvlGhXvs8qJY2XJ0yddxD0pBZrBgw4-2uayohmJRYYsz6Fk&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=Fi7aFp0zuFzmd5noKVUV6g&oh=00_AfF8GNXUcbrmLW9upE_wnJb1NNtsfZjpJ9vVMHPTva7yiQ&oe=67F7CFD2",
+            image: "https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/485147247_122223650060231453_874071710195790293_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=IUqGZa9XgasQ7kNvwE0speD&_nc_oc=AdkwpiacHdqFRUUwiBPgdXdpG1VkuG5x7UiopsPZUn1l6wlbRNdxldplRKQ0QCTPC6lxP0d52Qi4i2Nq5Wb1uWV8&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=BLIH_1P9MouKwnDxL1ou-Q&oh=00_AfGfT-nDAJIGhm1Ak-DpZpT_6u2NQJaxF6IHYoCNPYWCcQ&oe=6801EB52",
             title: "𝗥𝗠𝗜𝗧 𝗜𝗖𝗛𝗜𝗚𝗘𝗞𝗜 𝗞𝗘𝗡𝗗𝗢 𝗧𝗢𝗨𝗥𝗡𝗔𝗠𝗘𝗡𝗧 𝟮𝟬𝟮𝟱 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗧𝗜𝗢𝗡 𝗢𝗣𝗘𝗡!",
             link: "https://www.facebook.com/share/p/18nfn4BWMz/",
         },
         {
             id: 1,
-            image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/486554544_122224434584231453_7608000793104703063_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF9PkKyJOovh2vkMYYWIOyGeQTd2H5U8ml5BN3YflTyaReq4fb46IDGUtcH3Uc0nT_IHUXuiW1MUeq0gKLzu1Ty&_nc_ohc=ilESTC9Ab_kQ7kNvwHofpY_&_nc_oc=Adl1QAh5FR2ymnu_7frWizzwV1MYomypUS4J2LtfmtzJlXbJ017efm6oj5rE0v_YFsc3VGDaQys0mF2gHCHH0J7A&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=sFun0ixl_s-wx9t7IEBPNA&oh=00_AfH1n5IDUeTgNHtrPaKJdwv3PwdlQpXDg6bYi91mejVA-g&oe=67F7ADC8",
+            image: "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/486554544_122224434584231453_7608000793104703063_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=CS6W6710VzUQ7kNvwGmfPSs&_nc_oc=AdmGbgwZC0-KKs9SjTxmGHO3v_ro7pQ9F4VLkaAT7BtzABauhr-cuq2PJhgu99VQySD_dXqHyU7UQgBBXNTNf-KN&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=2hire1tRi8nzo0ExFIknWw&oh=00_AfHyGNey5BhotfeIbMzgDYlRQNblQKxCy897f_hjM38OSw&oe=6801C948",
             title: "🏅 𝗜𝗡𝗧𝗥𝗢𝗗𝗨𝗖𝗜𝗡𝗚 𝗥𝗠𝗜𝗧 𝗜𝗖𝗛𝗜𝗚𝗘𝗞𝗜 𝟮𝟬𝟮𝟱 𝗦𝗛𝗜𝗡𝗣𝗔𝗡𝗖𝗛𝗢 🏅",
             link: "https://www.facebook.com/share/p/1YTKQnMGUQ/",
         },
         {
             id: 3,
-            image: "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/486971890_122224732346231453_1732213346958709189_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHM0YhaXs5T3py9R9iLYWQYTr1QuwV2qaNOvVC7BXapoy_pkBJdLgVYglNYlEc1B1L_n_Z9VKmOUPPe3JAk8Rxg&_nc_ohc=REy88aKOqcAQ7kNvwEhI4OR&_nc_oc=Adk3qSCiqueaXXcu5G59ghqauPHjEW-tXIZ_NsrYizRbZ41iMUR2QoGO3y6PI03itlARvmHGkkzwnJwMqYmq5ULZ&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=sFun0ixl_s-wx9t7IEBPNA&oh=00_AfE5JOykd7abe27bNH1Bkmotnd_TR76HXsTd8vWRjHEBpA&oe=67F7C8DE",
+            image: "https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/486971890_122224732346231453_1732213346958709189_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=cxu-dAoMMpoQ7kNvwHKyAoi&_nc_oc=AdnrEFy6I7rIb16QSGbqHl4a9aVeVY_Wa0vCq2HdTaKm7-L2SxmVA_lqT1p2KV6TDEfpgH4XXW3FqgZl-YfOF1km&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=X8txi6CMCejdgM8M-gwjmA&oh=00_AfF-efgbVIDJW4jWe1jI6yYM9dGnK1_CI3Vdcq9udJnn4w&oe=6801E45E",
             title: "𝗞𝗲𝗻𝗱𝗼 𝟭𝟬𝟭 𝗘𝗽𝗶𝘀𝗼𝗱𝗲 𝟭: 𝗪𝗵𝗮𝘁'𝘀 𝗞𝗲𝗻𝗱𝗼?",
             link: "https://www.facebook.com/share/p/16Tjuxxfxn/",
         },
@@ -29,9 +29,9 @@ const FacebookPosts = ({ language }) => {
     return (
         <section className="w-full min-h-[500px] sm:min-h-[700px] md:min-h-[800px] bg-blue-[185195] relative flex flex-col items-center pt-[50px] sm:pt-[80px] md:pt-[100px]">
             {/* Follow Paragraph */}
-            <div className="w-full text-center px-6 sm:px-8 mt-6 text-white text-xl sm:text-2xl md:text-3xl leading-relaxed">
+            <div className="reddit-sans-regular  w-full text-left lg:pl-25 px-6 sm:px-8 mt-6 text-white text-xl sm:text-2xl md:text-3xl leading-relaxed">
                 Follow <br />
-                <span className="font-semibold">
+                <span className="font-bold">
                     RMIT SGS Shinsei Kendo Club
                 </span>{" "}
                 <br />
