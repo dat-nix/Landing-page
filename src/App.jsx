@@ -33,7 +33,7 @@ export default App;*/
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "./components";
-import { HomePage, RiktPage, TestPage } from "./pages";
+import { HomePage, RiktPage } from "./pages";
 
 function App() {
     const [language, setLanguage] = useState("en");

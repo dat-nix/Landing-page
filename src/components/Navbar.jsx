@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import { content } from "../configs/content";
@@ -79,26 +79,56 @@ export default function Navbar({ language, setLanguage }) {
         }
     };
 
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY <= 30) {
+                setIsVisible(true); // Show only when at top
+            } else {
+                setIsVisible(false); // Hide on scroll
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <nav className="bg-[#EB4E0B] w-full sticky top-0 py-3 sm:py-5 z-50 px-6 sm:px-8 flex items-center justify-between shadow-md">
+        <nav
+            className={`bg-[#EB4E0B] w-full fixed top-0 left-0 right-0 transform transition-transform duration-500 ease-in-out ${
+                isVisible ? "translate-y-0" : "-translate-y-full"
+            } py-1 sm:py-2 z-50 px-3 sm:px-4 flex items-center justify-between shadow-md`}
+        >
+            {/* Logo */}
             <div>
                 <Link to="/" className="flex items-center cursor-pointer">
                     <img
                         src="/white-logo.svg"
-                        className="w-12 h-14 sm:w-[59px] sm:h-[65px]"
+                        className="w-8 h-8 sm:w-10 sm:h-10"
                         alt="Logo"
                     />
                 </Link>
             </div>
 
+            {/* Mobile Menu Toggle */}
             <button
                 onClick={toggleMenu}
                 className="text-white lg:hidden cursor-pointer"
             >
-                <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="xl" />
+                <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="sm" />
             </button>
 
-            <div className="hidden lg:flex space-x-6 sm:space-x-8 text-base sm:text-lg font-medium">
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex space-x-4 sm:space-x-6 text-xs sm:text-sm md:text-base font-medium">
                 <button
                     onClick={() => handleNavigation("home")}
                     className="text-white cursor-pointer hover:text-yellow-300"
@@ -109,11 +139,11 @@ export default function Navbar({ language, setLanguage }) {
                     onClick={() => handleNavigation("about")}
                     className="text-white cursor-pointer hover:text-yellow-300"
                 >
-                    {currentContent.about}
+                    {language === "en" ? `About Event` : `Về Sự Kiện`}
                 </button>
                 <span
                     onClick={handleRiktNavigation}
-                    className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(174,238,238,0.8)]"
+                    className="relative cursor-pointer  text-yellow-300 before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-yellow-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 "
                 >
                     <span className="hidden lg:inline">
                         {currentContent.rikt}
@@ -126,20 +156,33 @@ export default function Navbar({ language, setLanguage }) {
                 >
                     {currentContent.contact}
                 </button>
-                <button
-                    onClick={toggleLanguage}
-                    className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300"
-                >
-                    <span className="text-lg">{currentContent.flag}</span>
-                    <span className="hidden sm:inline hover:text-yellow-300">
-                        {currentContent.language}
-                    </span>
-                </button>
+
+                {/* Language Switch */}
+                <div className="flex items-center space-x-1 text-white text-xs sm:text-sm">
+                    <button
+                        onClick={() => setLanguage("en")}
+                        className={`font-medium transition-colors ${
+                            language === "en" ? "text-yellow-300" : "text-white"
+                        }`}
+                    >
+                        EN
+                    </button>
+                    <span>|</span>
+                    <button
+                        onClick={() => setLanguage("vn")}
+                        className={`font-medium transition-colors ${
+                            language === "vn" ? "text-yellow-300" : "text-white"
+                        }`}
+                    >
+                        VN
+                    </button>
+                </div>
             </div>
 
+            {/* Mobile Menu */}
             {isOpen && (
-                <div className="absolute top-20 left-0 w-full bg-[#EB4E0B] text-white py-4 shadow-md lg:hidden">
-                    <ul className="flex flex-col items-center space-y-4 text-base sm:text-lg font-medium">
+                <div className="absolute top-14 left-0 w-full bg-[#EB4E0B] text-white py-3 shadow-md lg:hidden">
+                    <ul className="flex flex-col items-center space-y-3 text-xs sm:text-sm font-medium">
                         <li>
                             <button
                                 onClick={() => {
@@ -168,7 +211,7 @@ export default function Navbar({ language, setLanguage }) {
                                     handleRiktNavigation();
                                     toggleMenu();
                                 }}
-                                className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-cyan-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100 hover:drop-shadow-[0_0_10px_rgba(174,238,238,0.8)]"
+                                className="relative cursor-pointer font-bold text-white before:absolute before:left-0 before:bottom-0 before:w-full before:h-[2px] before:bg-cyan-300 before:scale-x-0 before:origin-left before:transition-transform before:duration-300  hover:before:scale-x-100 "
                             >
                                 RIKT
                             </span>
@@ -185,17 +228,30 @@ export default function Navbar({ language, setLanguage }) {
                             </button>
                         </li>
                         <li>
-                            <button
-                                onClick={toggleLanguage}
-                                className="flex items-center space-x-2 bg-gray-700 text-white px-3 rounded-md border border-gray-600 hover:bg-gray-800 transition duration-300"
-                            >
-                                <span className="text-lg">
-                                    {currentContent.flag}
-                                </span>
-                                <span className="sm:inline hover:text-cyan-300">
-                                    {currentContent.language}
-                                </span>
-                            </button>
+                            {/* Language Switch Mobile */}
+                            <div className="flex items-center space-x-1 text-white text-xs sm:text-sm">
+                                <button
+                                    onClick={() => setLanguage("en")}
+                                    className={`font-medium transition-colors ${
+                                        language === "en"
+                                            ? "text-yellow-300"
+                                            : "text-white"
+                                    }`}
+                                >
+                                    EN
+                                </button>
+                                <span>|</span>
+                                <button
+                                    onClick={() => setLanguage("vn")}
+                                    className={`font-medium transition-colors ${
+                                        language === "vn"
+                                            ? "text-yellow-300"
+                                            : "text-white"
+                                    }`}
+                                >
+                                    VN
+                                </button>
+                            </div>
                         </li>
                     </ul>
                 </div>
